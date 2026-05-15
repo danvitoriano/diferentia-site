@@ -23,6 +23,9 @@ function Nav() {
           <a href="#resultados" className="hover:text-white transition-colors">
             Resultados
           </a>
+          <a href="#cursos" className="hover:text-white transition-colors">
+            Cursos
+          </a>
           <a href="#comunidade" className="hover:text-white transition-colors">
             Comunidade
           </a>
@@ -104,7 +107,7 @@ function Hero() {
             { value: "4 fases", label: "Metodologia estruturada" },
             { value: "10 sem.", label: "Da adoção à autonomia" },
             { value: "100%", label: "Aplicado ao setor financeiro" },
-            { value: "0 genérico", label: "Cada empresa é um caso" },
+            { value: "0% genérico", label: "Cada empresa é um caso" },
           ].map((m) => (
             <div
               key={m.label}
@@ -317,6 +320,177 @@ function Results() {
               <p className="text-[#9090B0] text-sm leading-relaxed">{o.label}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────
+// CURSOS
+// ─────────────────────────────────────────────
+type Course = {
+  id: string;
+  trilha: string;
+  nome: string;
+  formato: string;
+  duracao: string;
+  publico: string;
+  nivel: string;
+  entregavel: string;
+  status: "Disponível" | "Em breve";
+};
+
+const COURSES: Course[] = [
+  { id: "00", trilha: "Operacional", nome: "IA para lideranças", formato: "Online · Grupo", duracao: "1h", publico: "Executivos", nivel: "Executivo", entregavel: "Checklist de decisões e política mínima de adoção", status: "Em breve" },
+  { id: "01", trilha: "Operacional", nome: "Fundamentos de IA e Claude", formato: "Online · Ind.", duracao: "2h", publico: "Todos", nivel: "Iniciante", entregavel: "Contexto configurado + 3 prompts padrão", status: "Disponível" },
+  { id: "02", trilha: "Operacional", nome: "Prompt engineering para o trabalho", formato: "Online · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Iniciante / Intermediário", entregavel: "Biblioteca de prompts reutilizáveis do time", status: "Disponível" },
+  { id: "03", trilha: "Operacional", nome: "Pesquisa, arquivos e multimodal", formato: "Online · Ind./Grupo", duracao: "1h30", publico: "Todos", nivel: "Intermediário", entregavel: "Exercício com documento real + checklist de validação", status: "Disponível" },
+  { id: "04", trilha: "Operacional", nome: "Claude Design", formato: "Online · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário", entregavel: "Protótipo funcional ou variações de uma tela real", status: "Disponível" },
+  { id: "04B", trilha: "Operacional", nome: "Governança e compliance com IA", formato: "Online · Ind./Grupo", duracao: "1h30", publico: "Todos", nivel: "Intermediário", entregavel: "Política de uso do time + checklist de conformidade", status: "Em breve" },
+  { id: "05", trilha: "Operacional", nome: "Conectores, MCP e automações", formato: "Presencial · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário", entregavel: "Mapa de 3 oportunidades com quick wins priorizados", status: "Disponível" },
+  { id: "06", trilha: "Operacional", nome: "Claude Cowork — skills, agentes e tarefas", formato: "Presencial · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário / Avançado", entregavel: "1 skill do time + 1 rotina agendada no ar", status: "Disponível" },
+  { id: "07", trilha: "Operacional", nome: "Sessão prática — fluxos e automações", formato: "Presencial · Ind.", duracao: "3h", publico: "Todos", nivel: "Avançado", entregavel: "1–2 automações em processos reais + base v.1", status: "Disponível" },
+  { id: "08", trilha: "Operacional", nome: "Sessão coletiva de compartilhamento", formato: "Pres./Online · Grupo", duracao: "2h", publico: "Todos", nivel: "Todos os níveis", entregavel: "Biblioteca coletiva — base de conhecimento do time", status: "Disponível" },
+  { id: "E1", trilha: "Especialização", nome: "IA para análise de investimentos", formato: "Presencial · Grupo", duracao: "3h", publico: "Analistas equity, research, setorial", nivel: "Intermediário", entregavel: "Template de análise + prompts padrão do time", status: "Em breve" },
+  { id: "E2", trilha: "Especialização", nome: "IA para análise de crédito", formato: "Presencial · Grupo", duracao: "3h", publico: "Analistas de crédito", nivel: "Intermediário", entregavel: "Template de parecer + checklist de risco", status: "Em breve" },
+  { id: "E3", trilha: "Especialização", nome: "IA para cientistas de dados", formato: "Pres./Online · Grupo", duracao: "4h", publico: "Cientistas de dados, analistas com Python", nivel: "Avançado", entregavel: "Script integrando Claude a pipeline ou fonte de dados real", status: "Em breve" },
+  { id: "09", trilha: "Dev", nome: "Claude Code para devs", formato: "Pres./Online · Grupo", duracao: "3h", publico: "Devs", nivel: "Intermediário", entregavel: "Tarefa multiarquivo com validação (tests / lint / review)", status: "Disponível" },
+  { id: "10", trilha: "Dev", nome: "Monitorador de ativos da B3", formato: "Ao vivo · Grupo", duracao: "4h30", publico: "Devs", nivel: "Intermediário", entregavel: "App no ar · repositório · gravação · templates CI/CD e E2E", status: "Disponível" },
+  { id: "11", trilha: "Dev", nome: "Agentes autônomos e orquestração", formato: "Pres./Online · Grupo", duracao: "4h", publico: "Devs", nivel: "Avançado", entregavel: "Agente funcional com ao menos uma tool integrada", status: "Em breve" },
+];
+
+const NIVEL_COLORS: Record<string, string> = {
+  "Iniciante": "bg-emerald-500/15 text-emerald-400 border-emerald-500/20",
+  "Iniciante / Intermediário": "bg-sky-500/15 text-sky-400 border-sky-500/20",
+  "Intermediário": "bg-sky-500/15 text-sky-400 border-sky-500/20",
+  "Intermediário / Avançado": "bg-amber-500/15 text-amber-400 border-amber-500/20",
+  "Avançado": "bg-amber-500/15 text-amber-400 border-amber-500/20",
+  "Executivo": "bg-violet-500/15 text-violet-400 border-violet-500/20",
+  "Todos os níveis": "bg-[#1E1E2E] text-[#9595B8] border-[#1E1E2E]",
+};
+
+const TRILHA_META: Record<string, { desc: string; icon: string }> = {
+  Todos: {
+    icon: "📋",
+    desc: "Catálogo completo — filtre por trilha para ver só o que importa para o seu time.",
+  },
+  Operacional: { icon: "⚙️", desc: "Para todos os perfis — do iniciante ao avançado" },
+  Especialização: { icon: "🎯", desc: "Módulos específicos para cada função do setor financeiro" },
+  Dev: { icon: "💻", desc: "Para desenvolvedores e times técnicos" },
+};
+
+function Courses() {
+  const [activeTab, setActiveTab] = useState<string>("Operacional");
+  const trilhas = ["Todos", "Operacional", "Especialização", "Dev"];
+  const filtered =
+    activeTab === "Todos" ? COURSES : COURSES.filter((c) => c.trilha === activeTab);
+
+  return (
+    <section id="cursos" className="py-28 relative">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Cabeçalho */}
+        <div className="text-center mb-14">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#7C6FF7] mb-4 block">
+            Catálogo de treinamentos
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-5">
+            Módulos sob medida
+            <br />
+            <span className="text-[#9090B0]">para cada perfil do time</span>
+          </h2>
+          <p className="mx-auto max-w-xl text-[#9090B0] text-base leading-relaxed">
+            Cada empresa monta sua trilha com base no diagnóstico. Você escolhe os módulos que fazem sentido para o seu contexto — não um pacote fechado.
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex flex-wrap gap-2 mb-10 justify-center">
+          {trilhas.map((t) => (
+            <button
+              key={t}
+              onClick={() => setActiveTab(t)}
+              className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition-all ${
+                activeTab === t
+                  ? "bg-[#7C6FF7] text-white shadow-lg shadow-[#7C6FF7]/20"
+                  : "border border-[#1E1E2E] text-[#9090B0] hover:border-[#7C6FF7]/40 hover:text-white"
+              }`}
+            >
+              <span>{TRILHA_META[t].icon}</span>
+              {t}
+            </button>
+          ))}
+        </div>
+
+        {/* Descrição da trilha ativa */}
+        <p className="text-center text-sm text-[#7C7C98] mb-8">
+          {TRILHA_META[activeTab].desc}
+        </p>
+
+        {/* Grid de cards */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+          {filtered.map((c) => (
+            <div
+              key={c.id}
+              className={`group relative flex flex-col rounded-2xl border bg-[#0F0F1A] p-6 transition-all ${
+                c.status === "Em breve"
+                  ? "border-[#1E1E2E] opacity-70"
+                  : "border-[#1E1E2E] hover:border-[#7C6FF7]/40"
+              }`}
+            >
+              {/* Header do card */}
+              <div className="flex items-start justify-between gap-3 mb-4">
+                <span className="text-xs font-mono font-bold text-[#7A7A98] bg-[#080810] border border-[#1E1E2E] rounded-md px-2 py-1 shrink-0">
+                  {c.id}
+                </span>
+                <span
+                  className={`text-[10px] font-semibold px-2.5 py-1 rounded-full border ${
+                    c.status === "Disponível"
+                      ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+                      : "bg-[#1E1E2E] text-[#7A7A98] border-[#1E1E2E]"
+                  }`}
+                >
+                  {c.status}
+                </span>
+              </div>
+
+              {/* Título */}
+              <h3 className="text-base font-semibold text-white leading-snug mb-3 flex-1">
+                {c.nome}
+              </h3>
+
+              {/* Entregável */}
+              <p className="text-xs text-[#9AA0C8] leading-relaxed mb-5 border-l-2 border-[#2E3045] pl-3">
+                {c.entregavel}
+              </p>
+
+              {/* Metadados */}
+              <div className="flex flex-wrap gap-2 mt-auto">
+                <span className={`text-[10px] font-medium px-2.5 py-1 rounded-full border ${NIVEL_COLORS[c.nivel] ?? "bg-[#1E1E2E] text-[#9595B8] border-[#1E1E2E]"}`}>
+                  {c.nivel}
+                </span>
+                <span className="text-[10px] font-medium px-2.5 py-1 rounded-full border border-[#1E1E2E] bg-[#080810] text-[#9595B8]">
+                  {c.duracao}
+                </span>
+                <span className="text-[10px] font-medium px-2.5 py-1 rounded-full border border-[#1E1E2E] bg-[#080810] text-[#9595B8]">
+                  {c.formato}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA rodapé */}
+        <div className="mt-12 text-center">
+          <p className="text-[#9090B0] text-sm mb-5">
+            O diagnóstico define quais módulos fazem sentido para a sua empresa.
+          </p>
+          <a
+            href="#contato"
+            className="inline-flex rounded-full bg-[#7C6FF7] px-8 py-3.5 text-sm font-semibold text-white hover:bg-[#5B54D6] transition-all hover:shadow-lg hover:shadow-[#7C6FF7]/25"
+          >
+            Montar minha trilha
+          </a>
         </div>
       </div>
     </section>
@@ -671,6 +845,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Method />
+        <Courses />
         <Results />
         <Community />
         <Contact />
