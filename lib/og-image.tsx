@@ -10,7 +10,7 @@ export const ogSize = {
 export const ogContentType = "image/png";
 
 export const ogAlt =
-  "Diferentia — metodologia de IA para fundos, gestoras e fintechs";
+  "Diferentia — metodologia de Agentic AI para fundos, gestoras e fintechs";
 
 async function loadLocalFont(file: string): Promise<ArrayBuffer> {
   const buffer = await readFile(
@@ -103,7 +103,7 @@ export async function createOgImageResponse() {
                 letterSpacing: "0.02em",
               }}
             >
-              Metodologia para o setor financeiro
+              Agentic AI · mercado financeiro
             </span>
           </div>
 
@@ -155,7 +155,7 @@ export async function createOgImageResponse() {
                 color: "#7C6FF7",
               }}
             >
-              IA que o mercado
+              Agentic AI que o mercado
             </span>
             <span
               style={{

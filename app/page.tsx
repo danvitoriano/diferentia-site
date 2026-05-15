@@ -275,19 +275,19 @@ function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-[#7C6FF7]/30 bg-[#7C6FF7]/10 px-4 py-1.5 text-xs font-medium text-[#c5c0ff] mb-8">
           <span className="h-1.5 w-1.5 rounded-full bg-[#7C6FF7] animate-pulse" />
-          Metodologia proprietária para o setor financeiro
+          Metodologia proprietária de Agentic AI · mercado financeiro
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6">
-          <span className="text-gradient">IA que o mercado</span>
+          <span className="text-gradient">Agentic AI que o mercado</span>
           <br />
           <span className="text-white">financeiro sabe usar.</span>
         </h1>
 
         <p className="mx-auto max-w-2xl text-lg md:text-xl text-[#9090B0] leading-relaxed mb-10">
           A Diferentia transforma times de fundos, gestoras e fintechs em
-          equipes que operam com inteligência artificial — do diagnóstico de
-          maturidade à autonomia operacional.
+          equipes que operam com Agentic AI — do diagnóstico de maturidade à
+          autonomia operacional.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
