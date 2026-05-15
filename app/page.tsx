@@ -10,7 +10,7 @@ function Nav() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#1E1E2E]/60 bg-[#080810]/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
         <span className="text-xl font-bold tracking-tight text-white">
-          Differentia
+          Diferentia
           <span className="text-[#7C6FF7]">.</span>
         </span>
         <nav className="hidden md:flex items-center gap-8 text-sm text-[#9090B0]">
@@ -75,7 +75,7 @@ function Hero() {
         </h1>
 
         <p className="mx-auto max-w-2xl text-lg md:text-xl text-[#9090B0] leading-relaxed mb-10">
-          A Differentia transforma times de fundos, gestoras e fintechs em
+          A Diferentia transforma times de fundos, gestoras e fintechs em
           equipes que operam com inteligência artificial — do diagnóstico de
           maturidade à autonomia operacional.
         </p>
@@ -198,7 +198,7 @@ function Method() {
     {
       n: "04",
       title: "Autonomia e escala",
-      body: "A equipe sai capaz de identificar e implementar novas automações de forma independente. O objetivo é dispensar a Differentia.",
+      body: "A equipe sai capaz de identificar e implementar novas automações de forma independente. O objetivo é dispensar a Diferentia.",
       detail: "Base de conhecimento interna + biblioteca de processos",
     },
   ];
@@ -464,10 +464,10 @@ function Footer() {
     <footer className="border-t border-[#1E1E2E] py-10">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <span className="text-lg font-bold text-white">
-          Differentia<span className="text-[#7C6FF7]">.</span>
+          Diferentia<span className="text-[#7C6FF7]">.</span>
         </span>
         <p className="text-xs text-[#4A4A6A]">
-          © 2026 Differentia. Todos os direitos reservados.
+          © 2026 Diferentia. Todos os direitos reservados.
         </p>
         <div className="flex gap-6 text-xs text-[#4A4A6A]">
           <a href="#problema" className="hover:text-[#9090B0] transition-colors">

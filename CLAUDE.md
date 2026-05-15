@@ -1,8 +1,8 @@
-# Differentia — Site MVP
+# Diferentia — Site MVP
 
 ## O produto
 
-**Differentia** é um produto independente de metodologia de adoção de IA para empresas do setor financeiro (fundos, gestoras, fintechs).
+**Diferentia** é um produto independente de metodologia de adoção de IA para empresas do setor financeiro (fundos, gestoras, fintechs).
 
 Não é uma consultoria de pessoa física. É uma marca/produto com metodologia proprietária escalável.
 
@@ -35,7 +35,7 @@ Sem logo definida ainda. O site estabelece a identidade:
 
 Tipografia: Inter (Google Fonts), sem-serif limpa.
 
-Dark theme. Sem logo por enquanto — logotipo textual "Differentia." com ponto indigo.
+Dark theme. Sem logo por enquanto — logotipo textual "Diferentia." com ponto indigo.
 
 ---
 
@@ -70,7 +70,7 @@ Seções:
 
 ### Deploy
 - [ ] `npx create-next-app` ou clonar estrutura em repo próprio
-- [ ] Configurar domínio differentia.com.br ou similar
+- [ ] Configurar domínio diferentia.com.br ou similar
 - [ ] Deploy na Vercel (zero config para Next.js)
 
 ---
