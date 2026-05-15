@@ -678,25 +678,29 @@ function Community() {
 // CONTATO
 // ─────────────────────────────────────────────
 function Contact() {
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState("");
-  const [isPending, startTransition] = useTransition();
-  const [form, setForm] = useState({
+  const initialForm = {
     name: "",
     email: "",
     company: "",
+    phone: "",
     message: "",
-  });
+  };
+  const [showSuccessBadge, setShowSuccessBadge] = useState(false);
+  const [error, setError] = useState("");
+  const [isPending, startTransition] = useTransition();
+  const [form, setForm] = useState(initialForm);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
+    setShowSuccessBadge(false);
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
+    setShowSuccessBadge(false);
     startTransition(async () => {
       try {
         const res = await fetch("/api/contact", {
@@ -709,7 +713,8 @@ function Contact() {
           setError(data.error ?? "Erro ao enviar. Tente novamente.");
           return;
         }
-        setSent(true);
+        setForm(initialForm);
+        setShowSuccessBadge(true);
       } catch {
         setError("Erro de conexão. Tente novamente.");
       }
@@ -741,21 +746,23 @@ function Contact() {
           </p>
         </div>
 
-        {sent ? (
-          <div className="rounded-2xl border border-[#7C6FF7]/30 bg-[#7C6FF7]/10 p-10 text-center">
-            <div className="text-4xl mb-4">✓</div>
-            <h3 className="text-xl font-semibold text-white mb-2">
-              Mensagem recebida
-            </h3>
-            <p className="text-[#9090B0] text-sm">
-              Retornaremos em até 24 horas.
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-2xl border border-[#1E1E2E] bg-[#0F0F1A] p-8 space-y-5"
-          >
+        <form
+          onSubmit={handleSubmit}
+          className="rounded-2xl border border-[#1E1E2E] bg-[#0F0F1A] p-8 space-y-5"
+        >
+          {showSuccessBadge && (
+            <div
+              role="status"
+              className="flex justify-center sm:justify-start"
+            >
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-4 py-2 text-xs font-medium text-emerald-300">
+                <span className="text-emerald-400" aria-hidden>
+                  ✓
+                </span>
+                Mensagem recebida — retornaremos em até 24 horas.
+              </span>
+            </div>
+          )}
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-xs font-medium text-[#9090B0] mb-2">
@@ -796,7 +803,22 @@ function Contact() {
                 name="company"
                 value={form.company}
                 onChange={handleChange}
-                placeholder="Nome do fundo ou gestora"
+                placeholder="Nome da empresa"
+                className="w-full rounded-lg border border-[#1E1E2E] bg-[#080810] px-4 py-3 text-sm text-white placeholder:text-[#4A4A6A] focus:border-[#7C6FF7] focus:outline-none transition-colors"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-[#9090B0] mb-2">
+                Telefone
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="+55 (11) 99999-9999"
+                autoComplete="tel"
                 className="w-full rounded-lg border border-[#1E1E2E] bg-[#080810] px-4 py-3 text-sm text-white placeholder:text-[#4A4A6A] focus:border-[#7C6FF7] focus:outline-none transition-colors"
               />
             </div>
@@ -826,8 +848,7 @@ function Contact() {
             >
               {isPending ? "Enviando..." : "Agendar diagnóstico gratuito"}
             </button>
-          </form>
-        )}
+        </form>
       </div>
     </section>
   );

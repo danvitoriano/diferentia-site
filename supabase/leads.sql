@@ -7,8 +7,12 @@ create table if not exists leads (
   name        text not null,
   email       text not null,
   company     text,
+  phone       text,
   message     text
 );
+
+-- Tabelas já existentes (criadas antes da coluna phone): execute uma vez no SQL Editor
+alter table leads add column if not exists phone text;
 
 -- Permite inserção pública (anon key) mas bloqueia leitura sem service_role
 alter table leads enable row level security;

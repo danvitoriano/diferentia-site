@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { name, email, company, message } = await req.json();
+  const { name, email, company, phone, message } = await req.json();
 
   if (!name || !email) {
     return NextResponse.json(
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
   // Dev sem variáveis: só loga
   if (!supabaseUrl || !supabaseKey) {
-    console.log("[lead]", { name, email, company, message });
+    console.log("[lead]", { name, email, company, phone, message });
     return NextResponse.json({ ok: true });
   }
 
@@ -28,7 +28,13 @@ export async function POST(req: NextRequest) {
       Authorization: `Bearer ${supabaseKey}`,
       Prefer: "return=minimal",
     },
-    body: JSON.stringify({ name, email, company: company ?? "", message: message ?? "" }),
+    body: JSON.stringify({
+      name,
+      email,
+      company: company ?? "",
+      phone: phone ?? "",
+      message: message ?? "",
+    }),
   });
 
   if (!dbRes.ok) {
@@ -52,6 +58,7 @@ export async function POST(req: NextRequest) {
         <p><strong>Nome:</strong> ${name}</p>
         <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
         <p><strong>Empresa:</strong> ${company || "—"}</p>
+        <p><strong>Telefone:</strong> ${phone || "—"}</p>
         <p><strong>Mensagem:</strong></p>
         <blockquote style="border-left:3px solid #7C6FF7;padding-left:12px;color:#555">
           ${message || "—"}
