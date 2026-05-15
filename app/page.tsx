@@ -1,6 +1,210 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useState, useTransition } from "react";
+
+// ─────────────────────────────────────────────
+// ICONS (SVG — evita emojis na UI)
+// ─────────────────────────────────────────────
+function IconLightning({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden>
+      <path
+        d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function IconClipboard({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <rect x="8" y="2" width="8" height="4" rx="1" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+      <path d="M9 12h6M9 16h6" />
+    </svg>
+  );
+}
+
+function IconLock({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </svg>
+  );
+}
+
+function IconCog({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+  );
+}
+
+function IconTarget({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  );
+}
+
+function IconLaptop({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+      <path d="M1 19h22" />
+    </svg>
+  );
+}
+
+function IconMessage({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  );
+}
+
+function IconRepeat({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M17 1l4 4-4 4" />
+      <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+      <path d="M7 23l-4-4 4-4" />
+      <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+    </svg>
+  );
+}
+
+function IconSignal({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M5 18v-4M9 18v-7M13 18V8M17 18v-3" />
+    </svg>
+  );
+}
+
+function IconHandshake({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L5 10" />
+      <path d="M7 11.5v3a2 2 0 0 0 2 2h3.5" />
+      <path d="M9 16v4" />
+      <path d="M12 14v2" />
+      <path d="M13 8.5v3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V11" />
+      <path d="M19 10l-2.5-2.5a2 2 0 0 0-2.8 0L14 10" />
+    </svg>
+  );
+}
+
+function IconCheck({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden
+    >
+      <path d="M20 6L9 17l-5-5" />
+    </svg>
+  );
+}
+
+const ICON_PROBLEM = "w-8 h-8 shrink-0 text-[#7C6FF7]";
+const ICON_TAB = "w-4 h-4 shrink-0";
+const ICON_COMMUNITY = "w-6 h-6 shrink-0 text-[#7C6FF7] mt-0.5";
 
 // ─────────────────────────────────────────────
 // NAV
@@ -129,19 +333,19 @@ function Hero() {
 // PROBLEMA
 // ─────────────────────────────────────────────
 function Problem() {
-  const problems = [
+  const problems: { icon: ReactNode; title: string; body: string }[] = [
     {
-      icon: "⚡",
+      icon: <IconLightning className={ICON_PROBLEM} />,
       title: "Ferramentas sem direção",
       body: "Empresas adotam ChatGPT e outras IAs sem metodologia. O resultado é uso superficial, frustração e nenhuma mudança real no processo.",
     },
     {
-      icon: "📋",
+      icon: <IconClipboard className={ICON_PROBLEM} />,
       title: "Treinamentos genéricos",
       body: "Capacitações desconectadas da realidade do setor financeiro não geram adoção. O time assiste, volta para a mesa e continua como antes.",
     },
     {
-      icon: "🔒",
+      icon: <IconLock className={ICON_PROBLEM} />,
       title: "Tecnologia sem adoção",
       body: "Investir em IA sem preparar a equipe é queimar dinheiro. A tecnologia só gera retorno quando as pessoas sabem integrá-la ao fluxo real de trabalho.",
     },
@@ -167,7 +371,7 @@ function Problem() {
               key={p.title}
               className="rounded-2xl border border-[#1E1E2E] bg-[#0F0F1A] p-8 hover:border-[#7C6FF7]/30 transition-colors"
             >
-              <div className="text-3xl mb-5">{p.icon}</div>
+              <div className="mb-5">{p.icon}</div>
               <h3 className="text-lg font-semibold text-white mb-3">
                 {p.title}
               </h3>
@@ -372,14 +576,23 @@ const NIVEL_COLORS: Record<string, string> = {
   "Todos os níveis": "bg-[#1E1E2E] text-[#9595B8] border-[#1E1E2E]",
 };
 
-const TRILHA_META: Record<string, { desc: string; icon: string }> = {
+const TRILHA_META: Record<string, { desc: string; icon: ReactNode }> = {
   Todos: {
-    icon: "📋",
+    icon: <IconClipboard className={ICON_TAB} />,
     desc: "Catálogo completo — filtre por trilha para ver só o que importa para o seu time.",
   },
-  Operacional: { icon: "⚙️", desc: "Para todos os perfis — do iniciante ao avançado" },
-  Especialização: { icon: "🎯", desc: "Módulos específicos para cada função do setor financeiro" },
-  Dev: { icon: "💻", desc: "Para desenvolvedores e times técnicos" },
+  Operacional: {
+    icon: <IconCog className={ICON_TAB} />,
+    desc: "Para todos os perfis — do iniciante ao avançado",
+  },
+  Especialização: {
+    icon: <IconTarget className={ICON_TAB} />,
+    desc: "Módulos específicos para cada função do setor financeiro",
+  },
+  Dev: {
+    icon: <IconLaptop className={ICON_TAB} />,
+    desc: "Para desenvolvedores e times técnicos",
+  },
 };
 
 function Courses() {
@@ -418,7 +631,7 @@ function Courses() {
                   : "border border-[#1E1E2E] text-[#9090B0] hover:border-[#7C6FF7]/40 hover:text-white"
               }`}
             >
-              <span>{TRILHA_META[t].icon}</span>
+              {TRILHA_META[t].icon}
               {t}
             </button>
           ))}
@@ -503,24 +716,24 @@ function Courses() {
 // COMUNIDADE
 // ─────────────────────────────────────────────
 function Community() {
-  const perks = [
+  const perks: { icon: ReactNode; title: string; body: string }[] = [
     {
-      icon: "💬",
+      icon: <IconMessage className={ICON_COMMUNITY} />,
       title: "Tire dúvidas em tempo real",
       body: "Canal dedicado para perguntas sobre ferramentas, prompts e automações. Respostas de quem já resolveu o mesmo problema no setor financeiro — não de uma IA genérica.",
     },
     {
-      icon: "🔁",
+      icon: <IconRepeat className={ICON_COMMUNITY} />,
       title: "Troca de casos reais",
       body: "Membros compartilham automações que funcionaram, fluxos que economizaram horas e erros que valem mais que qualquer treinamento teórico.",
     },
     {
-      icon: "📡",
+      icon: <IconSignal className={ICON_COMMUNITY} />,
       title: "Curadoria semanal de IA",
       body: "O mundo da IA muda toda semana. Na comunidade você recebe curadoria filtrada para o mercado financeiro — sem o ruído de quem não conhece o setor.",
     },
     {
-      icon: "🤝",
+      icon: <IconHandshake className={ICON_COMMUNITY} />,
       title: "Network exclusivo do setor",
       body: "Fundos, gestoras, fintechs e advisors discutindo IA no mesmo espaço. Um nível de conversa que não existe em nenhum fórum aberto.",
     },
@@ -596,7 +809,7 @@ function Community() {
               key={p.title}
               className="flex gap-5 rounded-2xl border border-[#1E1E2E] bg-[#0F0F1A] p-7 hover:border-[#7C6FF7]/30 transition-colors"
             >
-              <span className="text-2xl mt-0.5 shrink-0">{p.icon}</span>
+              {p.icon}
               <div>
                 <h3 className="text-base font-semibold text-white mb-2">
                   {p.title}
@@ -741,8 +954,8 @@ function Contact() {
             Pronto para começar?
           </h2>
           <p className="text-[#9090B0]">
-            Agende um diagnóstico gratuito. Em 30 minutos você vai entender
-            exatamente onde sua equipe está e qual é o próximo passo.
+            Agende um diagnóstico gratuito e alinhe com a gente onde sua equipe
+            está hoje e o que faz sentido como próximo passo.
           </p>
         </div>
 
@@ -756,9 +969,7 @@ function Contact() {
               className="flex justify-center sm:justify-start"
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-4 py-2 text-xs font-medium text-emerald-300">
-                <span className="text-emerald-400" aria-hidden>
-                  ✓
-                </span>
+                <IconCheck className="h-3.5 w-3.5 shrink-0 text-emerald-400" />
                 Mensagem recebida — retornaremos em até 24 horas.
               </span>
             </div>
