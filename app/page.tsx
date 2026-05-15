@@ -102,7 +102,7 @@ function Hero() {
         </div>
 
         {/* Métricas rápidas */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div className="mt-20 grid w-full max-w-6xl grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4 md:gap-6 mx-auto items-stretch">
           {[
             { value: "4 fases", label: "Metodologia estruturada" },
             { value: "10 sem.", label: "Da adoção à autonomia" },
@@ -111,10 +111,12 @@ function Hero() {
           ].map((m) => (
             <div
               key={m.label}
-              className="rounded-xl border border-[#1E1E2E] bg-[#0F0F1A]/60 p-5 text-left"
+              className="flex h-full min-w-0 flex-col rounded-xl border border-[#1E1E2E] bg-[#0F0F1A]/60 p-5 text-left"
             >
-              <div className="text-2xl font-bold text-white mb-1">{m.value}</div>
-              <div className="text-xs text-[#9090B0]">{m.label}</div>
+              <div className="mb-1 text-2xl font-bold tracking-tight text-white md:whitespace-nowrap">
+                {m.value}
+              </div>
+              <div className="text-xs leading-snug text-[#A8A8C8]">{m.label}</div>
             </div>
           ))}
         </div>
