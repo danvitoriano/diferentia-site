@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080810;
+  color: #F0F0FA;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar sutil */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080810;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a40;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a58;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #c5c0ff 50%, #7C6FF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #F5D98B 0%, #E8B84B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glow {
+    border: 1px solid rgba(124, 111, 247, 0.3);
+    box-shadow: 0 0 20px rgba(124, 111, 247, 0.08);
+  }
+
+  .card-surface {
+    background: rgba(15, 15, 26, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 30, 46, 0.8);
+  }
+}
