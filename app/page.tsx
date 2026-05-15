@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 
 // ─────────────────────────────────────────────
 // NAV
@@ -679,6 +679,8 @@ function Community() {
 // ─────────────────────────────────────────────
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const [isPending, startTransition] = useTransition();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -694,8 +696,24 @@ function Contact() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: integrar com backend / Resend / Make
-    setSent(true);
+    setError("");
+    startTransition(async () => {
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        });
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));
+          setError(data.error ?? "Erro ao enviar. Tente novamente.");
+          return;
+        }
+        setSent(true);
+      } catch {
+        setError("Erro de conexão. Tente novamente.");
+      }
+    });
   }
 
   return (
@@ -797,11 +815,16 @@ function Contact() {
               />
             </div>
 
+            {error && (
+              <p className="text-xs text-red-400 text-center">{error}</p>
+            )}
+
             <button
               type="submit"
-              className="w-full rounded-full bg-[#7C6FF7] py-3.5 text-sm font-semibold text-white hover:bg-[#5B54D6] transition-all hover:shadow-lg hover:shadow-[#7C6FF7]/25"
+              disabled={isPending}
+              className="w-full rounded-full bg-[#7C6FF7] py-3.5 text-sm font-semibold text-white hover:bg-[#5B54D6] transition-all hover:shadow-lg hover:shadow-[#7C6FF7]/25 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Agendar diagnóstico gratuito
+              {isPending ? "Enviando..." : "Agendar diagnóstico gratuito"}
             </button>
           </form>
         )}
