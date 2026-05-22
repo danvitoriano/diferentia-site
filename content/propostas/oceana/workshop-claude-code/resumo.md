@@ -1,19 +1,30 @@
 ## Programa detalhado
 
-### Workshop Claude Code
+Workshop prático de 3h para até 15 pessoas. Pré-requisito: Vibe Coders concluído e licença Claude Code confirmada antes da turma.
 
-*Duração a definir | Até 15 pessoas | Pré-requisito: Vibe Coders*
-
-#### Parte 1: Fundamentos Claude Code (metade da carga horária)
+#### Parte 1: Instalação e configuração (45 min)
 
 - Instalação e configuração no terminal
 - Primeiros comandos: delegação de tarefas técnicas ao Claude via CLI
-- CLAUDE.md: configurando o assistente para o contexto e políticas da Oceana
+- Tour pelos recursos do Claude Code
+
+#### Parte 2: CLAUDE.md e slash commands (60 min)
+
+- `CLAUDE.md`: configurando o assistente para o contexto e políticas da Oceana
 - Slash commands customizados para o workflow de análise
-
-#### Parte 2: Agentes e automações avançadas (metade da carga horária)
-
-- Construção de agente de monitoramento setorial passo a passo
-- Integração ao fluxo de análise quantitativa
 - Git + Claude Code: versionamento com contexto de IA
-- Exercício final: cada participante sai com uma automação real rodando no terminal
+- Demonstração: `/analisar-release` funcionando
+
+#### Parte 3: Cada participante configura o próprio fluxo (45 min)
+
+- Prática guiada: cada um cria seu slash command e `CLAUDE.md`
+- Construção de automação real para o workflow de análise
+- Suporte ao vivo do facilitador
+
+#### Encerramento (30 min)
+
+- Cada participante demonstra a automação funcionando no próprio terminal
+- Integração ao fluxo de análise quantitativa
+- Dúvidas e próximos passos
+
+Laboratório hands-on: não substitui o Vibe Coders, aprofunda Git, hooks e automações no próprio ambiente.
