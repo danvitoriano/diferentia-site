@@ -1,9 +1,13 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PropostasNav } from "@/components/propostas/propostas-nav";
 import { Breadcrumbs } from "@/components/propostas/breadcrumbs";
 import { MarkdownContent } from "@/components/propostas/markdown-content";
-import { getCourse, getResumoMarkdown, listDetalheFiles } from "@/lib/propostas/content";
+import {
+  getCourse,
+  getResumoMarkdown,
+  hasExemplosOceana,
+  getExemplosOceanaMarkdown,
+} from "@/lib/propostas/content";
 
 export default async function CursoResumoPage({
   params,
@@ -15,7 +19,8 @@ export default async function CursoResumoPage({
   if (!course) notFound();
 
   const resumo = getResumoMarkdown(slug);
-  const detalhe = listDetalheFiles(slug);
+  const showExemplos = hasExemplosOceana(slug);
+  const exemplos = showExemplos ? getExemplosOceanaMarkdown(slug) : "";
 
   return (
     <>
@@ -40,33 +45,16 @@ export default async function CursoResumoPage({
           <MarkdownContent content={resumo} />
         </div>
 
-        {detalhe.length > 0 ? (
-          <section className="mt-12 rounded-xl border border-gray-200 bg-gray-50 p-6">
-            <h2 className="text-lg font-semibold text-gray-900">Roteiro completo</h2>
-            <p className="mt-1 text-sm text-gray-600">
-              Conteúdo detalhado para facilitadores: módulos e sessões, na ordem sugerida.
+        {showExemplos ? (
+          <section className="mt-12 border-t border-gray-200 pt-10">
+            <h2 className="text-xl font-semibold text-gray-900">Exemplos para a Oceana</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Prompts e casos de uso adaptados ao contexto da Oceana. Use na preparação ou durante
+              as sessões.
             </p>
-            <ol className="mt-5 space-y-2">
-              {detalhe.map((f, i) => (
-                <li key={f.slug}>
-                  <Link
-                    href={`/propostas/oceana/${slug}/detalhe/${f.slug}`}
-                    className="flex gap-3 rounded-lg border border-transparent px-3 py-2 text-gray-800 transition hover:border-violet-200 hover:bg-white"
-                  >
-                    <span className="shrink-0 font-semibold tabular-nums text-violet-600">
-                      {i + 1}.
-                    </span>
-                    <span className="text-violet-700 hover:underline">{f.title}</span>
-                  </Link>
-                </li>
-              ))}
-            </ol>
-            <Link
-              href={`/propostas/oceana/${slug}/detalhe`}
-              className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-violet-600 hover:underline"
-            >
-              Ver índice do roteiro →
-            </Link>
+            <div className="mt-6">
+              <MarkdownContent content={exemplos} />
+            </div>
           </section>
         ) : null}
       </main>

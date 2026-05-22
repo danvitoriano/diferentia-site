@@ -1,13 +1,10 @@
 import { PropostasNav } from "@/components/propostas/propostas-nav";
 import { CourseCard } from "@/components/propostas/course-card";
-import { getTrilha, getLayerLabel } from "@/lib/propostas/content";
-import type { PropostasLayer } from "@/lib/propostas/types";
+import { getTrilha, getCoursesForDisplay } from "@/lib/propostas/content";
 
 export default function OceanaTrilhaPage() {
   const trilha = getTrilha();
-  const layerOrder: PropostasLayer[] = ["nucleo", "code", "workshop"];
-
-  let globalStep = 0;
+  const courses = getCoursesForDisplay();
 
   return (
     <>
@@ -25,51 +22,25 @@ export default function OceanaTrilhaPage() {
           <h2 className="text-sm font-semibold text-gray-900">Como navegar</h2>
           <ol className="mt-3 space-y-2 text-sm leading-relaxed text-gray-700">
             <li>
-              <strong className="text-gray-900">1.</strong> Escolha um curso abaixo para ver o
-              resumo (objetivos, carga e público).
+              <strong className="text-gray-900">1.</strong> Escolha um módulo abaixo para ver o
+              programa (objetivos, carga e estrutura das sessões).
             </li>
             <li>
-              <strong className="text-gray-900">2.</strong> No resumo, acesse o{" "}
-              <strong className="text-gray-900">roteiro completo</strong> com módulos e sessões para
-              facilitadores.
-            </li>
-            <li>
-              <strong className="text-gray-900">3.</strong> Use{" "}
-              <strong className="text-gray-900">Guia por área</strong> no menu para adaptar
-              exercícios a cada perfil da Oceana.
+              <strong className="text-gray-900">2.</strong> Na mesma página, role até{" "}
+              <strong className="text-gray-900">Exemplos para a Oceana</strong>: prompts e casos
+              prontos para usar no dia a dia do time.
             </li>
           </ol>
         </div>
 
-        {layerOrder.map((layerId) => {
-          const courses = trilha.courses.filter((c) => c.layer === layerId);
-          if (courses.length === 0) return null;
-
-          const layerDescriptions: Record<PropostasLayer, string> = {
-            nucleo: "Sequência recomendada para a maioria do time.",
-            code: "Para quem quer construir ferramentas no terminal (opcional).",
-            workshop: "Laboratório hands-on de um dia (opcional).",
-          };
-
-          return (
-            <section key={layerId} className="mt-14">
-              <div className="border-b border-gray-200 pb-3">
-                <h2 className="text-xl font-semibold text-gray-900">
-                  {getLayerLabel(layerId)}
-                </h2>
-                <p className="mt-1 text-sm text-gray-500">{layerDescriptions[layerId]}</p>
-              </div>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {courses.map((course) => {
-                  globalStep += 1;
-                  return (
-                    <CourseCard key={course.slug} course={course} step={globalStep} />
-                  );
-                })}
-              </div>
-            </section>
-          );
-        })}
+        <section className="mt-10">
+          <h2 className="sr-only">Módulos da trilha</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {courses.map((course, i) => (
+              <CourseCard key={course.slug} course={course} step={i + 1} />
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );

@@ -19,6 +19,12 @@ alwaysApply: true
 - **Nunca usar travessão** (— nem –) em copy do site, portal `/propostas/oceana`, `content/propostas/`, metadata e e-mails.
 - Substituir por `:`, vírgula, ponto, parênteses ou "a" em intervalos (`0:00 a 0:05`).
 
+## Portal Oceana (`/propostas/oceana`)
+
+- Cliente vê: resumo do programa + `exemplos-oceana.md` em cada curso.
+- **Não** expor: roteiro detalhado (`detalhe/`), guia por área.
+- Listar **todos** os módulos numa grade única (sem agrupar núcleo/opcional).
+
 ## Exemplos
 
 - Errado: `Diferentia — Agentic AI`, `Cowork — Demonstrativo`

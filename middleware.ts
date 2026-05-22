@@ -12,6 +12,12 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  const isRestricted =
+    pathname.includes("/detalhe") || pathname === "/propostas/oceana/guia-areas";
+  if (isRestricted) {
+    return NextResponse.redirect(new URL("/propostas/oceana", request.url));
+  }
+
   const token = request.cookies.get(SESSION_COOKIE)?.value;
   let valid = false;
   try {

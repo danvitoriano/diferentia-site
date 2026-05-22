@@ -18,11 +18,6 @@ export function CourseCard({ course, step }: { course: TrilhaCourse; step?: numb
             Módulo {String(course.moduleNumber).padStart(2, "0")}
           </span>
         ) : null}
-        {course.optional ? (
-          <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600">
-            Opcional
-          </span>
-        ) : null}
         {course.status === "em-definicao" ? (
           <span className="rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800">
             Em definição
@@ -35,7 +30,7 @@ export function CourseCard({ course, step }: { course: TrilhaCourse; step?: numb
       <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">{course.subtitle}</p>
       <p className="mt-4 text-sm font-medium text-violet-600">{course.duration}</p>
       <span className="mt-3 text-xs font-medium text-gray-400 group-hover:text-violet-600">
-        Ver resumo do curso →
+        Ver programa e exemplos →
       </span>
     </Link>
   );

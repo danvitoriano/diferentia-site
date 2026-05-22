@@ -1,7 +1,7 @@
 {
   "client": "oceana",
   "title": "Trilha Oceana",
-  "description": "Sequência de capacitação em agentes de IA para o mercado de capitais, com casos adaptados à Oceana. Núcleo recomendado para a maioria do time; módulos técnicos e workshops opcionais.",
+  "description": "Capacitação em agentes de IA para o mercado de capitais. Cada módulo inclui resumo do programa e exemplos de prompts e casos adaptados à Oceana.",
   "layers": [
     {
       "id": "nucleo",

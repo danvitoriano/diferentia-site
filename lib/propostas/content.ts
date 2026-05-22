@@ -22,6 +22,28 @@ export function getGuiaAreasMarkdown(): string {
   return fs.readFileSync(path.join(CONTENT_ROOT, "guia-areas.md"), "utf8");
 }
 
+export function hasExemplosOceana(slug: string): boolean {
+  return fs.existsSync(path.join(CONTENT_ROOT, slug, "exemplos-oceana.md"));
+}
+
+export function getExemplosOceanaMarkdown(slug: string): string {
+  const filePath = path.join(CONTENT_ROOT, slug, "exemplos-oceana.md");
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`exemplos-oceana.md not found for ${slug}`);
+  }
+  return fs.readFileSync(filePath, "utf8");
+}
+
+/** Ordem de exibição na trilha (todos os cursos, sem agrupar por camada). */
+export function getCoursesForDisplay(): TrilhaCourse[] {
+  return [...getTrilha().courses].sort((a, b) => {
+    const na = a.moduleNumber ?? 99;
+    const nb = b.moduleNumber ?? 99;
+    if (na !== nb) return na - nb;
+    return a.title.localeCompare(b.title, "pt-BR");
+  });
+}
+
 export function listDetalheFiles(slug: string): DetalheFile[] {
   const detalheDir = path.join(CONTENT_ROOT, slug, "detalhe");
   if (!fs.existsSync(detalheDir)) return [];
