@@ -1,4 +1,4 @@
-# Exemplos específicos Oceana: Vibe Coders
+# Exemplos Oceana: Claude Code para Vibe Coders
 
 Cada módulo traz o exemplo padrão (analistas) seguido de projetos
 alternativos por área. O facilitador escolhe o mais adequado para a turma.

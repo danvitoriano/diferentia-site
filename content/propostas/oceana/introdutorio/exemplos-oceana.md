@@ -1,4 +1,4 @@
-# Exemplos específicos Oceana: Curso Introdutório
+# Exemplos Oceana: Claude Essentials: do prompt ao agente
 
 Use estes exemplos nos módulos indicados para substituir os exemplos genéricos.
 Cada módulo traz o exemplo padrão (analistas de investimento) seguido de

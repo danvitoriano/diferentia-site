@@ -1,4 +1,4 @@
-# Exemplos específicos Oceana: Claude Code Avançado
+# Exemplos Oceana: Claude Code Avançado
 
 Use estes exemplos nos módulos indicados para substituir os exemplos genéricos.
 Os arquivos de demonstração ficam em `dados/releases-demo/` (números fictícios).

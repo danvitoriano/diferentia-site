@@ -1,4 +1,4 @@
-# Workshop Prático de Cowork
+# Workshop: Claude Cowork (prático)
 
 ### Exemplos Oceana
 

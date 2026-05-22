@@ -1,4 +1,4 @@
-# Exemplos Oceana: Workshop Prático de Cowork
+# Exemplos Oceana: Workshop: Claude Cowork (prático)
 
 Prompts de referência e casos de uso adaptados para a Oceana Investimentos.
 Como este workshop usa os arquivos reais de cada participante, os exemplos abaixo servem

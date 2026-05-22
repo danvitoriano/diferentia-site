@@ -1,4 +1,4 @@
-# Vibe Coders
+# Claude Code para Vibe Coders
 
 ### Exemplos Oceana
 

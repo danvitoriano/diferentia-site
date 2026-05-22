@@ -1,4 +1,4 @@
-# Demonstrativo de Cowork
+# Automação com Claude Cowork
 
 ### Exemplos Oceana
 

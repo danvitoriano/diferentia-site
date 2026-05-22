@@ -1,4 +1,4 @@
-# Claude Code: Avançado
+# Claude Code Avançado
 
 **Carga:** ~6h (+ 1h30 opcional de API/Agent SDK)
 

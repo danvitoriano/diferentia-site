@@ -1,4 +1,4 @@
-# Curso Introdutório
+# Claude Essentials: do prompt ao agente
 
 ### Exemplos Oceana (nova seção no slide, após "O que você vai aprender")
 

@@ -1,4 +1,4 @@
-# Módulo Avançado
+# Claude para Decisões Críticas
 
 ### Exemplos Oceana
 
