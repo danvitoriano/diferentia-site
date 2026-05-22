@@ -25,11 +25,8 @@ export default function GuiaAreasPage() {
         </div>
       </div>
       <main className="mw-page-body mw-page-wrap">
-        <div className="mw-editorial-shell">
-          <div className="mw-editorial-content">
-            <MarkdownContent content={content} />
-          </div>
-          <div className="mw-editorial-rail" aria-hidden="true" />
+        <div className="mw-editorial-content">
+          <MarkdownContent content={content} />
         </div>
       </main>
     </>

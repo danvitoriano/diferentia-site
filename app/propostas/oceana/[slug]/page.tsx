@@ -44,27 +44,24 @@ export default async function CursoResumoPage({
         </div>
       </div>
       <main className="mw-page-body mw-page-wrap">
-        <div className="mw-editorial-shell">
-          <div className="mw-editorial-content">
-            <MarkdownContent content={resumo} />
+        <div className="mw-editorial-content">
+          <MarkdownContent content={resumo} />
 
-            {showExemplos ? (
-              <section className="mt-14 pt-2">
-                <p className="mw-label-large">Por perfil</p>
-                <h2 className="mt-2 mw-title-large">O que cada área recebe</h2>
-                <p className="mt-3 mw-body-medium">
-                  O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
-                  {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
-                    ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."
-                    : " (analistas, operações, jurídico, comercial e administrativo)."}
-                </p>
-                <div className="mt-8">
-                  <AreaExemplosAccordion content={exemplos} />
-                </div>
-              </section>
-            ) : null}
-          </div>
-          <div className="mw-editorial-rail" aria-hidden="true" />
+          {showExemplos ? (
+            <section className="mt-14 pt-2">
+              <p className="mw-label-large">Por perfil</p>
+              <h2 className="mt-2 mw-title-large">O que cada área recebe</h2>
+              <p className="mt-3 mw-body-medium">
+                O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
+                {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
+                  ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."
+                  : " (analistas, operações, jurídico, comercial e administrativo)."}
+              </p>
+              <div className="mt-8">
+                <AreaExemplosAccordion content={exemplos} />
+              </div>
+            </section>
+          ) : null}
         </div>
       </main>
     </>
