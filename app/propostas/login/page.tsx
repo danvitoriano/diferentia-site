@@ -3,6 +3,17 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense, useRef, useState } from "react";
 
+function readMdField(form: HTMLFormElement, name: string): string {
+  const fromForm = form.elements.namedItem(name);
+  if (fromForm && "value" in fromForm && typeof (fromForm as { value: unknown }).value === "string") {
+    return (fromForm as { value: string }).value.trim();
+  }
+  const field = form.querySelector(`md-outlined-text-field[name="${name}"]`) as
+    | (HTMLElement & { value: string })
+    | null;
+  return (field?.value ?? "").trim();
+}
+
 function LoginForm() {
   const searchParams = useSearchParams();
   const next = searchParams.get("next") ?? "/propostas/oceana";
@@ -15,17 +26,18 @@ function LoginForm() {
     setError("");
     setLoading(true);
     try {
+      await customElements.whenDefined("md-outlined-text-field");
       const form = formRef.current;
-      const user = (
-        form?.querySelector('md-outlined-text-field[name="user"]') as HTMLElement & {
-          value: string;
-        }
-      )?.value;
-      const password = (
-        form?.querySelector('md-outlined-text-field[name="password"]') as HTMLElement & {
-          value: string;
-        }
-      )?.value;
+      if (!form) {
+        setError("Formulário indisponível. Recarregue a página.");
+        return;
+      }
+      const user = readMdField(form, "user");
+      const password = readMdField(form, "password");
+      if (!user || !password) {
+        setError("Preencha usuário e senha.");
+        return;
+      }
 
       const res = await fetch("/api/propostas/auth", {
         method: "POST",

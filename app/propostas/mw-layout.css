@@ -1,10 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap");
 
 .propostas-mw {
-  --md-ref-typeface-brand: var(--font-propostas, "Roboto"), system-ui, sans-serif;
-  --md-ref-typeface-plain: var(--font-propostas, "Roboto"), system-ui, sans-serif;
-  background-color: var(--md-sys-color-surface);
+  --md-ref-typeface-brand: var(--font-propostas, "Inter"), system-ui, sans-serif;
+  --md-ref-typeface-plain: var(--font-propostas, "Inter"), system-ui, sans-serif;
+  --diferentia-gold: #e8b84b;
+  --diferentia-indigo: #7c6ff7;
+  background-color: #ffffff;
   color: var(--md-sys-color-on-surface);
+}
+
+.propostas-mw .mw-page-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+.propostas-mw .mw-editorial-shell {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .propostas-mw .mw-editorial-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(4rem, 7%);
+    gap: 3rem;
+  }
+}
+.propostas-mw .mw-editorial-rail {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .propostas-mw .mw-editorial-rail {
+    display: block;
+    align-self: stretch;
+    min-height: 12rem;
+    border-left: 2px solid color-mix(in srgb, var(--diferentia-indigo) 35%, transparent);
+    margin-top: 0.5rem;
+  }
+}
+.propostas-mw .mw-editorial-content {
+  max-width: 42rem;
 }
 
 .material-symbols-outlined {
@@ -24,19 +62,17 @@
 
 /* Hero */
 .propostas-mw .mw-hero-band {
-  background: linear-gradient(
-    165deg,
-    var(--md-sys-color-primary-container) 0%,
-    color-mix(in srgb, var(--md-sys-color-tertiary-container) 40%, var(--md-sys-color-surface)) 38%,
-    var(--md-sys-color-surface) 85%
-  );
-  padding-bottom: 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  padding-bottom: 2.5rem;
 }
 .propostas-mw .mw-hero-band-compact {
   padding-bottom: 1.25rem;
 }
 .propostas-mw .mw-page-body {
-  padding-top: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background: #ffffff;
 }
 
 /* App bar */
@@ -44,7 +80,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--md-sys-color-surface) 90%, transparent);
+  background: color-mix(in srgb, #ffffff 92%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--md-sys-color-outline-variant);
@@ -57,7 +93,7 @@
   color: inherit;
 }
 .propostas-mw .mw-brand-dot {
-  color: var(--md-sys-color-primary);
+  color: var(--diferentia-indigo);
 }
 .propostas-mw .mw-nav-pill {
   display: inline-flex;
@@ -81,15 +117,16 @@
 
 /* Tipografia */
 .propostas-mw .mw-display-small {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--md-sys-color-on-surface);
 }
 @media (min-width: 640px) {
   .propostas-mw .mw-display-small {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 .propostas-mw .mw-title-large {
@@ -115,10 +152,12 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 .propostas-mw .mw-label-large {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.25rem;
-  font-weight: 500;
-  color: var(--md-sys-color-primary);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--diferentia-gold);
 }
 
 /* Card de módulo */
@@ -126,9 +165,9 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  background: var(--md-sys-color-surface-container-lowest);
+  background: #ffffff;
   border: 1px solid var(--md-sys-color-outline-variant);
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   transition:
     transform 0.25s ease,
     border-color 0.2s ease,
@@ -136,8 +175,8 @@
 }
 .propostas-mw .mw-module-card:hover {
   transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
+  border-color: color-mix(in srgb, var(--diferentia-indigo) 30%, transparent);
+  box-shadow: 0 8px 24px color-mix(in srgb, #1a1a1a 6%, transparent);
 }
 .propostas-mw .mw-module-card-inner {
   display: flex;
@@ -158,8 +197,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  background: var(--diferentia-indigo);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -183,21 +222,21 @@
   margin: 0;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--md-sys-color-primary);
+  color: var(--diferentia-indigo);
 }
 .propostas-mw .mw-module-card-cta {
   margin-top: 0.25rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--md-sys-color-primary);
+  color: var(--diferentia-indigo);
 }
 
 /* Caixa "Como navegar" */
 .propostas-mw .mw-info-box {
-  background: var(--md-sys-color-surface-container-low);
+  background: #f8f9fa;
   border: 1px solid var(--md-sys-color-outline-variant);
-  border-radius: 1.25rem;
-  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
 }
 
 /* Acordeão áreas */
@@ -260,34 +299,41 @@
 .propostas-mw .mw-expansion-body .propostas-prose p strong {
   display: block;
   margin-top: 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--md-sys-color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--diferentia-gold);
 }
 
 /* Prose */
 .propostas-mw .propostas-prose h1 {
   font-size: 1.75rem;
   line-height: 2.25rem;
-  margin: 2rem 0 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
   color: var(--md-sys-color-on-surface);
 }
 .propostas-mw .propostas-prose h2 {
-  font-size: 1.375rem;
-  line-height: 1.75rem;
-  margin: 1.75rem 0 0.75rem;
-  color: var(--md-sys-color-on-surface);
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 2.5rem 0 1rem;
+  color: var(--diferentia-gold);
 }
 .propostas-mw .propostas-prose h3 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.5rem;
-  font-weight: 500;
-  margin: 1.25rem 0 0.5rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.75rem;
   color: var(--md-sys-color-on-surface);
 }
 .propostas-mw .propostas-prose p {
   margin-bottom: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.6;
   color: var(--md-sys-color-on-surface-variant);
 }
 .propostas-mw .propostas-prose ul,
@@ -312,7 +358,7 @@
   font-weight: 500;
 }
 .propostas-mw .propostas-prose a {
-  color: var(--md-sys-color-primary);
+  color: var(--diferentia-indigo);
 }
 .propostas-mw .propostas-prose code {
   background: var(--md-sys-color-surface-container-high);
@@ -326,11 +372,11 @@
   overflow-x: auto;
 }
 .propostas-mw .propostas-prose blockquote {
-  border-left: 4px solid var(--md-sys-color-primary);
+  border-left: 3px solid var(--diferentia-indigo);
   padding: 0.75rem 1rem;
-  background: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
-  border-radius: 0 12px 12px 0;
+  background: #f8f9fa;
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 0 8px 8px 0;
 }
 
 /* Login */
@@ -385,7 +431,7 @@
 .propostas-mw .mw-roteiro-item-title {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--md-sys-color-primary);
+  color: var(--diferentia-indigo);
 }
 
 /* Sidebar índice */

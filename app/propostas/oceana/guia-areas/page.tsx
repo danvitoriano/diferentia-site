@@ -9,24 +9,27 @@ export default function GuiaAreasPage() {
     <>
       <PropostasNav />
       <div className="mw-hero-band mw-hero-band-compact">
-        <div className="mx-auto max-w-3xl px-4 pb-4 pt-6 sm:px-6">
+        <div className="mw-page-wrap pb-6 pt-8">
           <Breadcrumbs
             items={[
               { label: "Trilha", href: "/propostas/oceana" },
               { label: "Guia por área" },
             ]}
           />
-          <header className="mt-4">
+          <header className="mt-6 max-w-3xl">
             <h1 className="mw-display-small">Guia por área</h1>
-            <p className="mt-2 mw-body-large">
+            <p className="mt-3 mw-body-large">
               Como adaptar exercícios e demos para cada perfil da Oceana.
             </p>
           </header>
         </div>
       </div>
-      <main className="mw-page-body mx-auto max-w-3xl px-4 pb-12 sm:px-6">
-        <div className="mt-2">
-          <MarkdownContent content={content} />
+      <main className="mw-page-body mw-page-wrap">
+        <div className="mw-editorial-shell">
+          <div className="mw-editorial-content">
+            <MarkdownContent content={content} />
+          </div>
+          <div className="mw-editorial-rail" aria-hidden="true" />
         </div>
       </main>
     </>

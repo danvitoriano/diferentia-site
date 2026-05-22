@@ -11,7 +11,7 @@ export function PropostasNav() {
 
   return (
     <header className="mw-top-app-bar">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <div className="mw-page-wrap flex items-center justify-between gap-4 py-3">
         <Link href="/propostas/oceana" className="mw-brand-link">
           <span className="mw-title-medium">
             Diferentia<span className="mw-brand-dot">.</span>

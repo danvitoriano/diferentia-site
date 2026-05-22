@@ -27,41 +27,45 @@ export default async function CursoResumoPage({
     <>
       <PropostasNav />
       <div className="mw-hero-band mw-hero-band-compact">
-        <div className="mx-auto max-w-3xl px-4 pb-4 pt-6 sm:px-6">
+        <div className="mw-page-wrap pb-6 pt-8">
           <Breadcrumbs
             items={[
               { label: "Trilha", href: "/propostas/oceana" },
               { label: course.title },
             ]}
           />
-          <header className="mt-4">
+          <header className="mt-6 max-w-3xl">
             <h1 className="mw-display-small">{course.title}</h1>
-            <p className="mt-2 mw-body-large">{course.subtitle}</p>
-            <p className="mt-3">
+            <p className="mt-3 mw-body-large">{course.subtitle}</p>
+            <p className="mt-4">
               <span className="mw-module-tag">{course.duration}</span>
             </p>
           </header>
         </div>
       </div>
-      <main className="mw-page-body mx-auto max-w-3xl px-4 pb-12 sm:px-6">
-        <div className="mt-2">
-          <MarkdownContent content={resumo} />
-        </div>
+      <main className="mw-page-body mw-page-wrap">
+        <div className="mw-editorial-shell">
+          <div className="mw-editorial-content">
+            <MarkdownContent content={resumo} />
 
-        {showExemplos ? (
-          <section className="mt-12 pt-4">
-            <h2 className="mw-title-large">O que cada área recebe</h2>
-            <p className="mt-2 mw-body-medium">
-              O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
-              {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
-                ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."
-                : " (analistas, operações, jurídico, comercial e administrativo)."}
-            </p>
-            <div className="mt-6">
-              <AreaExemplosAccordion content={exemplos} />
-            </div>
-          </section>
-        ) : null}
+            {showExemplos ? (
+              <section className="mt-14 pt-2">
+                <p className="mw-label-large">Por perfil</p>
+                <h2 className="mt-2 mw-title-large">O que cada área recebe</h2>
+                <p className="mt-3 mw-body-medium">
+                  O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
+                  {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
+                    ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."
+                    : " (analistas, operações, jurídico, comercial e administrativo)."}
+                </p>
+                <div className="mt-8">
+                  <AreaExemplosAccordion content={exemplos} />
+                </div>
+              </section>
+            ) : null}
+          </div>
+          <div className="mw-editorial-rail" aria-hidden="true" />
+        </div>
       </main>
     </>
   );

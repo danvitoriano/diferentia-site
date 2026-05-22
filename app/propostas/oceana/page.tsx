@@ -10,13 +10,13 @@ export default function OceanaTrilhaPage() {
     <>
       <PropostasNav />
       <div className="mw-hero-band">
-        <div className="mx-auto max-w-5xl px-4 pb-6 pt-8 sm:px-6">
+        <div className="mw-page-wrap pb-8 pt-10">
           <p className="mw-label-large">Agentes de IA · mercado de capitais</p>
-          <h1 className="mt-3 mw-display-small">{trilha.title}</h1>
-          <p className="mt-4 max-w-2xl mw-body-large">{trilha.description}</p>
+          <h1 className="mt-4 mw-display-small">{trilha.title}</h1>
+          <p className="mt-5 max-w-2xl mw-body-large">{trilha.description}</p>
         </div>
       </div>
-      <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
+      <main className="mw-page-body mw-page-wrap">
         <div className="mw-info-box">
           <h2 className="mw-title-medium">Como navegar</h2>
           <ol className="mt-3 space-y-2 mw-body-medium" style={{ paddingLeft: "1.25rem", margin: 0 }}>
@@ -36,9 +36,9 @@ export default function OceanaTrilhaPage() {
           </ol>
         </div>
 
-        <section className="mt-8">
+        <section className="mt-12">
           <h2 className="sr-only">Módulos da trilha</h2>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {courses.map((course, i) => (
               <CourseCard key={course.slug} course={course} step={i + 1} />
             ))}

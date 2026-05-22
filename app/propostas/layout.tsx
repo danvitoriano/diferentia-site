@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import { MaterialWebRoot } from "@/components/propostas/material-web-root";
 import "./mw-layout.css";
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-propostas",
 });
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function PropostasLayout({ children }: { children: React.ReactNode }) {
   return (
-    <MaterialWebRoot className={`${roboto.className} ${roboto.variable}`}>
+    <MaterialWebRoot className={`${inter.className} ${inter.variable}`}>
       {children}
     </MaterialWebRoot>
   );

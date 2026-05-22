@@ -28,7 +28,7 @@ export default async function DetalheFilePage({
     <>
       <PropostasNav />
       <div className="mw-hero-band mw-hero-band-compact">
-        <div className="mx-auto max-w-5xl px-4 pb-4 pt-6 sm:px-6">
+        <div className="mw-page-wrap pb-6 pt-8">
           <Breadcrumbs
             items={[
               { label: "Trilha", href: "/propostas/oceana" },
@@ -40,9 +40,9 @@ export default async function DetalheFilePage({
           <h1 className="mt-4 mw-display-small">{md.title}</h1>
         </div>
       </div>
-      <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
-        <div className="mt-4 grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
-          <article>
+      <main className="mw-page-body mw-page-wrap">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
+          <article className="mw-editorial-content max-w-none">
             <MarkdownContent content={md.content} />
             <DetalhePager courseSlug={slug} files={files} currentSlug={file} />
           </article>

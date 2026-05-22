@@ -19,7 +19,7 @@ export default async function DetalheIndexPage({
     <>
       <PropostasNav />
       <div className="mw-hero-band mw-hero-band-compact">
-        <div className="mx-auto max-w-5xl px-4 pb-4 pt-6 sm:px-6">
+        <div className="mw-page-wrap pb-6 pt-8">
           <Breadcrumbs
             items={[
               { label: "Trilha", href: "/propostas/oceana" },
@@ -33,7 +33,7 @@ export default async function DetalheIndexPage({
           </p>
         </div>
       </div>
-      <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
+      <main className="mw-page-body mw-page-wrap">
         {files.length === 0 ? (
           <div className="mw-info-box mt-4">
             <p className="mw-body-medium" style={{ textAlign: "center", margin: 0 }}>
