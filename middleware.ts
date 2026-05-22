@@ -5,10 +5,21 @@ import { SESSION_COOKIE, verifySessionToken } from "@/lib/propostas/session";
 const LOGIN = "/propostas/login";
 const OCEANA_PREFIX = "/propostas/oceana";
 
+function isLocalPropostasBypass(): boolean {
+  return (
+    process.env.NODE_ENV === "development" &&
+    process.env.PROPOSTAS_SKIP_AUTH === "true"
+  );
+}
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (!pathname.startsWith("/propostas/oceana")) {
+  if (!pathname.startsWith(OCEANA_PREFIX)) {
+    return NextResponse.next();
+  }
+
+  if (isLocalPropostasBypass()) {
     return NextResponse.next();
   }
 
