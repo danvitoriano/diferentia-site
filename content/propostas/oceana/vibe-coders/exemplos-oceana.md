@@ -1,4 +1,20 @@
-Construção de ferramentas com Claude Code no terminal. Entregas por área ao final do módulo.
+Módulo para **perfis técnicos** da Oceana: times de **TI e desenvolvimento** (sistemas, integrações, ferramentas internas) e, em paralelo, áreas de negócio que constroem protótipos sem stack tradicional.
+
+---
+
+## TI / Desenvolvimento
+
+**Entregas**
+
+- Claude Code instalado e validado no padrão do time (Node, CLI, conta Pro)
+- Repositório de projeto interno com `CLAUDE.md` e convenções do time
+- Primeira ferramenta ou script útil versionado (estrutura de pastas, README mínimo)
+- Fluxo repetível: descrever → gerar → revisar diff → ajustar com prompts
+- Publicação ou deploy de protótipo interno (ex.: Vercel ou ambiente aprovado pela TI)
+
+**Processos priorizados**
+
+- Ferramentas internas, automações de suporte a sistemas, protótipos de integração, documentação viva do projeto
 
 ---
 
@@ -8,7 +24,7 @@ Construção de ferramentas com Claude Code no terminal. Entregas por área ao f
 
 - Painel web simples: colar release e visualizar KPIs (receita, EBITDA, lucro, dívida)
 - Evolução do painel com comparação de trimestres e persistência local dos dados
-- Publicação ou compartilhamento do protótipo com o time de análise
+- Protótipo compartilhável com o time de análise (com validação antes de uso em decisão)
 
 **Processos priorizados**
 
@@ -55,9 +71,3 @@ Construção de ferramentas com Claude Code no terminal. Entregas por área ao f
 **Processos priorizados**
 
 - Due diligence de investidores, preparação de respostas recorrentes
-
----
-
-## Entrega comum
-
-- Cada participante apresenta **um projeto próprio** construído durante o módulo, alinhado à sua área

@@ -1,4 +1,20 @@
-Workshop intensivo no terminal (em definição). Entregas previstas por área técnica da Oceana.
+Workshop intensivo no terminal (em definição). Foco em **TI, desenvolvimento e automação**; entregas previstas também por área de negócio que usa o terminal.
+
+---
+
+## TI / Desenvolvimento
+
+**Entregas previstas**
+
+- Repositório Git com scripts e automações versionados e documentados
+- Slash commands do time (ex.: análise de release, revisão de PR interno, scaffold de serviço)
+- Agente ou fluxo repetível: ingestão de dados → validação → alerta ou relatório
+- `CLAUDE.md` e hooks alinhados à política de segurança da Oceana
+- Plano de handoff para produção (o que fica no repo, o que exige pipeline da TI)
+
+**Processos priorizados**
+
+- Integrações internas, automação de rotinas de engenharia, ferramentas de suporte a dados e sistemas legados
 
 ---
 
@@ -6,9 +22,9 @@ Workshop intensivo no terminal (em definição). Entregas previstas por área t�
 
 **Entregas previstas**
 
-- Repositório Git com scripts de análise de releases versionados e documentados
-- Slash command para processar resultados trimestrais via terminal
-- Agente ou fluxo: fechamento → comparação com limites → rascunho de alerta
+- Scripts de análise de releases versionados no Git
+- Comando no terminal para processar resultados trimestrais
+- Fluxo: fechamento → comparação com limites → rascunho de alerta
 - Integração ao fluxo de análise quantitativa do portfólio
 
 ---
@@ -19,7 +35,7 @@ Workshop intensivo no terminal (em definição). Entregas previstas por área t�
 
 - Scripts de conciliação versionados no Git
 - Automação de relatório de divergências disparada por comando
-- Documentação de governança de dados no `CLAUDE.md`
+- Governança de dados documentada no `CLAUDE.md`
 
 ---
 

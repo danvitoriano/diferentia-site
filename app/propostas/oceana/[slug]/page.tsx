@@ -49,8 +49,10 @@ export default async function CursoResumoPage({
           <section className="mt-12 border-t border-gray-200 pt-10">
             <h2 className="text-xl font-semibold text-gray-900">O que cada área recebe</h2>
             <p className="mt-2 text-sm text-gray-600">
-              O programa é comum a toda a Oceana. Abaixo, o que muda por perfil (analistas,
-              operações, jurídico, comercial e administrativo).
+              O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
+              {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
+                ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."
+                : " (analistas, operações, jurídico, comercial e administrativo)."}
             </p>
             <div className="mt-6">
               <MarkdownContent content={exemplos} />
