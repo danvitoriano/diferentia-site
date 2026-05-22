@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
-import "./propostas-theme.css";
+import { Roboto } from "next/font/google";
+import { MaterialWebRoot } from "@/components/propostas/material-web-root";
+import "./mw-layout.css";
 
-const robotoFlex = Roboto_Flex({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
+  variable: "--font-propostas",
 });
 
 export const metadata: Metadata = {
@@ -15,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function PropostasLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`propostas-theme ${robotoFlex.className} min-h-screen antialiased`}>
+    <MaterialWebRoot className={`${roboto.className} ${roboto.variable}`}>
       {children}
-    </div>
+    </MaterialWebRoot>
   );
 }

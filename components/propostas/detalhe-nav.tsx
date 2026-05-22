@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { DetalheFile } from "@/lib/propostas/types";
 
 export function DetalheNav({
@@ -17,28 +16,27 @@ export function DetalheNav({
   const base = `/propostas/oceana/${courseSlug}/detalhe`;
 
   return (
-    <aside className="md-nav-rail">
-      <p className="md-label-medium">Índice do roteiro</p>
-      <p className="mt-1 md-title-medium">{courseTitle}</p>
-      <ol className="mt-4 space-y-1">
-        {files.map((f, i) => {
-          const active = f.slug === currentSlug;
-          return (
-            <li key={f.slug}>
-              <Link
-                href={`${base}/${f.slug}`}
-                className={`md-nav-rail-link ${active ? "md-nav-rail-link-active" : ""}`}
-              >
-                <span className="shrink-0 tabular-nums opacity-70">{i + 1}.</span>
-                <span>{f.title}</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ol>
-      <Link href={base} className="md-text-button mt-4 inline-block px-0">
+    <md-elevated-card style={{ display: "block", padding: "1rem", borderRadius: "1rem" }}>
+      <p className="mw-label-large" style={{ margin: 0 }}>
+        Índice do roteiro
+      </p>
+      <p className="mw-title-medium" style={{ marginTop: "0.25rem" }}>
+        {courseTitle}
+      </p>
+      <md-list style={{ marginTop: "0.5rem", padding: 0 }}>
+        {files.map((f, i) => (
+          <md-list-item
+            key={f.slug}
+            type="link"
+            href={`${base}/${f.slug}`}
+            headline={`${i + 1}. ${f.title}`}
+            selected={f.slug === currentSlug}
+          />
+        ))}
+      </md-list>
+      <a href={base} className="mw-label-large" style={{ display: "inline-block", marginTop: "0.75rem" }}>
         Ver lista completa
-      </Link>
-    </aside>
+      </a>
+    </md-elevated-card>
   );
 }

@@ -9,32 +9,32 @@ export default function OceanaTrilhaPage() {
   return (
     <>
       <PropostasNav />
-      <div className="md-hero-band">
+      <div className="mw-hero-band">
         <div className="mx-auto max-w-5xl px-4 pb-6 pt-8 sm:px-6">
-          <p className="md-label-large">Agentes de IA · mercado de capitais</p>
-          <h1 className="mt-3 md-display-small">{trilha.title}</h1>
-          <p className="mt-4 max-w-2xl md-body-large">{trilha.description}</p>
+          <p className="mw-label-large">Agentes de IA · mercado de capitais</p>
+          <h1 className="mt-3 mw-display-small">{trilha.title}</h1>
+          <p className="mt-4 max-w-2xl mw-body-large">{trilha.description}</p>
         </div>
       </div>
-      <main className="md-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
-        <div className="md-card-outlined p-5 sm:p-6">
-          <h2 className="md-title-medium">Como navegar</h2>
-          <ol className="mt-3 space-y-2 md-body-medium">
+      <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
+        <md-elevated-card style={{ display: "block", padding: "1.25rem 1.5rem", borderRadius: "1.75rem" }}>
+          <h2 className="mw-title-medium">Como navegar</h2>
+          <ol className="mt-3 space-y-2 mw-body-medium" style={{ paddingLeft: "1.25rem" }}>
             <li>
-              <strong className="text-[var(--md-sys-color-on-surface)]">1.</strong> Escolha um
+              <strong style={{ color: "var(--md-sys-color-on-surface)" }}>1.</strong> Escolha um
               módulo abaixo para ver o programa (objetivos, carga e estrutura das sessões).
             </li>
             <li>
-              <strong className="text-[var(--md-sys-color-on-surface)]">2.</strong> Na mesma
+              <strong style={{ color: "var(--md-sys-color-on-surface)" }}>2.</strong> Na mesma
               página, veja{" "}
-              <strong className="text-[var(--md-sys-color-on-surface)]">
+              <strong style={{ color: "var(--md-sys-color-on-surface)" }}>
                 O que cada área recebe
               </strong>
               : entregas adaptadas por perfil (analistas, operações, jurídico, comercial,
               administrativo).
             </li>
           </ol>
-        </div>
+        </md-elevated-card>
 
         <section className="mt-10">
           <h2 className="sr-only">Módulos da trilha</h2>

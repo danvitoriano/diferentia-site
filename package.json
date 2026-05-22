@@ -10,6 +10,8 @@
     "sync:oceana": "node scripts/sync-oceana-content.mjs"
   },
   "dependencies": {
+    "@material/material-color-utilities": "^0.3.0",
+    "@material/web": "^2.4.0",
     "gray-matter": "^4.0.3",
     "next": "^15.5.18",
     "react": "^19.0.0",

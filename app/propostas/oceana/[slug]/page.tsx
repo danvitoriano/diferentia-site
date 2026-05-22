@@ -26,7 +26,7 @@ export default async function CursoResumoPage({
   return (
     <>
       <PropostasNav />
-      <div className="md-hero-band md-hero-band-compact">
+      <div className="mw-hero-band mw-hero-band-compact">
         <div className="mx-auto max-w-3xl px-4 pb-4 pt-6 sm:px-6">
           <Breadcrumbs
             items={[
@@ -35,23 +35,23 @@ export default async function CursoResumoPage({
             ]}
           />
           <header className="mt-4">
-            <h1 className="md-display-small">{course.title}</h1>
-            <p className="mt-2 md-body-large">{course.subtitle}</p>
+            <h1 className="mw-display-small">{course.title}</h1>
+            <p className="mt-2 mw-body-large">{course.subtitle}</p>
             <p className="mt-3">
-              <span className="md-chip md-chip-filled">{course.duration}</span>
+              <md-assist-chip label={course.duration} />
             </p>
           </header>
         </div>
       </div>
-      <main className="md-page-body mx-auto max-w-3xl px-4 pb-12 sm:px-6">
+      <main className="mw-page-body mx-auto max-w-3xl px-4 pb-12 sm:px-6">
         <div className="mt-2">
           <MarkdownContent content={resumo} />
         </div>
 
         {showExemplos ? (
           <section className="mt-12 pt-4">
-            <h2 className="md-title-large">O que cada área recebe</h2>
-            <p className="mt-2 md-body-medium">
+            <h2 className="mw-title-large">O que cada área recebe</h2>
+            <p className="mt-2 mw-body-medium">
               O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
               {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
                 ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."

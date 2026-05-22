@@ -1,13 +1,12 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 
 function LoginForm() {
   const searchParams = useSearchParams();
   const next = searchParams.get("next") ?? "/propostas/oceana";
-  const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -16,6 +15,18 @@ function LoginForm() {
     setError("");
     setLoading(true);
     try {
+      const form = formRef.current;
+      const user = (
+        form?.querySelector('md-outlined-text-field[name="user"]') as HTMLElement & {
+          value: string;
+        }
+      )?.value;
+      const password = (
+        form?.querySelector('md-outlined-text-field[name="password"]') as HTMLElement & {
+          value: string;
+        }
+      )?.value;
+
       const res = await fetch("/api/propostas/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -36,49 +47,23 @@ function LoginForm() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4">
-      <div className="md-card w-full max-w-md p-8">
-        <p className="md-label-large">Área restrita</p>
-        <h1 className="mt-2 md-headline-small">Proposta Oceana</h1>
-        <p className="mt-2 md-body-large">
+      <md-elevated-card className="mw-login-card">
+        <p className="mw-label-large">Área restrita</p>
+        <h1 className="mw-display-small" style={{ marginTop: "0.5rem" }}>
+          Proposta Oceana
+        </h1>
+        <p className="mw-body-large" style={{ marginTop: "0.5rem" }}>
           Informe login e senha para acessar a trilha de capacitação.
         </p>
-        <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-          <div>
-            <label htmlFor="user" className="md-label">
-              Usuário
-            </label>
-            <input
-              id="user"
-              name="user"
-              type="text"
-              autoComplete="username"
-              required
-              value={user}
-              onChange={(e) => setUser(e.target.value)}
-              className="md-text-field"
-            />
-          </div>
-          <div>
-            <label htmlFor="password" className="md-label">
-              Senha
-            </label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              autoComplete="current-password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="md-text-field"
-            />
-          </div>
-          {error ? <p className="md-error-text">{error}</p> : null}
-          <button type="submit" disabled={loading} className="md-filled-button w-full">
+        <form ref={formRef} onSubmit={handleSubmit} className="mw-form-stack">
+          <md-outlined-text-field label="Usuário" name="user" required />
+          <md-outlined-text-field label="Senha" name="password" type="password" required />
+          {error ? <p className="mw-error-text">{error}</p> : null}
+          <md-filled-button type="submit" disabled={loading} style={{ width: "100%" }}>
             {loading ? "Entrando…" : "Entrar"}
-          </button>
+          </md-filled-button>
         </form>
-      </div>
+      </md-elevated-card>
     </div>
   );
 }
@@ -87,7 +72,7 @@ export default function LoginPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-screen items-center justify-center md-body-medium">
+        <div className="flex min-h-screen items-center justify-center mw-body-medium">
           Carregando…
         </div>
       }

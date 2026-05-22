@@ -20,29 +20,21 @@ export function DetalhePager({
   if (!prev && !next) return null;
 
   return (
-    <nav
-      aria-label="Módulos anterior e próximo"
-      className="mt-12 flex flex-col gap-3 border-t border-[var(--md-sys-color-outline-variant)] pt-8 sm:flex-row sm:justify-between"
-    >
+    <nav aria-label="Módulos anterior e próximo" className="mw-pager">
       {prev ? (
-        <Link href={`${base}/${prev.slug}`} className="md-card group flex-1 p-4 sm:max-w-[48%]">
-          <span className="md-label-medium">← Anterior</span>
-          <span className="mt-1 block md-title-medium group-hover:text-[var(--md-sys-color-primary)]">
-            {prev.title}
-          </span>
+        <Link href={`${base}/${prev.slug}`} className="mw-pager-link">
+          <md-outlined-button style={{ width: "100%", minHeight: "4rem" }}>
+            ← {prev.title}
+          </md-outlined-button>
         </Link>
       ) : (
         <div className="hidden sm:block sm:max-w-[48%]" />
       )}
       {next ? (
-        <Link
-          href={`${base}/${next.slug}`}
-          className="md-card group flex-1 p-4 sm:max-w-[48%] sm:text-right"
-        >
-          <span className="md-label-medium">Próximo →</span>
-          <span className="mt-1 block md-title-medium group-hover:text-[var(--md-sys-color-primary)]">
-            {next.title}
-          </span>
+        <Link href={`${base}/${next.slug}`} className="mw-pager-link" style={{ marginLeft: "auto" }}>
+          <md-outlined-button style={{ width: "100%", minHeight: "4rem" }}>
+            {next.title} →
+          </md-outlined-button>
         </Link>
       ) : null}
     </nav>

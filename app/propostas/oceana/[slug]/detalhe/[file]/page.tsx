@@ -27,22 +27,23 @@ export default async function DetalheFilePage({
   return (
     <>
       <PropostasNav />
-      <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-        <Breadcrumbs
-          items={[
-            { label: "Trilha", href: "/propostas/oceana" },
-            { label: course.title, href: `/propostas/oceana/${slug}` },
-            { label: "Roteiro", href: `/propostas/oceana/${slug}/detalhe` },
-            { label: md.title },
-          ]}
-        />
-
-        <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
+      <div className="mw-hero-band mw-hero-band-compact">
+        <div className="mx-auto max-w-5xl px-4 pb-4 pt-6 sm:px-6">
+          <Breadcrumbs
+            items={[
+              { label: "Trilha", href: "/propostas/oceana" },
+              { label: course.title, href: `/propostas/oceana/${slug}` },
+              { label: "Roteiro", href: `/propostas/oceana/${slug}/detalhe` },
+              { label: md.title },
+            ]}
+          />
+          <h1 className="mt-4 mw-display-small">{md.title}</h1>
+        </div>
+      </div>
+      <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
+        <div className="mt-4 grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
           <article>
-            <h1 className="md-headline-small">{md.title}</h1>
-            <div className="mt-8">
-              <MarkdownContent content={md.content} />
-            </div>
+            <MarkdownContent content={md.content} />
             <DetalhePager courseSlug={slug} files={files} currentSlug={file} />
           </article>
           {files.length > 0 ? (
