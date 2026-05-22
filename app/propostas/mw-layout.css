@@ -284,30 +284,80 @@
 }
 
 /* Prose */
-.propostas-mw .propostas-prose h1 {
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0 0 1.5rem;
-  color: var(--md-sys-color-on-surface);
+.propostas-mw .propostas-prose > h1:first-child {
+  display: none;
 }
+
 .propostas-mw .propostas-prose h2 {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 2.5rem 0 1rem;
-  color: var(--diferentia-gold);
-}
-.propostas-mw .propostas-prose h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 600;
-  margin: 1.75rem 0 0.75rem;
+  letter-spacing: -0.01em;
+  margin: 2.25rem 0 0.75rem;
   color: var(--md-sys-color-on-surface);
 }
+
+.propostas-mw .propostas-prose h3 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--md-sys-color-on-surface);
+}
+
+/* Programa (resumo de módulo) */
+.propostas-mw .mw-programa-prose > h2:first-child {
+  font-size: 0.6875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  color: var(--diferentia-gold);
+}
+
+.propostas-mw .mw-programa-prose > h3 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+  color: var(--md-sys-color-on-surface);
+}
+
+.propostas-mw .mw-programa-prose > h3 + p:has(> em:only-child) {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.propostas-mw .mw-programa-prose > h3 + p:has(> em:only-child) em {
+  font-style: normal;
+}
+
+.propostas-mw .mw-programa-prose h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 0.625rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+}
+
+.propostas-mw .mw-programa-prose > h3 + h4 {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.propostas-mw .mw-programa-prose h4 + ul {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
 .propostas-mw .propostas-prose p {
   margin-bottom: 1rem;
   line-height: 1.6;

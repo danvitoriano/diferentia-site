@@ -45,7 +45,10 @@ export default async function CursoResumoPage({
       </div>
       <main className="mw-page-body mw-page-wrap">
         <div className="mw-editorial-content">
-          <MarkdownContent content={resumo} />
+          <MarkdownContent
+            content={resumo}
+            variant={slug === "claude-code-avancado" ? "default" : "programa"}
+          />
 
           {showExemplos ? (
             <section className="mt-14 pt-2">
