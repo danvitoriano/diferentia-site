@@ -1,7 +1,3 @@
-Segunda fase da trilha Claude Code: **profissionalizar o fluxo** para TI, desenvolvimento e perfis técnicos que já têm projeto local funcionando.
-
----
-
 ## TI / Desenvolvimento
 
 **Entregas**
@@ -70,7 +66,7 @@ Segunda fase da trilha Claude Code: **profissionalizar o fluxo** para TI, desenv
 
 - Slash command para rascunho de resposta a formulário (com argumentos para o caso)
 - `CLAUDE.md` com regras de tom e compliance para comunicação com investidores
-- Fluxo integrado ao material aprovado da gestora
+- Fluxo integrado ao material institucional aprovado da Oceana
 
 **Processos priorizados**
 

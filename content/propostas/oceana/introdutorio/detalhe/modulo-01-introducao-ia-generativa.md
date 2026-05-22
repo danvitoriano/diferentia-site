@@ -237,7 +237,7 @@ Começar com o prompt simples:
 Ir adicionando camadas:
 
 1. Papel: `"Você é um analista de renda variável especializado em empresas brasileiras."`
-2. Contexto: `"A Oceana é uma gestora de fundos de ações com foco em empresas do setor de utilities e energia."`
+2. Contexto: `"A Oceana é uma instituição do grupo com atuação no mercado financeiro. O analista trabalha com empresas do portfólio e setores de cobertura da área."`
 3. Tarefa: `"Leia o release de resultado abaixo e identifique os 3 principais pontos que impactam a tese de investimento."`
 4. Formato: `"Responda em tópicos. Para cada ponto, indique se é positivo ou negativo para a tese."`
 5. Restrição: `"Não inclua informações que não estejam no documento. Se algo não estiver claro, diga explicitamente."`
@@ -255,7 +255,7 @@ Subir um relatório ou documento disponível e pedir:
 > `"Leia esse documento e responda: (1) Qual é a conclusão principal? (2) Há dados numéricos relevantes? Liste os mais importantes. (3) Há alguma inconsistência ou ponto de atenção que eu deva verificar?"`
 
 **Demo 2: Rascunho de e-mail:**
-> `"Escreva um e-mail formal para um executivo de empresa de energia elétrica solicitando uma reunião de atualização operacional. Tom: profissional e direto. Máximo 3 parágrafos. Não mencione valores ou investimentos."`
+> `"Escreva um e-mail formal para um executivo de empresa do portfólio solicitando uma reunião de atualização operacional. Tom: profissional e direto. Máximo 3 parágrafos. Não mencione valores ou investimentos."`
 
 **Demo 3: Ata de reunião:**
 Colar notas brutas de uma reunião fictícia e pedir:

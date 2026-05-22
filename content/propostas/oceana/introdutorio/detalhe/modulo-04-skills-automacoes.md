@@ -26,7 +26,7 @@ A distribuição completa por módulo (referência rápida, igual aos Módulos 1
 | 7, Projetos | Contexto restrito, instruções, arquivos | 3 |
 | **8, Skills (Habilidades)** | **Criação de automações com /skill-creator** | **4** |
 
-> **Regra prática:** este módulo cobre a Seção 8 da apresentação. O track técnico é um **teaser** de 15 a 20 min (não substitui o curso [Claude Code: Vibe Coders](../../curso-claude-code/) nem o [Avançado](../../curso-claude-code-avancado/)).
+> **Regra prática:** este módulo cobre a Seção 8 da apresentação. O track técnico é um **teaser** de 15 a 20 min (não substitui o curso [Claude Code: Vibe Coders](../../vibe-coders/)).
 
 ---
 
@@ -36,7 +36,7 @@ Antes da aula, o facilitador deve enviar um e-mail (24h antes) lembrando:
 
 1. Ter conta no claude.ai ativa com o Claude Cowork instalado (ou Desktop app com acesso ao modo Cowork). Skills e /skill-creator funcionam apenas no Cowork.
 2. Revisitar o Projeto criado no Módulo 3 e trazer pelo menos um caso de uso repetitivo que vocês gostariam de automatizar. Não precisa ser técnico: "toda semana eu monto um sumário de resultados no mesmo formato" já é suficiente.
-3. Track técnico (opcional): **não** é necessário instalar Claude Code nesta aula. Quem quiser aprofundar depois segue para o curso [Claude Code: Vibe Coders](../../curso-claude-code/).
+3. Track técnico (opcional): **não** é necessário instalar Claude Code nesta aula. Quem quiser aprofundar depois segue para o curso [Claude Code: Vibe Coders](../../vibe-coders/).
 4. Reservar 2h sem interrupções, com fone se estiver em sala compartilhada.
 
 ---
@@ -114,7 +114,7 @@ Abrir o painel de skills no Cowork ao vivo.
 
 Demo 1: skill docx
 
-> `"/docx Gere um relatório executivo de uma página com as seguintes informações: [colar dados fictícios de resultado de empresa de utilities]. Cabeçalho com logotipo da Oceana no canto superior direito, seções: Sumário, Métricas Principais e Próximos Catalisadores."`
+> `"/docx Gere um relatório executivo de uma página com as seguintes informações: [colar dados fictícios de resultado de empresa do portfólio]. Cabeçalho com logotipo da Oceana no canto superior direito, seções: Sumário, Métricas Principais e Próximos Catalisadores."`
 
 Aguardar e mostrar o arquivo gerado.
 
@@ -122,7 +122,7 @@ Aguardar e mostrar o arquivo gerado.
 
 Demo 2: skill xlsx
 
-> `"/xlsx Monte uma tabela comparando as seguintes métricas trimestrais de três empresas de energia: [inserir dados fictícios]. Inclua linha de variação trimestral e destaque em vermelho os indicadores que pioraram mais de 10%."`
+> `"/xlsx Monte uma tabela comparando as seguintes métricas trimestrais de três empresas do portfólio: [inserir dados fictícios]. Inclua linha de variação trimestral e destaque em vermelho os indicadores que pioraram mais de 10%."`
 
 Aguardar.
 
@@ -223,13 +223,13 @@ Posicionar Claude Code na trilha Diferentia **sem** instalação longa nem MCP n
 
 > "Claude Code é o Claude no **terminal**: lê e escreve arquivos no seu computador, executa comandos e evolui projetos em pasta: como um engenheiro ao lado de você. Não substitui o claude.ai nem o Cowork; complementa quando a entrega é **software**, pasta de projeto ou integração local."
 
-> "No Módulo 3 desta trilha vocês viram **MCP no navegador**: Drive, Slack. No Claude Code avançado vocês verão **MCP no terminal**: outro capítulo, outro curso."
+> "No Módulo 3 desta trilha vocês viram **MCP no navegador**: Drive, Slack. No **Vibe Coders** vocês verão **MCP no terminal** em demonstração: Aula 03 da proposta Oceana."
 
 **[1:16 a 1:22] Demo curta (opcional, 3 min)**
 
 Se houver tempo e ambiente preparado **antes** da aula, mostrar só o **resultado**: pasta com `index.html` aberta no navegador + uma frase no terminal. **Não** conduzir instalação `npm install` com a turma inteira aqui.
 
-> "Quem quiser fazer isso nas próprias máquinas: curso **Claude Code para Vibe Coders**: quatro aulas, do zero ao link na Vercel, sem precisar saber programar."
+> "Quem quiser acompanhar a construção: curso **Claude Code para Vibe Coders**, 6h em demonstração ao vivo, do painel de releases à publicação e ao repositório compartilhado."
 
 **[1:22 a 1:28] Mapa da trilha: distribuir no chat**
 
@@ -239,8 +239,8 @@ Se houver tempo e ambiente preparado **antes** da aula, mostrar só o **resultad
 |---|---|---|
 | [Cowork demonstrativo](https://github.com/diferentia/curso-cowork) | **Quase todo mundo** após este intro | App desktop: o que muda vs navegador |
 | [Workshop Cowork](https://github.com/diferentia/curso-cowork-workshop) | Quem já tem Pro + app instalado | Laboratório 3h (opcional) |
-| [Claude Code: Vibe Coders](https://github.com/diferentia/curso-claude-code) | Quem quer **criar e publicar** no terminal | Instalação, prompts, Vercel (opcional) |
-| [Claude Code: Avançado](https://github.com/diferentia/curso-claude-code-avancado) | Pós-Vibe ou perfil técnico | Git, hooks, MCP, API (opcional) |
+| [Claude Code: Vibe Coders](../../vibe-coders/) | Quem quer **criar e publicar** no terminal | 6h (3× 2h): painel, scripts, Git, slash, MCP (demo) |
+| [Workshop Claude Code](../../workshop-claude-code/) | Quem tem licença confirmada | Laboratório hands-on pós-Vibe (opcional) |
 | [cursos-oceana](https://github.com/diferentia/cursos-oceana) | Facilitadores e gestores | Mapa completo |
 
 > "Para a maioria, o próximo passo recomendado é o Cowork demonstrativo: não o workshop ainda. Workshop e Claude Code são opcionais, para quem precisar de prática intensiva ou construir software."
@@ -377,10 +377,10 @@ Este é o último módulo da trilha. Mas alguns temas ficam além do escopo da t
 |---|---|
 | App desktop (demonstração) | [Cowork demonstrativo](https://github.com/diferentia/curso-cowork) |
 | Prática Cowork com Pro | [Workshop Cowork](https://github.com/diferentia/curso-cowork-workshop) |
-| Instalação completa e publicação (Vercel) | [Vibe Coders](https://github.com/diferentia/curso-claude-code) |
-| Git, slash commands, hooks, MCP no terminal | [Avançado](https://github.com/diferentia/curso-claude-code-avancado) |
-| Deploys de agentes em produção | [Avançado: M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md) |
-| Integração com sistemas legados da Oceana | Projeto específico de TI + curso Avançado |
+| Instalação, publicação, Git, slash, MCP no terminal | [Vibe Coders](../../vibe-coders/) (Aula 03 em demo) |
+| Hooks e automação hands-on no terminal | [Workshop Claude Code](../../workshop-claude-code/) |
+| Deploys de agentes em produção | Workshop Claude Code ou projeto de TI |
+| Integração com sistemas legados da Oceana | Projeto específico de TI + Workshop Claude Code |
 | Fine-tuning de modelos | Fora do escopo do claude.ai (requer API) |
 | Computer use automatizado em produção | Claude Computer Use API (beta) |
 
@@ -396,8 +396,9 @@ Este é o último módulo da trilha. Mas alguns temas ficam além do escopo da t
 - Trilha Diferentia: https://github.com/diferentia/cursos-oceana
 - Cowork demonstrativo: https://github.com/diferentia/curso-cowork
 - Workshop Cowork: https://github.com/diferentia/curso-cowork-workshop
-- Claude Code: Vibe Coders: https://github.com/diferentia/curso-claude-code
-- Claude Code: Avançado: https://github.com/diferentia/curso-claude-code-avancado
+- Claude Code: Vibe Coders (proposta): /propostas/oceana/vibe-coders
+- Repositório facilitador: https://github.com/diferentia/curso-claude-code
+- Workshop Claude Code (proposta): /propostas/oceana/workshop-claude-code
 - Template de descrição de skill: incluído abaixo
 - Exemplos específicos Oceana: [exemplos-oceana.md](exemplos-oceana.md)
 - Apresentação usada: "Aprendendo Claude, do básico ao intermediário" (Seção 8)

@@ -409,7 +409,8 @@
   color: var(--md-sys-color-on-surface);
 }
 
-.propostas-mw .mw-programa-prose > h3 + h4 {
+.propostas-mw .mw-programa-prose > h3 + h4,
+.propostas-mw .mw-programa-prose > h2:first-child + h4 {
   margin-top: 0.5rem;
   padding-top: 0;
   border-top: none;

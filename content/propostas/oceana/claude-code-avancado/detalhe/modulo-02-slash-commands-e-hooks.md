@@ -419,7 +419,7 @@ Quando alguém perguntar sobre os temas abaixo, anote e redirecione:
 
 ## O que é
 Painel de indicadores financeiros fictícios para demonstração interna.
-Público: analistas de fundos de renda variável da Oceana Gestora.
+Público: analistas de investimento e times técnicos da Oceana.
 
 ## Stack
 HTML, CSS e JavaScript vanilla. Sem framework, sem backend, sem banco de dados.

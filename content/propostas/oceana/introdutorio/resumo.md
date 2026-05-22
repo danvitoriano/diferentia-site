@@ -1,9 +1,5 @@
 ## Programa detalhado
 
-### Curso introdutório
-
-*4 sessões de 2h | 100% online via Teams ou Meet*
-
 #### Sessão 1: Fundamentos (2h)
 
 - Demo ao vivo com caso Oceana (release, ata ou e-mail)
@@ -17,7 +13,7 @@
 - Análise de imagem e documentos (PDFs, planilhas, prints de tela)
 - Pesquisa na web em tempo real dentro do Claude
 - Artefatos: geração de tabelas, visualizações e rascunhos sem sair da ferramenta
-- Deep Research: pesquisa aprofundada para análise setorial de utilities e energia
+- Deep Research: pesquisa aprofundada para análise setorial ou regulatória
 
 #### Sessão 3: Conectores, Mobile e Projetos (2h)
 

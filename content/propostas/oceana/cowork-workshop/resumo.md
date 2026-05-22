@@ -1,9 +1,5 @@
 ## Programa detalhado
 
-### Workshop prático de Cowork
-
-*Sessão única de 3h | Até 15 pessoas*
-
 #### Parte 1: Instalação e configuração (45 min)
 
 - Instalação do app desktop e primeiras configurações

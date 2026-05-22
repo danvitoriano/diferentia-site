@@ -40,7 +40,7 @@ Não substitui o [Cowork demonstrativo](https://github.com/diferentia/curso-cowo
 |---|---|
 | Núcleo | Introdutório → Cowork demonstrativo |
 | **Este repo** | Workshop Cowork (opcional) |
-| Opcional | [Claude Code](https://github.com/diferentia/curso-claude-code) · [Avançado](https://github.com/diferentia/curso-claude-code-avancado) |
+| Opcional | [Vibe Coders](../vibe-coders/) · [Workshop Claude Code](../workshop-claude-code/) |
 
 ---
 

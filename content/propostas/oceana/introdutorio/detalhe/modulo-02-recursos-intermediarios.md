@@ -69,7 +69,7 @@ Repetir a regra do Módulo 1 (demo antes da teoria), agora elevando a barra: mos
 
 **[0:03 a 0:10] Demo de impacto: artefato a partir de um release**
 
-Pegar um release de resultado real de uma empresa do universo de cobertura da Oceana (utilities ou energia, sem mencionar tese ativa). Subir o PDF no claude.ai e digitar:
+Pegar um release de resultado real de uma empresa do portfólio ou setor de cobertura da área (sem mencionar tese ativa). Subir o PDF no claude.ai e digitar:
 
 > `"Leia esse release e gere um artefato em formato de tabela comparando as principais linhas do P&L deste trimestre vs o mesmo trimestre do ano anterior. Inclua uma coluna com variação percentual e outra com um comentário curto para cada linha. Use formatação visual clara."`
 
@@ -130,7 +130,7 @@ Mostrar ao vivo a interface, o ícone de pesquisa na web. Ativar.
 
 Demo 3: pesquisa pontual
 
-> `"Pesquise as últimas notícias relevantes sobre [escolher uma empresa de utilities listada que esteja no noticiário recente]. Liste em ordem de relevância para um analista de fundo de ações brasileiro, com a data e a fonte de cada notícia. Em seguida, sintetize em 3 pontos o que mudou na narrativa de curto prazo da empresa."`
+> `"Pesquise as últimas notícias relevantes sobre [escolher uma empresa listada do portfólio que esteja no noticiário recente]. Liste em ordem de relevância para um analista do mercado financeiro brasileiro, com a data e a fonte de cada notícia. Em seguida, sintetize em 3 pontos o que mudou na narrativa de curto prazo da empresa."`
 
 Observar como o Claude busca, lê os resultados e estrutura a resposta com citações.
 
@@ -138,7 +138,7 @@ Observar como o Claude busca, lê os resultados e estrutura a resposta com cita�
 
 Demo 4: pesquisa estruturada
 
-> `"Pesquise quais foram as últimas decisões do Conselho de Administração de Energia Elétrica (CAEE) no último mês. Devolva em forma de tabela com: data, tema, decisão, impacto provável para o setor de utilities."`
+> `"Pesquise quais foram as últimas decisões regulatórias relevantes para o setor de cobertura da sua área no último mês (ex.: CVM, ANBIMA ou regulador setorial). Devolva em forma de tabela com: data, tema, decisão, impacto provável para o setor."`
 
 > "Esse tipo de varredura tomaria 1 hora num portal regulatório. Em 30 segundos vocês têm um rascunho para validar."
 
@@ -209,7 +209,7 @@ Aprofundar artefatos com 3 casos de uso reais inspirados nas oportunidades do di
 
 Demo A, tabela comparativa (inspirada na oportunidade "Leitor de releases" do diagnóstico, alto impacto, 11 pessoas citaram):
 
-> `"Tenho 3 releases de resultado de empresas do setor de utilities (vou subir agora). Gere um artefato em formato de tabela comparativa lado a lado, com as seguintes linhas: receita líquida, EBITDA, margem EBITDA, lucro líquido, dívida líquida, alavancagem. Para cada linha, mostre o valor de cada empresa e destaque com cor de fundo a maior e a menor. Adicione uma coluna final com um comentário curto seu sobre o destaque mais relevante."`
+> `"Tenho 3 releases de resultado de empresas do portfólio (vou subir agora). Gere um artefato em formato de tabela comparativa lado a lado, com as seguintes linhas: receita líquida, EBITDA, margem EBITDA, lucro líquido, dívida líquida, alavancagem. Para cada linha, mostre o valor de cada empresa e destaque com cor de fundo a maior e a menor. Adicione uma coluna final com um comentário curto seu sobre o destaque mais relevante."`
 
 > "Olhem o que essa tabela substitui: uma planilha manual que tomaria 30 a 40 minutos para um analista. E vocês ainda têm a leitura crítica embutida na última coluna, que é uma referência para validar."
 
@@ -217,7 +217,7 @@ Demo B, ata estruturada (inspirada na oportunidade "Resumo de reuniões"):
 
 Colar uma transcrição bruta de uma reunião fictícia (ou real anonimizada). Pedir:
 
-> `"Você é um analista que participou desta reunião com o CFO de uma empresa de energia. Gere um artefato em formato de ata estruturada com: (1) contexto e participantes, (2) tópicos discutidos com bullet curto para cada, (3) decisões tomadas, (4) ações com responsável e prazo, (5) perguntas que ficaram em aberto, (6) impressão geral do tom da reunião. Mantenha a ata em 1 página, formatação limpa."`
+> `"Você é um analista que participou desta reunião com o CFO de uma empresa do portfólio. Gere um artefato em formato de ata estruturada com: (1) contexto e participantes, (2) tópicos discutidos com bullet curto para cada, (3) decisões tomadas, (4) ações com responsável e prazo, (5) perguntas que ficaram em aberto, (6) impressão geral do tom da reunião. Mantenha a ata em 1 página, formatação limpa."`
 
 > "Esse formato é reutilizável. Vocês podem salvar como template e usar todo dia."
 
@@ -241,9 +241,9 @@ Avançar para o slide "Deep Research".
 
 Mostrar ao vivo a ativação de Deep Research na interface.
 
-Demo: setor de utilities
+Demo: análise setorial ou regulatória
 
-> `"Faça uma pesquisa profunda sobre o cenário regulatório do setor de transmissão de energia elétrica no Brasil em 2026. Cubra: (1) decisões recentes da ANEEL, (2) leilões realizados e programados, (3) movimentações de M&A no setor nos últimos 12 meses, (4) principais riscos regulatórios identificados por analistas. Devolva em forma de relatório com seções, dados quantitativos onde houver, e citações para cada afirmação."`
+> `"Faça uma pesquisa profunda sobre o cenário regulatório do setor de cobertura da sua área no Brasil em 2026. Cubra: (1) decisões recentes do regulador setorial, (2) leilões ou mudanças de marco relevantes, (3) movimentações de M&A no setor nos últimos 12 meses, (4) principais riscos regulatórios identificados por analistas. Devolva em forma de relatório com seções, dados quantitativos onde houver, e citações para cada afirmação."`
 
 > "Notem que ele primeiro mostra o plano de pesquisa. Vocês podem aprovar, ajustar ou refinar o plano antes da execução. Esse controle inicial é o que diferencia de uma pesquisa comum."
 

@@ -1,7 +1,3 @@
-Workshop intensivo no terminal (em definição). Foco em **TI, desenvolvimento e automação**; entregas previstas também por área de negócio que usa o terminal.
-
----
-
 ## TI / Desenvolvimento
 
 **Entregas previstas**

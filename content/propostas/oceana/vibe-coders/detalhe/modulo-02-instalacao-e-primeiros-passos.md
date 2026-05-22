@@ -322,10 +322,8 @@ Se alguém perguntar sobre os itens abaixo, agradeça a pergunta e informe que o
 
 - Boas práticas de prompt em detalhes (Módulo 3)
 - Publicação na internet (Módulo 4)
-- Slash commands, hooks ([Avançado: M2](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-02-slash-commands-e-hooks.md))
-- MCP servers ([Avançado: M3](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-03-mcp-integracoes.md))
-- Git e controle de versão ([Avançado: M1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md))
-- Uso da API ([Avançado: M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md))
+- Slash commands, Git e MCP ([Aula 03](../../vibe-coders/))
+- Hooks e automação no terminal ([Workshop Claude Code](../../workshop-claude-code/))
 
 ---
 

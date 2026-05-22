@@ -329,7 +329,8 @@ Aguardar as respostas. Para quem ainda não tem algum dos três, dar suporte rá
 | Conceitos introdutórios do Claude | [Introdutório](https://github.com/diferentia/curso-claude-introdutorio) |
 | Demonstração sem prática | [Cowork demonstrativo](https://github.com/diferentia/curso-cowork) |
 | Claude Code e terminal | [Vibe Coders](https://github.com/diferentia/curso-claude-code) |
-| Git, slash commands, hooks, MCP no terminal, API/SDK | [Avançado](https://github.com/diferentia/curso-claude-code-avancado) |
+| Git, slash, MCP no terminal (demo) | [Vibe Coders](../vibe-coders/) |
+| Hooks e automação hands-on | [Workshop Claude Code](../workshop-claude-code/) |
 | Mapa da trilha | [cursos-oceana](https://github.com/diferentia/cursos-oceana) |
 | Chrome, Excel e PowerPoint Extensions | Curso de Extensões |
 

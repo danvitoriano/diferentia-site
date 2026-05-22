@@ -18,7 +18,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
                   /
                 </span>
               ) : null}
-              {item.href && !isLast ? (
+              {item.href && (!isLast || items.length === 1) ? (
                 <Link
                   href={item.href}
                   className="no-underline"

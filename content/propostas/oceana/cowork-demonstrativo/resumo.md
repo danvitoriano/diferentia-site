@@ -1,27 +1,25 @@
 ## Programa detalhado
 
-### Demonstrativo de Cowork
+#### Parte 1: Abertura e pasta de trabalho (45 min)
 
-*Sessão única de 2h30 | Até 30 pessoas*
+- Tour pelo Claude desktop vs. navegador (pasta de investimentos conectada)
+- Extrair KPIs de release de resultados e comparativo trimestral na pasta
+- Comparar extrato do custodiante vs. sistema interno e listar divergências (validação humana)
 
-#### Parte 1: O app em ação sobre documentos reais (45 min)
+#### Parte 2: Documentos salvos na pasta (30 min)
 
-- Tour pelo Claude desktop com pasta da empresa conectada
-- Demo: Claude lendo e analisando arquivo da Oceana em tempo real
-- O que muda com o app desktop vs. Claude no navegador
+- Gerar nota interna em Word a partir do release para reunião de revisão
+- Planilha comparativa Q1 vs trimestre anterior (opcional se o tempo apertar)
 
-#### Parte 2: Conectores e tarefas automáticas (45 min)
+#### Parte 3: Conectores e tarefas agendadas (35 min)
 
-- Demonstração de conectores (Google Drive, Notion)
-- Tarefas agendadas: o que é possível automatizar sem programar
-- Exemplos do setor financeiro: resumo diário, monitoramento de documentos
+- Drive: documentos novos em Relatórios de Gestão e leitura para due diligence
+- Slack: leitura de canal (sem publicar ainda)
+- Tarefa agendada de resumo de movimentação e pendências do dia
 
-#### Parte 3: Mapeamento coletivo de casos de uso (45 min)
+#### Parte 4: Live artifacts e publicação no time (30 min)
 
-- Exercício: cada participante descreve um processo que gostaria de automatizar
-- Facilitador compila e categoriza os casos em tempo real
-
-#### Encerramento (15 min)
-
-- Facilitador entrega relatório de demanda por área e prioridade de adoção
-- Próximos passos: sequência recomendada de módulos por área
+- Painel live artifact do que mudou na pasta nas últimas 24h (ou fila de pendências)
+- Refresh do painel com dados dos conectores; menção a MCP como camada das integrações
+- Publicar no Slack bullets do comparativo de release ou do relatório de divergências (conector com escrita ou rascunho)
+- Fechamento e workshop prático para quem for licenciar o app desktop

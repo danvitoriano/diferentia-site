@@ -4,6 +4,9 @@ Como usar este guia: cada seção descreve como adaptar os exercícios, exemplos
 demos da trilha para um perfil de área específico. O conteúdo dos módulos não muda.
 O que muda é o caso de uso demonstrado e os exercícios propostos.
 
+O material padrão não fixa setor nem empresa: o facilitador escolhe empresa, setor
+e casos na turma com base no diagnóstico local do grupo Oceana.
+
 Antes de cada módulo, o facilitador identifica o perfil predominante da turma e
 seleciona os exemplos correspondentes do `exemplos-oceana.md` de cada curso.
 
@@ -41,7 +44,7 @@ agente de monitoramento setorial é o caso de uso mais próximo do que o grupo p
 
 Atualização de modelos financeiros a partir de releases, leitura e estruturação
 de resultados trimestrais, preview de earnings antes da divulgação, análise setorial
-(utilities e energia), compilação de dados de múltiplas fontes, checagem de modelos,
+análise setorial do portfólio, compilação de dados de múltiplas fontes, checagem de modelos,
 monitoramento de oportunidades de investimento, gestão de agenda de reuniões com
 executivos e especialistas.
 
@@ -155,7 +158,7 @@ de apresentação de fundo. O bloco 5B de confiança é crítico aqui por um mot
 diferente: o que a IA produz em comunicação com investidores precisa ser
 revisado por compliance antes de sair.
 
-No Módulo 3, Projetos com o material padrão da gestora como contexto é o
+No Módulo 3, Projetos com o material institucional aprovado da Oceana como contexto é o
 recurso mais útil: regulamento dos fundos, deck de apresentação, perguntas
 frequentes. Isso permite que a IA responda em linguagem alinhada com o que
 a Oceana já aprova para comunicação com investidores.

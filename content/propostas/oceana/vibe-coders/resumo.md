@@ -1,19 +1,25 @@
 ## Programa detalhado
 
-### Vibe Coders
+#### Aula 01: Fundamentos e painel (2h)
 
-*2 sessões de ~3h | Até 30 pessoas | Perfis técnicos*
+- O que é vibe coding: delegar ao Claude com responsabilidade
+- Ciclo descrever, iterar, validar e usar no trabalho
+- Prompts técnicos e revisão de KPI (não inventar número; citar origem)
+- Governança: dados sensíveis e o que não automatizar
+- Demonstração: início do painel de releases da Oceana (HTML, CSS, JavaScript)
 
-#### Sessão 1: Metodologia e primeiro projeto (3h)
+#### Aula 02: Painel completo, scripts e fluxo (2h)
 
-- O que é vibe coding: delegação ao Claude com responsabilidade
-- Metodologia: como descrever, iterar e validar código gerado por IA
-- Projeto guiado: painel de releases da Oceana (HTML, CSS, JavaScript puro)
-- Iteração ao vivo: adicionar funcionalidades e corrigir erros com prompts
+- Demonstração: painel com comparação de trimestres e variação percentual
+- Demonstração: script de comparação e extração em lote (pasta releases-demo)
+- Integração ao fluxo: prompt, resultado, validação, uso
+- Demonstração: estrutura de projeto no terminal (pré-repositório)
 
-#### Sessão 2: Scripts, automações e publicação (3h)
+#### Aula 03: Publicar, configurar e encerrar (2h)
 
-- Scripts de automação: comparação de trimestres, extração de dados de múltiplos arquivos
-- Integração ao fluxo de trabalho: prompt, resultado, validação, uso
-- Exercício final: cada participante constrói e apresenta um projeto próprio
-- Publicação: como hospedar e compartilhar o que foi criado
+- Demonstração: publicação do painel na web
+- `CLAUDE.md` para contexto e políticas da Oceana
+- Demonstração: slash `/analisar-release` em release fictício
+- Demonstração: commit Git e MCP no terminal (listar e ler arquivos)
+- Visão de automação e checklist pós-curso (licença opcional)
+- Entrega: repositório, prompts e roteiro para replicar no ambiente da Oceana

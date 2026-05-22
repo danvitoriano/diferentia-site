@@ -1,13 +1,9 @@
-Módulo focado em **qualidade e auditabilidade** dos outputs, com **computer use** no Chrome e extensões no Excel e PowerPoint. Entregas por área ao longo das três sessões.
-
----
-
 ## Analistas de investimento
 
 **Entregas**
 
 - Chain-of-thought aplicado a risco de crédito e tese de investimento
-- System prompt reutilizável do time de utilities e energia
+- System prompt reutilizável do time de análise (Projeto de cobertura setorial)
 - Fluxo completo: release → extração → nota interna → auditoria do próprio output
 - Framework de revisão para números críticos (anti-alucinação)
 - Computer use no Chrome (portal de RI, fluxos web) e extensões no Excel e PowerPoint (modelo e deck)

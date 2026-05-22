@@ -31,7 +31,7 @@ Aguardar 2 ou 3 respostas no chat. Comentar brevemente.
 
 **[0:05 a 0:12] Demo: system prompt em ação**
 
-Mostrar ao vivo a diferença entre uma conversa sem system prompt e a mesma conversa com o system prompt do analista de utilities configurado no Projeto.
+Mostrar ao vivo a diferença entre uma conversa sem system prompt e a mesma conversa com o system prompt de cobertura setorial configurado no Projeto.
 
 > "Mesmo pergunta. Mesmo Claude. A diferença é que no segundo caso o Claude já sabe quem ele é, o que pode e o que não pode fazer, e como deve estruturar a resposta. Isso é um system prompt."
 
@@ -58,7 +58,7 @@ Mostrar ao vivo onde ficam as instruções de Projeto no claude.ai.
 
 **[0:27 a 0:45] Três demos de system prompts da Oceana**
 
-Demo 1: analista de utilities e energia (ver exemplos-oceana.md)
+Demo 1: analista com Projeto de cobertura setorial (ver exemplos-oceana.md)
 
 Demo 2: revisor de documentos de compliance (ver exemplos-oceana.md)
 

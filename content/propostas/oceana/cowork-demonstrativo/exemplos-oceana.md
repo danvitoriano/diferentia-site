@@ -1,7 +1,3 @@
-Demonstrativo: a Oceana vê o que o app desktop permite no fluxo de trabalho. Entregas por área ao final da sessão.
-
----
-
 ## Analistas de investimento
 
 **Entregas**
@@ -49,7 +45,7 @@ Demonstrativo: a Oceana vê o que o app desktop permite no fluxo de trabalho. En
 **Entregas**
 
 - Ver rascunho de comunicação e síntese de material de fundo a partir de arquivos locais
-- Entender triagem de e-mails e preparação de resposta com contexto da gestora
+- Entender triagem de e-mails e preparação de resposta com contexto interno aprovado
 - Mapa de ganho em formulários de investidor e atendimento recorrente
 
 **Processos priorizados**

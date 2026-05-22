@@ -22,44 +22,53 @@ export default async function CursoResumoPage({
   const resumo = getResumoMarkdown(slug);
   const showExemplos = hasExemplosOceana(slug);
   const exemplos = showExemplos ? getExemplosOceanaMarkdown(slug) : "";
+  const prerequisiteTitles = course.prerequisites
+    .map((pre) => getCourse(pre)?.title)
+    .filter((title): title is string => Boolean(title));
 
   return (
     <>
       <PropostasNav />
       <div className="mw-hero-band mw-hero-band-compact">
         <div className="mw-page-wrap pb-6 pt-8">
-          <Breadcrumbs
-            items={[
-              { label: "Trilha", href: "/propostas/oceana" },
-              { label: course.title },
-            ]}
-          />
+          <Breadcrumbs items={[{ label: "Trilha", href: "/propostas/oceana" }]} />
           <header className="mt-6 max-w-3xl">
             <h1 className="mw-display-small">{course.title}</h1>
             <p className="mt-3 mw-body-large">{course.subtitle}</p>
-            <p className="mt-4">
-              <span className="mw-module-tag">{course.duration}</span>
-            </p>
+            {(course.duration || course.audience || course.delivery) ? (
+              <p className="mt-4 flex flex-wrap items-center gap-2">
+                {course.duration ? (
+                  <span className="mw-module-tag">{course.duration}</span>
+                ) : null}
+                {course.audience ? (
+                  <span className="mw-module-tag">{course.audience}</span>
+                ) : null}
+                {course.delivery ? (
+                  <span className="mw-body-medium" style={{ color: "var(--md-sys-color-on-surface-variant)" }}>
+                    {course.delivery}
+                  </span>
+                ) : null}
+              </p>
+            ) : null}
+            {prerequisiteTitles.length > 0 ? (
+              <p className="mt-4 mw-body-medium">
+                <span className="font-medium" style={{ color: "var(--md-sys-color-on-surface)" }}>
+                  Pré-requisito obrigatório:{" "}
+                </span>
+                {prerequisiteTitles.join(" · ")}
+              </p>
+            ) : null}
           </header>
         </div>
       </div>
       <main className="mw-page-body mw-page-wrap">
         <div className="mw-editorial-content">
-          <MarkdownContent
-            content={resumo}
-            variant={slug === "claude-code-avancado" ? "default" : "programa"}
-          />
+          <MarkdownContent content={resumo} variant="programa" />
 
           {showExemplos ? (
             <section className="mt-14 pt-2">
               <p className="mw-label-large">Por perfil</p>
               <h2 className="mt-2 mw-title-large">O que cada área recebe</h2>
-              <p className="mt-3 mw-body-medium">
-                O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
-                {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
-                  ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."
-                  : " (analistas, operações, jurídico, comercial e administrativo)."}
-              </p>
               <div className="mt-8">
                 <AreaExemplosAccordion content={exemplos} />
               </div>

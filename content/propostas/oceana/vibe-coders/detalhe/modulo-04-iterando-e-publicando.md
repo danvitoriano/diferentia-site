@@ -210,7 +210,7 @@ Na prática, o fluxo de manutenção fica assim:
 
 Guarde sempre a pasta do projeto. A Vercel hospeda; o **código fonte** continua no seu computador. Sem a pasta, vocês ainda têm o link, mas não conseguem evoluir facilmente.
 
-Se trocar de computador, copiem a pasta inteira: pendrive, nuvem, e-mail para si mesmo: ou sigam o [Curso Avançado: Módulo 1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md) para Git e GitHub.
+Se trocar de computador, copiem a pasta inteira: pendrive, nuvem, e-mail para si mesmo: ou usem o repositório compartilhado na [Aula 03](../../vibe-coders/) (Git em demonstração).
 
 Para pedidos semanais depois do curso, usem este modelo:
 
@@ -248,7 +248,7 @@ Fechar com honestidade: o que a turma pode continuar sozinha e quando envolver u
 
 Não é fracasso pedir ajuda técnica. É maturidade. O vibe coder entrega **protótipo funcionando, visão clara, requisitos testados**: o desenvolvedor industrializa.
 
-Na trilha Diferentia, o **[Curso Avançado de Claude Code](https://github.com/diferentia/curso-claude-code-avancado)** aprofunda: Git, slash commands, hooks, MCP e: opcionalmente: API e Agent SDK. Para quem quiser ir além do que vimos em quatro aulas."
+Na proposta Oceana, a **[Aula 03 do Vibe Coders](../../vibe-coders/)** cobre em demonstração: publicação, `CLAUDE.md`, slash, Git e MCP. Quem tiver licença confirmada pode aprofundar no **[Workshop Claude Code](../../workshop-claude-code/)**."
 
 ---
 
@@ -313,7 +313,8 @@ Recapitulando a trilha deste curso:
 **Próximos passos na Diferentia:**
 
 - Continuem evoluindo o projeto publicado esta semana: um pedido por dia já treina a habilidade
-- [Curso Avançado de Claude Code](https://github.com/diferentia/curso-claude-code-avancado): Git, slash commands, hooks, MCP e API/SDK (opcional)
+- [Vibe Coders: programa](../../vibe-coders/): Aula 03 (publicação, `CLAUDE.md`, slash, Git, MCP)
+- [Workshop Claude Code](../../workshop-claude-code/): hands-on com licença confirmada
 - Trilha de adoção de IA da metodologia Diferentia no contexto de vocês
 
 Obrigado pela participação. Os links que vocês mandaram hoje são a prova de que dá para criar software descrevendo o que querem: sem ter sido programador antes deste curso.
@@ -327,11 +328,9 @@ Qualquer dúvida pós-curso, usem o canal do grupo. Até a próxima etapa da tri
 Se alguém perguntar sobre os itens abaixo, agradeça a pergunta e informe que o tema será abordado em outro momento:
 
 - Domínio customizado (ex.: www.suaempresa.com.br): infraestrutura / TI
-- Conectar a APIs de mercado com dados reais em tempo real: [Avançado](https://github.com/diferentia/curso-claude-code-avancado)
-- Git, branches e pull requests: [Avançado: M1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md)
+- Git, slash e MCP: [Aula 03](../../vibe-coders/)
+- Hooks e automação no próprio ambiente: [Workshop Claude Code](../../workshop-claude-code/)
 - Banco de dados, login e autenticação: desenvolvedor + política de dados
-- Slash commands, hooks e MCP servers: [Avançado: M2 e M3](https://github.com/diferentia/curso-claude-code-avancado)
-- CI/CD e pipelines de deploy: [Avançado: M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md)
 
 ---
 

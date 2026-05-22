@@ -257,8 +257,8 @@ Se alguém perguntar sobre os itens abaixo, agradeça a pergunta e informe que o
 - Como instalar o Claude Code (Módulo 2)
 - Como escrever bons prompts em detalhes (Módulo 3)
 - Deploy e publicação (Módulo 4)
-- Slash commands, hooks, MCP servers ([Curso Avançado](https://github.com/diferentia/curso-claude-code-avancado))
-- API e integrações programáticas ([Módulo 4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md))
+- Slash commands, Git e MCP no terminal ([Aula 03 do Vibe Coders](../../vibe-coders/))
+- Hooks e automação hands-on ([Workshop Claude Code](../../workshop-claude-code/))
 
 ---
 

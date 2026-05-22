@@ -1,13 +1,9 @@
-O programa é o mesmo para toda a Oceana. O que muda é o **caso de uso** e o que cada área **leva para o dia a dia** ao final do módulo.
-
----
-
 ## Analistas de investimento
 
 **Entregas**
 
 - Extrair KPIs de releases e comparar trimestres de empresas do portfólio
-- Estruturar atas de reunião com executivos (utilities e energia)
+- Estruturar atas de reunião com executivos e especialistas do portfólio
 - Projeto de cobertura setorial com contexto persistente (sem repetir prompt toda vez)
 - Skill reutilizável para nota interna de resultado
 - Protocolo de checagem de números antes de usar output em decisão

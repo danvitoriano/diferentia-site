@@ -70,8 +70,8 @@ Repetir o padrão dos módulos anteriores: demo antes da teoria. O efeito "uau" 
 
 **[0:03 a 0:10] Demo de impacto: Projeto de cobertura já configurado**
 
-Antes da aula, o facilitador cria um Projeto no claude.ai chamado "Cobertura CPFL" (ou outra empresa de utilities no universo da Oceana) com:
-- Instruções de projeto: "Você é um analista sênior de renda variável da Oceana Gestora, especializado no setor de utilities. Sempre que eu iniciar uma conversa, assuma que estamos analisando a CPFL. Use linguagem técnica de análise fundamentalista. Estruture respostas com clareza para uso em relatórios internos."
+Antes da aula, o facilitador cria um Projeto no claude.ai chamado "Cobertura [empresa]" (empresa listada do portfólio escolhida para a turma) com:
+- Instruções de projeto: "Você é um analista sênior da Oceana, com foco no setor de cobertura deste Projeto. Sempre que eu iniciar uma conversa, assuma que estamos analisando [empresa]. Use linguagem técnica de análise fundamentalista. Estruture respostas com clareza para uso em relatórios internos."
 - Pelo menos um arquivo carregado: o release mais recente da empresa.
 
 Abrir uma conversa nova dentro do projeto e digitar:
@@ -175,7 +175,7 @@ Demo 1: câmera para capturar whiteboard de reunião
 
 Fotografar (ou usar uma foto pré-salva de) um quadro com anotações de reunião de gestão, com dados fictícios mas realistas (tipo: "CAPEX 2026 R$1,2bi, prazo de execução 18 meses, três projetos prioritários listados, dois riscos identificados").
 
-> `"Fotografei o quadro de uma reunião com o CFO de uma empresa de energia. Transcreva tudo que está escrito, organize em uma ata estruturada com: contexto da reunião, pontos discutidos, decisões tomadas, próximas ações com responsável se houver, e perguntas que ficaram em aberto."`
+> `"Fotografei o quadro de uma reunião com o CFO de uma empresa do portfólio. Transcreva tudo que está escrito, organize em uma ata estruturada com: contexto da reunião, pontos discutidos, decisões tomadas, próximas ações com responsável se houver, e perguntas que ficaram em aberto."`
 
 Mostrar a resposta ao vivo.
 
@@ -228,7 +228,7 @@ Mostrar ao vivo a tela de criação de Projeto no claude.ai.
 
 **[1:20 a 1:30] Demo ao vivo: criando um Projeto do zero**
 
-Criar ao vivo um Projeto chamado "Cobertura [empresa de utilities]". Mostrar cada etapa:
+Criar ao vivo um Projeto chamado "Cobertura [empresa do portfólio]". Mostrar cada etapa:
 
 Etapa 1, nome e descrição:
 
@@ -238,7 +238,7 @@ Etapa 2, instruções do Projeto:
 
 Digitar ao vivo as instruções, explicando cada parte enquanto escreve:
 
-> `"Você é um analista sênior de renda variável da Oceana Gestora, com foco em utilities (energia elétrica, transmissão, saneamento). Quando eu iniciar uma conversa neste projeto, assuma que estamos analisando [empresa]. Use sempre linguagem técnica de análise fundamentalista. Ao estruturar respostas, priorize clareza para uso em notas e relatórios internos. Se eu pedir um artefato, use formatação limpa sem cores berrantes. Se eu pedir comparações com pares, priorize os comparáveis que estão no universo da Oceana."`
+> `"Você é um analista sênior da Oceana, com foco no setor de cobertura deste Projeto. Quando eu iniciar uma conversa neste projeto, assuma que estamos analisando [empresa]. Use sempre linguagem técnica de análise fundamentalista. Ao estruturar respostas, priorize clareza para uso em notas e relatórios internos. Se eu pedir um artefato, use formatação limpa sem cores berrantes. Se eu pedir comparações com pares, priorize os comparáveis que estão no universo da Oceana."`
 
 > "Essas instruções ficam ativas em todas as conversas do Projeto. Não precisam ser repetidas no prompt. Pensem nisso como a briefing que você daria a um estagiário no primeiro dia, mas uma vez só."
 
@@ -260,7 +260,7 @@ Demo A, pergunta sem contexto explícito:
 
 Observar que o Claude responde com contexto específico da empresa, não uma resposta genérica.
 
-> "Reparem que eu não precisei dizer de qual empresa estou falando, nem que sou analista de utilities. O Projeto já sabe."
+> "Reparem que eu não precisei dizer de qual empresa estou falando, nem repetir meu papel. O Projeto já sabe."
 
 Demo B, iteração entre conversas:
 
@@ -293,7 +293,7 @@ Enquanto o time cria:
 > "Se você nunca usou Projetos, comece pelas instruções: escreva só uma frase dizendo seu cargo e o setor que você cobre. Já faz diferença. O arquivo pode vir depois."
 
 **Desafio opcional para o nível avançado:**
-> "Para quem já está confortável: tente criar dois Projetos distintos, um para empresas de energia elétrica e outro para saneamento, cada um com instruções diferentes. Depois compare como o Claude responde à mesma pergunta em cada Projeto."
+> "Para quem já está confortável: tente criar dois Projetos distintos, cada um com setor ou empresa diferente e instruções distintas. Depois compare como o Claude responde à mesma pergunta em cada Projeto."
 
 ---
 

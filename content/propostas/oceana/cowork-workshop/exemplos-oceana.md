@@ -1,7 +1,3 @@
-Workshop hands-on: cada participante configura Cowork com **dados reais da própria área**. Entregas ao sair da sessão.
-
----
-
 ## Analistas de investimento
 
 **Entregas**

@@ -10,6 +10,10 @@ export interface TrilhaCourse {
   prerequisites: string[];
   moduleNumber: number | null;
   status?: "em-definicao";
+  /** Ex.: Até 30 pessoas */
+  audience?: string;
+  /** Ex.: 100% online via Teams ou Meet */
+  delivery?: string;
 }
 
 export interface TrilhaData {

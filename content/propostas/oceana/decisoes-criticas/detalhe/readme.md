@@ -7,9 +7,9 @@ title: Sobre o curso
 **Produto:** Diferentia  
 **Carga horária total:** 6h (3 sessões de 2h), incluindo computer use (Chrome) e extensões Excel e PowerPoint  
 **Formato:** Online síncrono via Teams ou Meet  
-**Público:** Times que já completaram o Claude Essentials e querem extrair mais qualidade e consistência dos resultados  
-**Pré-requisito:** Claude Essentials: do prompt ao agente  
-**Trilha:** [cursos-oceana](https://github.com/diferentia/cursos-oceana) · **Anterior:** [curso-claude-introdutorio](https://github.com/diferentia/curso-claude-introdutorio)
+**Público:** Times que já completaram o Claude Essentials e o Cowork demonstrativo e querem extrair mais qualidade e consistência dos resultados  
+**Pré-requisitos obrigatórios:** Claude Essentials: do prompt ao agente · Automação com Claude Cowork  
+**Trilha:** [cursos-oceana](https://github.com/diferentia/cursos-oceana) · **Anteriores:** [curso-claude-introdutorio](https://github.com/diferentia/curso-claude-introdutorio) · [curso-cowork](https://github.com/diferentia/curso-cowork)
 
 ---
 
@@ -17,13 +17,14 @@ title: Sobre o curso
 
 Enquanto o Claude Essentials cobre o ciclo completo de uso do Claude, este curso foca em **qualidade e consistência dos outputs**. O time já sabe usar o Claude. Aqui aprende a fazer o Claude pensar melhor, produzir resultados mais auditáveis e criar padrões reutilizáveis para toda a equipe.
 
-O foco é em técnicas que fazem diferença em contextos de análise, síntese e tomada de decisão no mercado de capitais: chain-of-thought, few-shot prompting, system prompts, fluxos multi-etapas e frameworks de auditoria de outputs.
+O foco é em técnicas que fazem diferença em contextos de análise, síntese e tomada de decisão no mercado financeiro: chain-of-thought, few-shot prompting, system prompts, fluxos multi-etapas e frameworks de auditoria de outputs.
 
 ---
 
 ## Pré-requisitos
 
 - Ter concluído o **Claude Essentials: do prompt ao agente** (todos os 4 módulos)
+- Ter concluído **Automação com Claude Cowork** (demonstrativo)
 - Conta claude.ai ativa com plano Pro
 - Ter à mão documentos reais do trabalho (releases, atas, contratos, modelos internos)
 
@@ -54,7 +55,7 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 
 - Auditoria de outputs: framework de revisão para resultados com números críticos
 - Extensões Claude no Excel e no PowerPoint
-- Casos práticos: análise de utilities, crédito privado, due diligence, comunicação
+- Casos práticos: análise de crédito e investimentos, due diligence, comunicação
 - Entrega coletiva: playbook de prompts avançados da Oceana
 
 ---
@@ -67,7 +68,8 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 | Skills e /skill-creator | [curso-claude-introdutorio: Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
 | App desktop e automações Cowork | [curso-cowork](https://github.com/diferentia/curso-cowork) |
 | Claude Code e vibe coding | [curso-claude-code](https://github.com/diferentia/curso-claude-code) |
-| MCP no terminal e API | [curso-claude-code-avancado](https://github.com/diferentia/curso-claude-code-avancado) |
+| MCP no terminal, Git, slash | [Vibe Coders](../vibe-coders/) |
+| Automação hands-on no terminal | [Workshop Claude Code](../workshop-claude-code/) |
 
 ---
 
@@ -76,8 +78,8 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 | Ordem | Curso |
 |---|---|
 | 1 (obrigatório) | [Claude Essentials: do prompt ao agente](https://github.com/diferentia/curso-claude-introdutorio) |
-| 2 | **Este curso**: Claude para Decisões Críticas |
-| Paralelo (opcional) | [Automação com Claude Cowork](https://github.com/diferentia/curso-cowork) |
+| 2 (obrigatório) | [Automação com Claude Cowork](https://github.com/diferentia/curso-cowork) |
+| 3 | **Este curso**: Claude para Decisões Críticas |
 | Paralelo (opcional, técnico) | [Claude Code para Vibe Coders](https://github.com/diferentia/curso-claude-code) |
 
 ---
@@ -104,6 +106,6 @@ Cada `sessao-XX-*.md` segue o padrão da trilha:
 
 ## Sobre a Diferentia
 
-Metodologia proprietária de adoção de agentes de IA para o mercado de capitais.
+Metodologia proprietária de adoção de agentes de IA para o mercado financeiro.
 
 Para mais informações: [diferentia.com.br](https://diferentia.com.br)
