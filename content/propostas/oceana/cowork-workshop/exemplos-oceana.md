@@ -1,6 +1,4 @@
-# Exemplos para a Oceana: Workshop Claude Cowork (prático)
-
-Prompts para usar no workshop com sua própria pasta de trabalho e licença Pro. Adapte os nomes de arquivos e pastas ao seu dia a dia.
+Prompts para usar com sua pasta de trabalho e licença Pro. Adapte nomes de arquivos e pastas ao seu dia a dia.
 
 ---
 

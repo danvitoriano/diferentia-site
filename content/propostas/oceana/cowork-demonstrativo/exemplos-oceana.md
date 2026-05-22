@@ -1,6 +1,4 @@
-# Exemplos para a Oceana: Automação com Claude Cowork
-
-Prompts e fluxos para usar no app desktop do Claude com a pasta de trabalho da Oceana conectada. Os exemplos usam releases e documentos do setor de utilities e energia (dados podem ser fictícios para teste).
+Prompts e fluxos para o app desktop do Claude com a pasta de trabalho conectada. Exemplos em utilities e energia (podem usar dados fictícios para teste).
 
 ---
 

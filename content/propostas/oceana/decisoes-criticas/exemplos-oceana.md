@@ -1,6 +1,4 @@
-# Exemplos para a Oceana: Claude para Decisões Críticas
-
-Prompts, system prompts e fluxos para análises com números críticos, due diligence e comunicação institucional. Copie e adapte ao seu caso.
+Prompts, system prompts e fluxos para análises com números críticos, due diligence e comunicação institucional.
 
 ---
 

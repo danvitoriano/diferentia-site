@@ -1,6 +1,4 @@
-# Exemplos para a Oceana: Claude Code para Vibe Coders
-
-Projetos e prompts para construir ferramentas com Claude Code no terminal. Cada bloco traz um exemplo para **análise de investimentos** e variantes por área.
+Projetos e prompts para construir ferramentas no terminal. Cada bloco traz um exemplo para **análise de investimentos** e variantes por área.
 
 ---
 

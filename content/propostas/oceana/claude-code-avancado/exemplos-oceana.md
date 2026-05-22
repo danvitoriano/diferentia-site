@@ -1,6 +1,4 @@
-# Exemplos para a Oceana: Claude Code Avançado
-
-Referências de projeto, slash commands e prompts com MCP para o terminal. Use dados fictícios em pastas de teste até validar com compliance.
+Slash commands, MCP e versionamento com Git no terminal. Use dados fictícios em pastas de teste até validar com compliance.
 
 ---
 

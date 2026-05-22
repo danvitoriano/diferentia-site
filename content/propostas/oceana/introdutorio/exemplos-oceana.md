@@ -1,6 +1,4 @@
-# Exemplos para a Oceana: Claude Essentials
-
-Prompts prontos para copiar no Claude, organizados por tema do curso. Em cada bloco há um exemplo para **análise de investimentos** e variantes por área (operações, jurídico, comercial, administrativo).
+Prompts organizados por tema do curso. Em cada bloco há um exemplo para **análise de investimentos** e variantes por área (operações, jurídico, comercial, administrativo).
 
 ---
 
