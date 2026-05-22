@@ -49,8 +49,7 @@ export default async function CursoResumoPage({
           <section className="mt-12 border-t border-gray-200 pt-10">
             <h2 className="text-xl font-semibold text-gray-900">Exemplos para a Oceana</h2>
             <p className="mt-2 text-sm text-gray-600">
-              Prompts e casos de uso adaptados ao contexto da Oceana. Use na preparação ou durante
-              as sessões.
+              Prompts e fluxos prontos para copiar no Claude, adaptados ao contexto da Oceana.
             </p>
             <div className="mt-6">
               <MarkdownContent content={exemplos} />

@@ -1,221 +1,221 @@
-# Exemplos Oceana: Claude Essentials: do prompt ao agente
+# Exemplos para a Oceana: Claude Essentials
 
-Use estes exemplos nos módulos indicados para substituir os exemplos genéricos.
-Cada módulo traz o exemplo padrão (analistas de investimento) seguido de
-variantes por área: use a variante adequada ao perfil da turma.
+Prompts prontos para copiar no Claude, organizados por tema do curso. Em cada bloco há um exemplo para **análise de investimentos** e variantes por área (operações, jurídico, comercial, administrativo).
 
 ---
 
-## Módulo 2: substituir o exemplo de análise de texto
+## Análise de textos e documentos
 
 ### Analistas de investimento
 
-**Caso: resumo de ata de reunião**
+**Resumo de ata de reunião**
 
-Prompt para exercício:
+```
+Você é um assistente de analistas de investimento da Oceana.
+Leia a ata abaixo e produza: (1) lista de decisões tomadas,
+(2) lista de pendências com responsável e prazo, (3) um parágrafo
+de resumo executivo em até 5 linhas.
 
-> Você é um assistente de analistas de investimento da Oceana.
-> Leia a ata abaixo e produza: (1) lista de decisões tomadas,
-> (2) lista de pendências com responsável e prazo, (3) um parágrafo
-> de resumo executivo em até 5 linhas.
-> Ata: [participante cola o texto]
+Cole a ata abaixo:
+```
 
-### Variante: Operações / Backoffice
+### Operações / Backoffice
 
-**Caso: sumário de pendências operacionais do dia**
+**Sumário de pendências operacionais do dia**
 
-Prompt para exercício:
+```
+Leia o extrato de movimentações abaixo e identifique: (1) trades que
+ainda precisam de confirmação de contraparte, (2) discrepâncias entre
+quantidade negociada e quantidade liquidada, (3) itens que exigem ação
+antes do fechamento do dia.
+Se um item não tiver informação suficiente para classificar, diga
+explicitamente em vez de assumir.
 
-> Leia o extrato de movimentações abaixo e identifique: (1) trades que
-> ainda precisam de confirmação de contraparte, (2) discrepâncias entre
-> quantidade negociada e quantidade liquidada, (3) itens que exigem ação
-> antes do fechamento do dia.
-> Se um item não tiver informação suficiente para classificar, diga
-> explicitamente em vez de assumir.
-> Extrato: [participante cola o texto]
+Cole o extrato abaixo:
+```
 
-### Variante: Jurídico / Compliance
+### Jurídico / Compliance
 
-**Caso: extração de obrigações de contrato**
+**Extração de obrigações de contrato**
 
-Prompt para exercício:
+```
+Leia o contrato abaixo e produza: (1) lista de obrigações da Oceana
+com prazo definido, (2) cláusulas que exigem aprovação interna antes
+de qualquer ação, (3) pontos que precisam de atenção de compliance
+(dados pessoais, sigilo, vedações regulatórias).
+Cite o número da cláusula para cada item.
+Se uma cláusula for ambígua, sinalize em vez de interpretar.
 
-> Leia o contrato abaixo e produza: (1) lista de obrigações da Oceana
-> com prazo definido, (2) cláusulas que exigem aprovação interna antes
-> de qualquer ação, (3) pontos que precisam de atenção de compliance
-> (dados pessoais, sigilo, vedações regulatórias).
-> Cite o número da cláusula para cada item.
-> Se uma cláusula for ambígua, sinalize em vez de interpretar.
-> Contrato: [participante cola o texto]
+Cole o contrato abaixo:
+```
 
-### Variante: Comercial
+### Comercial
 
-**Caso: resposta a formulário de investidor**
+**Resposta a formulário de investidor**
 
-Prompt para exercício:
+```
+Leia o formulário de due diligence abaixo e rascunhe respostas para
+cada pergunta usando as informações que eu vou fornecer logo depois.
+Para perguntas que você não tem dados suficientes para responder,
+deixe marcado como [PENDENTE: informação necessária].
+Não invente nenhum dado sobre a gestora, a carteira ou o time.
 
-> Leia o formulário de due diligence abaixo e rascunhe respostas para
-> cada pergunta usando as informações que eu vou fornecer logo depois.
-> Para perguntas que você não tem dados suficientes para responder,
-> deixe marcado como [PENDENTE: informação necessária].
-> Não invente nenhum dado sobre a gestora, a carteira ou o time.
-> Formulário: [participante cola o texto]
-> Informações disponíveis: [participante cola o material de referência]
+Cole o formulário e, em seguida, o material de referência:
+```
 
-### Variante: Administrativo
+### Administrativo
 
-**Caso: organização de solicitações de viagem**
+**Organização de solicitações de viagem**
 
-Prompt para exercício:
+```
+Leia os e-mails abaixo com solicitações de viagem e produza uma tabela
+com as colunas: colaborador, destino, data de ida, data de volta,
+finalidade, status (confirmado / pendente / sem informação suficiente).
+Para cada linha com informação faltando, liste o que precisa ser confirmado.
 
-> Leia os e-mails abaixo com solicitações de viagem e produza uma tabela
-> com as colunas: colaborador, destino, data de ida, data de volta,
-> finalidade, status (confirmado / pendente / sem informação suficiente).
-> Para cada linha com informação faltando, liste o que precisa ser confirmado.
-> E-mails: [participante cola o texto]
+Cole os e-mails abaixo:
+```
 
 ---
 
-## Módulo 3: substituir o exemplo de conector MCP
+## Conectores e leitura de arquivos
 
 ### Analistas de investimento
 
-**Caso: leitor de releases de resultados**
+**Leitor de releases de resultados**
 
-Prompt para exercício:
+```
+Leia o release de resultados do 1T25 da empresa X que está no arquivo
+que compartilhei. Extraia: receita líquida, EBITDA, lucro líquido,
+dívida líquida e guidance para o próximo trimestre.
+Apresente em tabela comparando com o trimestre anterior.
+Se alguma informação não estiver no documento, diga explicitamente.
+```
 
-> Leia o release de resultados do 1T25 da empresa X que está no arquivo
-> que compartilhei. Extraia: receita líquida, EBITDA, lucro líquido,
-> dívida líquida e guidance para o próximo trimestre.
-> Apresente em tabela comparando com o trimestre anterior.
-> Se alguma informação não estiver no documento, diga explicitamente.
+**Atualização de modelo a partir do release**
 
-### Analistas de investimento (avançado): atualização de modelo
+Etapa 1: mapeamento dos campos
 
-Este é o caso mais pedido no diagnóstico da Oceana: usar a IA para
-ajudar a preencher os campos de um modelo financeiro a partir de um release,
-sem apenas resumir o documento.
+```
+Leia o release do 1T25 da empresa X que está no arquivo.
+Abaixo estão os campos que preciso atualizar no meu modelo. Para cada
+campo, encontre o número correspondente no release e cite a página ou
+seção de origem. Se não encontrar, diga "não localizado".
 
-Prompt para exercício (duas etapas):
+Campos: receita líquida 1T25, EBITDA ajustado 1T25, capex 1T25,
+dívida líquida em 31/03/2025, guidance de receita para 2025.
+```
 
-**Etapa 1: mapeamento dos campos:**
-> Leia o release do 1T25 da empresa X que está no arquivo.
-> Abaixo estão os campos que preciso atualizar no meu modelo. Para cada
-> campo, encontre o número correspondente no release e cite a página ou
-> seção de origem. Se não encontrar, diga "não localizado".
-> Campos: receita líquida 1T25, EBITDA ajustado 1T25, capex 1T25,
-> dívida líquida em 31/03/2025, guidance de receita para 2025.
+Etapa 2: checagem cruzada
 
-**Etapa 2: checagem cruzada:**
-> Os números que você extraiu batem com os que estão na tabela de
-> destaques financeiros na página 2 do release? Aponte qualquer
-> divergência antes de eu usar esses dados.
+```
+Os números que você extraiu batem com os que estão na tabela de
+destaques financeiros na página 2 do release? Aponte qualquer
+divergência antes de eu usar esses dados.
+```
 
-**Nota para o facilitador:** o exercício de duas etapas ensina o
-participante a usar a IA como extrator, não como oráculo. A etapa 2
-é o coração da aula de confiança (ver Módulo 2, bloco de verificação).
+### Operações / Backoffice
 
-### Variante: Operações / Backoffice
+**Conciliação de posições a partir de dois extratos**
 
-**Caso: conciliação de posições a partir de dois extratos**
+```
+Tenho dois arquivos: o extrato da custodiante e o extrato do sistema
+interno. Compare as posições linha a linha e produza: (1) itens que
+batem nos dois sistemas, (2) itens que aparecem em um e não no outro,
+(3) itens com quantidade ou valor divergente.
+Não arredonde diferenças: se houver qualquer divergência, mesmo de
+centavos, liste.
 
-Prompt para exercício:
+Anexe ou cole os dois extratos.
+```
 
-> Tenho dois arquivos: o extrato da custodiante e o extrato do sistema
-> interno. Compare as posições linha a linha e produza: (1) itens que
-> batem nos dois sistemas, (2) itens que aparecem em um e não no outro,
-> (3) itens com quantidade ou valor divergente.
-> Não arredonde diferenças: se houver qualquer divergência, mesmo de
-> centavos, liste.
-> Extrato custodiante: [participante cola ou anexa]
-> Extrato interno: [participante cola ou anexa]
+### Jurídico / Compliance
 
-### Variante: Jurídico / Compliance
+**Checagem de due diligence em fornecedor**
 
-**Caso: checagem de due diligence em fornecedor**
+```
+Leia os documentos do fornecedor que compartilhei (contrato social,
+certidões, proposta comercial). Produza: (1) lista de itens de KYP
+que estão presentes e conformes, (2) itens ausentes ou vencidos,
+(3) pontos de atenção que merecem consulta ao jurídico antes de
+assinar. Cite o documento de origem para cada item.
+```
 
-Prompt para exercício:
+### Comercial
 
-> Leia os documentos do fornecedor que compartilhei (contrato social,
-> certidões, proposta comercial). Produza: (1) lista de itens de KYP
-> que estão presentes e conformes, (2) itens ausentes ou vencidos,
-> (3) pontos de atenção que merecem consulta ao jurídico antes de
-> assinar. Cite o documento de origem para cada item.
+**Análise de regulamento de fundo para investidor**
 
-### Variante: Comercial
-
-**Caso: análise de regulamento de fundo para investidor**
-
-Prompt para exercício:
-
-> Leia o regulamento do fundo que está no arquivo. O investidor quer
-> saber: (1) qual a política de liquidez e prazo de resgate, (2) quais
-> são as taxas cobradas, (3) quais os riscos explicitamente declarados.
-> Responda em linguagem acessível, sem jargão técnico.
-> Se uma informação não estiver no regulamento, diga explicitamente.
+```
+Leia o regulamento do fundo que está no arquivo. O investidor quer
+saber: (1) qual a política de liquidez e prazo de resgate, (2) quais
+são as taxas cobradas, (3) quais os riscos explicitamente declarados.
+Responda em linguagem acessível, sem jargão técnico.
+Se uma informação não estiver no regulamento, diga explicitamente.
+```
 
 ---
 
-## Módulo 4: substituir o exemplo de skill
+## Skills e automações
 
 ### Analistas de investimento
 
-**Caso: checagem de compliance em e-mail**
+**Checagem de compliance em e-mail**
 
-Prompt para exercício:
+```
+Você é um revisor de comunicações de uma gestora de recursos.
+Leia o e-mail abaixo e identifique: (1) menções a rentabilidade futura
+sem disclaimer adequado, (2) linguagem que pode ser interpretada como
+promessa de retorno, (3) informações que precisam de aprovação de
+compliance antes de enviar.
 
-> Você é um revisor de comunicações de uma gestora de recursos.
-> Leia o e-mail abaixo e identifique: (1) menções a rentabilidade futura
-> sem disclaimer adequado, (2) linguagem que pode ser interpretada como
-> promessa de retorno, (3) informações que precisam de aprovação de
-> compliance antes de enviar.
-> E-mail: [participante cola o texto]
+Cole o e-mail abaixo:
+```
 
-### Variante: Operações / Backoffice
+### Operações / Backoffice
 
-**Caso: skill de relatório diário de operações**
+**Skill: relatório diário de operações**
 
-Prompt base para criar a skill:
+```
+Toda vez que eu usar esta skill, vou colar o boletim de operações do dia.
+Produza: (1) resumo em 3 linhas do que foi feito, (2) lista de itens
+que precisam de follow-up até amanhã, (3) flag se houver qualquer
+operação fora do padrão (volume atípico, ativo incomum, prazo diferente
+do usual). Formato: markdown simples, sem tabelas longas.
+```
 
-> Toda vez que eu usar esta skill, vou colar o boletim de operações do dia.
-> Produza: (1) resumo em 3 linhas do que foi feito, (2) lista de itens
-> que precisam de follow-up até amanhã, (3) flag se houver qualquer
-> operação fora do padrão (volume atípico, ativo incomum, prazo diferente
-> do usual). Formato: markdown simples, sem tabelas longas.
+### Jurídico / Compliance
 
-### Variante: Jurídico / Compliance
+**Skill: revisão de ata de gestão**
 
-**Caso: skill de revisão de ata de gestão**
+```
+Toda vez que eu usar esta skill, vou colar o texto de uma ata de
+reunião de gestão. Produza: (1) decisões tomadas com o quórum presente,
+(2) matérias que exigem registro em órgão regulador, (3) pendências
+com prazo. Sinalize se faltar informação de quórum ou data.
+```
 
-Prompt base para criar a skill:
+### Comercial
 
-> Toda vez que eu usar esta skill, vou colar o texto de uma ata de
-> reunião de gestão. Produza: (1) decisões tomadas com o quórum presente,
-> (2) matérias que exigem registro em órgão regulador, (3) pendências
-> com prazo. Sinalize se faltar informação de quórum ou data.
+**Skill: triagem de e-mails de investidores**
 
-### Variante: Comercial
+```
+Toda vez que eu usar esta skill, vou colar um e-mail de investidor.
+Classifique o e-mail em uma destas categorias: solicitação de resgate,
+aporte, dúvida sobre extrato, dúvida sobre estratégia, reclamação,
+outro. Depois indique: (1) qual área deve responder, (2) prazo regulatório
+se aplicável, (3) rascunho de resposta de acuse de recebimento em tom
+formal mas direto.
+```
 
-**Caso: skill de triagem de e-mails de investidores**
+### Administrativo
 
-Prompt base para criar a skill:
+**Skill: consolidação de despesas do cartão**
 
-> Toda vez que eu usar esta skill, vou colar um e-mail de investidor.
-> Classifique o e-mail em uma destas categorias: solicitação de resgate,
-> aporte, dúvida sobre extrato, dúvida sobre estratégia, reclamação,
-> outro. Depois indique: (1) qual área deve responder, (2) prazo regulatório
-> se aplicável, (3) rascunho de resposta de acuse de recebimento em tom
-> formal mas direto.
-
-### Variante: Administrativo
-
-**Caso: skill de consolidação de despesas do cartão**
-
-Prompt base para criar a skill:
-
-> Toda vez que eu usar esta skill, vou colar o extrato do cartão
-> corporativo. Produza uma tabela com: data, estabelecimento, valor,
-> categoria sugerida (viagem, refeição, material, fornecedor, outro),
-> flag se o valor parecer fora do padrão para a categoria.
-> Não classifique itens ambíguos por conta própria: liste-os separados
-> para revisão manual.
+```
+Toda vez que eu usar esta skill, vou colar o extrato do cartão
+corporativo. Produza uma tabela com: data, estabelecimento, valor,
+categoria sugerida (viagem, refeição, material, fornecedor, outro),
+flag se o valor parecer fora do padrão para a categoria.
+Não classifique itens ambíguos por conta própria: liste-os separados
+para revisão manual.
+```

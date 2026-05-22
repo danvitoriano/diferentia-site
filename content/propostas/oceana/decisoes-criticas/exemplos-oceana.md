@@ -1,7 +1,6 @@
-# Exemplos Oceana: Claude para Decisões Críticas
+# Exemplos para a Oceana: Claude para Decisões Críticas
 
-Casos de uso e prompts adaptados para a Oceana Investimentos.
-Usar como referência para demos e exercícios das duas sessões.
+Prompts, system prompts e fluxos para análises com números críticos, due diligence e comunicação institucional. Copie e adapte ao seu caso.
 
 ---
 
@@ -21,7 +20,7 @@ Antes de dar sua conclusão, pense passo a passo:
 
 Só depois de percorrer esses cinco pontos, dê sua avaliação final com recomendação.
 
-[colar dados financeiros do emissor]
+Cole os dados financeiros do emissor abaixo:
 ```
 
 ### Avaliação de tese de investimento
@@ -35,7 +34,7 @@ Você é um analista de renda variável. Antes de dar sua opinião sobre essa te
 
 Só após percorrer esses pontos, dê sua avaliação final.
 
-[colar resumo da tese]
+Cole o resumo da tese abaixo:
 ```
 
 ---
@@ -48,13 +47,13 @@ Só após percorrer esses pontos, dê sua avaliação final.
 Vou te mostrar dois exemplos de como a Oceana estrutura uma nota interna de resultado trimestral. Aprenda o padrão e replique para a empresa abaixo.
 
 EXEMPLO 1:
-[colar nota real anonimizada da Oceana: empresa A]
+[cole uma nota interna anonimizada da Oceana]
 
 EXEMPLO 2:
-[colar nota real anonimizada da Oceana: empresa B]
+[cole outra nota interna anonimizada da Oceana]
 
 Agora gere uma nota no mesmo padrão para:
-[colar release da empresa C]
+[cole o release da empresa]
 ```
 
 ### Classificação de e-mails de investidores
@@ -75,7 +74,7 @@ E-mail: [texto]
 Classificação: Feedback / Prioridade: Baixa / Área: Comercial
 
 Agora classifique os seguintes e-mails no mesmo formato:
-[colar e-mails]
+[cole os e-mails]
 ```
 
 ---
@@ -146,7 +145,7 @@ Leia o release abaixo. Extraia apenas os seguintes dados e indique a seção de 
 
 Se algum dado não estiver no documento, escreva "não localizado".
 
-[colar release]
+Cole o release abaixo:
 ```
 
 ### Passo 2: síntese analítica
@@ -159,7 +158,7 @@ Com base nos dados extraídos abaixo, escreva uma síntese analítica de 3 pará
 
 Tom: técnico, direto, sem adjetivos promocionais. Público: gestores de portfólio.
 
-[colar dados do Passo 1]
+Cole os dados do Passo 1:
 ```
 
 ### Passo 3: auditoria
@@ -176,8 +175,6 @@ Se não houver problemas, responda: "Nenhuma divergência identificada."
 ---
 
 ## Framework de auditoria de outputs
-
-### Checklist de validação para números críticos
 
 ```
 Antes de usar este output em qualquer decisão, responda:

@@ -24,6 +24,7 @@ alwaysApply: true
 - Cliente vê: resumo do programa + `exemplos-oceana.md` em cada curso.
 - **Não** expor: roteiro detalhado (`detalhe/`), guia por área.
 - Listar **todos** os módulos numa grade única (sem agrupar núcleo/opcional).
+- Em `exemplos-oceana.md`: tom **para a Oceana** (copiar e usar). Proibido: "substituir exemplos genéricos", "facilitador", "preparar antes da aula", "participante cola", "demo do facilitador".
 
 ## Exemplos
 
