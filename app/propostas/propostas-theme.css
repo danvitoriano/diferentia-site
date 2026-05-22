@@ -362,12 +362,47 @@
 .propostas-theme .propostas-prose ul,
 .propostas-theme .propostas-prose ol {
   margin-bottom: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
   color: var(--md-sys-color-on-surface-variant);
+  list-style-position: outside;
+}
+.propostas-theme .propostas-prose ul {
+  list-style-type: disc;
+}
+.propostas-theme .propostas-prose ol {
+  list-style-type: decimal;
+}
+.propostas-theme .propostas-prose ul ul {
+  list-style-type: circle;
+  margin-top: 0.35rem;
+}
+.propostas-theme .propostas-prose ol ol {
+  list-style-type: lower-alpha;
+  margin-top: 0.35rem;
 }
 .propostas-theme .propostas-prose li {
+  display: list-item;
   margin-bottom: 0.4rem;
   line-height: 1.5rem;
+  padding-left: 0.25rem;
+}
+.propostas-theme .propostas-prose li::marker {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Listas fora do markdown (ex.: Como navegar) */
+.propostas-theme .md-bullet-list {
+  list-style-position: outside;
+  padding-left: 1.75rem;
+}
+.propostas-theme .md-bullet-list ul {
+  list-style-type: disc;
+}
+.propostas-theme .md-bullet-list ol {
+  list-style-type: decimal;
+}
+.propostas-theme .md-bullet-list li {
+  display: list-item;
 }
 .propostas-theme .propostas-prose strong {
   color: var(--md-sys-color-on-surface);
