@@ -38,7 +38,7 @@ export default function OceanaTrilhaPage() {
 
         <section className="mt-12">
           <h2 className="sr-only">Módulos da trilha</h2>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="mw-module-card-grid">
             {courses.map((course, i) => (
               <CourseCard key={course.slug} course={course} step={i + 1} />
             ))}
