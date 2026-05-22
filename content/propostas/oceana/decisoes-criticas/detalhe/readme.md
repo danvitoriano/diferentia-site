@@ -5,7 +5,7 @@ title: Sobre o curso
 # Curso: Claude para Decisões Críticas
 
 **Produto:** Diferentia  
-**Carga horária total:** ~6h (2 sessões de 3h)  
+**Carga horária total:** 6h (3 sessões de 2h)  
 **Formato:** Online síncrono via Teams ou Meet  
 **Público:** Times que já completaram o Claude Essentials e querem extrair mais qualidade e consistência dos resultados  
 **Pré-requisito:** Claude Essentials: do prompt ao agente  
@@ -31,20 +31,26 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 
 ## Estrutura das sessões
 
-### Sessão 01: Técnicas avançadas de prompting
-**Arquivo:** `sessao-01-tecnicas-avancadas-de-prompting.md`  
-**Duração:** 3h
+### Sessão 01: Chain-of-thought e few-shot
+**Arquivo:** `aula-01-chain-of-thought-e-few-shot.md`  
+**Duração:** 2h
 
 - Chain-of-thought: forçar o Claude a mostrar o raciocínio passo a passo
 - Few-shot prompting: treinar o Claude com exemplos internos da Oceana
+- Exercício: aplicar as técnicas em caso real do trabalho
+
+### Sessão 02: System prompts e fluxos multi-etapas
+**Arquivo:** `aula-02-system-prompts-e-fluxos.md`  
+**Duração:** 2h
+
 - System prompts: instruções robustas e reutilizáveis para toda a equipe
+- Fluxos multi-etapas: do release à nota interna sem sair do Claude
 - Exercício: cada área escreve o próprio system prompt de uso recorrente
 
-### Sessão 02: Fluxos complexos, auditoria e playbook
-**Arquivo:** `sessao-02-fluxos-complexos-auditoria-e-playbook.md`  
-**Duração:** 3h
+### Sessão 03: Auditoria, casos práticos e playbook
+**Arquivo:** `aula-03-auditoria-casos-e-playbook.md`  
+**Duração:** 2h
 
-- Fluxos multi-etapas: do release à nota interna sem sair do Claude
 - Auditoria de outputs: framework de revisão para resultados com números críticos
 - Casos práticos: análise de utilities, crédito privado, due diligence, comunicação
 - Entrega coletiva: playbook de prompts avançados da Oceana

@@ -2,18 +2,22 @@
 
 ### Módulo avançado: programa
 
-*2 sessões de ~3h | Até 30 pessoas | Pré-requisito: Curso Introdutório*
+*3 sessões de 2h | Até 30 pessoas | Pré-requisito: Curso Introdutório*
 
-#### Sessão 1: Técnicas avançadas de prompting (3h)
+#### Sessão 1: Chain-of-thought e few-shot (2h)
 
 - Chain-of-thought: forçar o Claude a mostrar o raciocínio passo a passo
 - Few-shot prompting: treinar o Claude com exemplos internos da Oceana
-- System prompts: criar instruções de sistema robustas e reutilizáveis para toda a equipe
+- Exercício: aplicar as técnicas em caso real do trabalho
+
+#### Sessão 2: System prompts e fluxos multi-etapas (2h)
+
+- System prompts: instruções robustas e reutilizáveis para toda a equipe
+- Fluxos multi-etapas: do release à nota interna, sem sair do Claude
 - Exercício: cada área escreve o próprio system prompt de uso recorrente
 
-#### Sessão 2: Fluxos complexos, auditoria e playbook (3h)
+#### Sessão 3: Auditoria, casos práticos e playbook (2h)
 
-- Fluxos multi-etapas: integrar o Claude a processos sequenciais (release, extração, nota, revisão)
-- Auditoria de outputs: framework de revisão estruturada para resultados com números críticos
-- Casos práticos da Oceana: análise de utilities, crédito privado, due diligence e comunicação
+- Auditoria de outputs: framework de revisão para resultados com números críticos
+- Casos práticos da Oceana: utilities, crédito privado, due diligence e comunicação
 - Entrega coletiva: playbook de prompts avançados da Oceana
