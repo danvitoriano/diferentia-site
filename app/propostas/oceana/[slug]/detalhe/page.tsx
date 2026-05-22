@@ -29,12 +29,10 @@ export default async function DetalheIndexPage({
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Roteiro: {course.title}</h1>
-            <p className="mt-2 text-gray-600">
-              Selecione um módulo ou sessão para abrir o conteúdo completo.
-            </p>
+            <h1 className="md-headline-small">Roteiro: {course.title}</h1>
+            <p className="mt-2 md-body-large">Selecione um módulo ou sessão para abrir o conteúdo completo.</p>
             {files.length === 0 ? (
-              <p className="mt-8 rounded-lg border border-dashed border-gray-300 bg-gray-50 p-6 text-gray-500">
+              <p className="mt-8 md-card-outlined p-6 md-body-medium text-center">
                 Roteiro em preparação.
               </p>
             ) : (
@@ -43,12 +41,12 @@ export default async function DetalheIndexPage({
                   <li key={f.slug}>
                     <Link
                       href={`/propostas/oceana/${slug}/detalhe/${f.slug}`}
-                      className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-violet-300 hover:shadow-sm"
+                      className="md-list-item"
                     >
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-violet-100 text-sm font-bold text-violet-800">
-                        {i + 1}
+                      <span className="md-list-item-number">{i + 1}</span>
+                      <span className="md-title-medium text-[var(--md-sys-color-primary)]">
+                        {f.title}
                       </span>
-                      <span className="text-base font-medium text-violet-700">{f.title}</span>
                     </Link>
                   </li>
                 ))}

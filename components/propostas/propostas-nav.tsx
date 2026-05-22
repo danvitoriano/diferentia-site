@@ -10,22 +10,18 @@ export function PropostasNav() {
     pathname === "/propostas/oceana" || pathname.startsWith("/propostas/oceana/");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 shadow-sm backdrop-blur-sm">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+    <header className="md-top-app-bar sticky top-0 z-50">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/propostas/oceana" className="flex items-baseline gap-2">
-          <span className="text-lg font-bold text-gray-900">
-            Diferentia<span className="text-violet-600">.</span>
+          <span className="md-title-medium">
+            Diferentia<span style={{ color: "var(--md-sys-color-primary)" }}>.</span>
           </span>
-          <span className="text-sm font-normal text-gray-500">Proposta Oceana</span>
+          <span className="md-body-medium">Proposta Oceana</span>
         </Link>
-        <nav className="flex items-center gap-2" aria-label="Menu principal">
+        <nav className="flex items-center gap-1" aria-label="Menu principal">
           <Link
             href="/propostas/oceana"
-            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-              onTrilha
-                ? "bg-violet-100 text-violet-800"
-                : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-            }`}
+            className={`md-nav-item ${onTrilha ? "md-nav-item-active" : ""}`}
           >
             Trilha
           </Link>

@@ -17,11 +17,9 @@ export function DetalheNav({
   const base = `/propostas/oceana/${courseSlug}/detalhe`;
 
   return (
-    <aside className="rounded-xl border border-gray-200 bg-gray-50 p-5">
-      <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-        Índice do roteiro
-      </p>
-      <p className="mt-1 text-sm font-medium text-gray-900">{courseTitle}</p>
+    <aside className="md-nav-rail">
+      <p className="md-label-large">Índice do roteiro</p>
+      <p className="mt-1 md-title-medium">{courseTitle}</p>
       <ol className="mt-4 space-y-1">
         {files.map((f, i) => {
           const active = f.slug === currentSlug;
@@ -29,23 +27,16 @@ export function DetalheNav({
             <li key={f.slug}>
               <Link
                 href={`${base}/${f.slug}`}
-                className={`flex gap-2 rounded-lg px-2 py-1.5 text-sm transition ${
-                  active
-                    ? "bg-violet-100 font-medium text-violet-900"
-                    : "text-gray-700 hover:bg-white hover:text-violet-700"
-                }`}
+                className={`md-nav-rail-link ${active ? "md-nav-rail-link-active" : ""}`}
               >
-                <span className="shrink-0 tabular-nums text-gray-400">{i + 1}.</span>
+                <span className="shrink-0 tabular-nums opacity-70">{i + 1}.</span>
                 <span>{f.title}</span>
               </Link>
             </li>
           );
         })}
       </ol>
-      <Link
-        href={base}
-        className="mt-4 inline-block text-xs font-medium text-violet-600 hover:underline"
-      >
+      <Link href={base} className="md-text-button mt-4 inline-block px-0">
         Ver lista completa
       </Link>
     </aside>

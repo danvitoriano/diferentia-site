@@ -33,11 +33,13 @@ export default async function CursoResumoPage({
           ]}
         />
 
-        <header className="mt-6 border-b border-gray-200 pb-6">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">{course.title}</h1>
-          <p className="mt-2 text-lg text-gray-600">{course.subtitle}</p>
-          <p className="mt-2 inline-flex rounded-full bg-violet-50 px-3 py-1 text-sm font-medium text-violet-800">
-            {course.duration}
+        <header className="mt-6 border-b border-[var(--md-sys-color-outline-variant)] pb-6">
+          <h1 className="md-headline-medium">{course.title}</h1>
+          <p className="mt-2 md-body-large text-[length:1.125rem] leading-7">
+            {course.subtitle}
+          </p>
+          <p className="mt-3">
+            <span className="md-chip md-chip-filled">{course.duration}</span>
           </p>
         </header>
 
@@ -46,9 +48,9 @@ export default async function CursoResumoPage({
         </div>
 
         {showExemplos ? (
-          <section className="mt-12 border-t border-gray-200 pt-10">
-            <h2 className="text-xl font-semibold text-gray-900">O que cada área recebe</h2>
-            <p className="mt-2 text-sm text-gray-600">
+          <section className="mt-12 border-t border-[var(--md-sys-color-outline-variant)] pt-10">
+            <h2 className="md-title-large">O que cada área recebe</h2>
+            <p className="mt-2 md-body-medium">
               O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
               {["vibe-coders", "claude-code-avancado", "workshop-claude-code"].includes(slug)
                 ? " (TI e desenvolvimento, e áreas de negócio que usam o terminal)."

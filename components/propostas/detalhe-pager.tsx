@@ -22,17 +22,12 @@ export function DetalhePager({
   return (
     <nav
       aria-label="Módulos anterior e próximo"
-      className="mt-12 flex flex-col gap-3 border-t border-gray-200 pt-8 sm:flex-row sm:justify-between"
+      className="mt-12 flex flex-col gap-3 border-t border-[var(--md-sys-color-outline-variant)] pt-8 sm:flex-row sm:justify-between"
     >
       {prev ? (
-        <Link
-          href={`${base}/${prev.slug}`}
-          className="group rounded-lg border border-gray-200 bg-white px-4 py-3 transition hover:border-violet-300 hover:shadow-sm sm:max-w-[48%]"
-        >
-          <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
-            ← Anterior
-          </span>
-          <span className="mt-1 block text-sm font-medium text-gray-900 group-hover:text-violet-700">
+        <Link href={`${base}/${prev.slug}`} className="md-card group flex-1 p-4 sm:max-w-[48%]">
+          <span className="md-label-large normal-case">← Anterior</span>
+          <span className="mt-1 block md-title-medium group-hover:text-[var(--md-sys-color-primary)]">
             {prev.title}
           </span>
         </Link>
@@ -42,12 +37,10 @@ export function DetalhePager({
       {next ? (
         <Link
           href={`${base}/${next.slug}`}
-          className="group rounded-lg border border-gray-200 bg-white px-4 py-3 text-left transition hover:border-violet-300 hover:shadow-sm sm:max-w-[48%] sm:text-right"
+          className="md-card group flex-1 p-4 sm:max-w-[48%] sm:text-right"
         >
-          <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
-            Próximo →
-          </span>
-          <span className="mt-1 block text-sm font-medium text-gray-900 group-hover:text-violet-700">
+          <span className="md-label-large normal-case">Próximo →</span>
+          <span className="mt-1 block md-title-medium group-hover:text-[var(--md-sys-color-primary)]">
             {next.title}
           </span>
         </Link>

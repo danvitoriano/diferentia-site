@@ -39,7 +39,7 @@ export default async function DetalheFilePage({
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
           <article>
-            <h1 className="text-2xl font-bold text-gray-900">{md.title}</h1>
+            <h1 className="md-headline-small">{md.title}</h1>
             <div className="mt-8">
               <MarkdownContent content={md.content} />
             </div>

@@ -10,25 +10,25 @@ export default function OceanaTrilhaPage() {
     <>
       <PropostasNav />
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-        <p className="text-xs font-semibold uppercase tracking-widest text-violet-600">
-          Agentes de IA · mercado de capitais
-        </p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-gradient">{trilha.title}</h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-          {trilha.description}
-        </p>
+        <p className="md-label-large">Agentes de IA · mercado de capitais</p>
+        <h1 className="mt-2 md-headline-large">{trilha.title}</h1>
+        <p className="mt-4 max-w-2xl md-body-large">{trilha.description}</p>
 
-        <div className="mt-8 rounded-xl border border-violet-100 bg-violet-50/60 p-5 sm:p-6">
-          <h2 className="text-sm font-semibold text-gray-900">Como navegar</h2>
-          <ol className="mt-3 space-y-2 text-sm leading-relaxed text-gray-700">
+        <div className="mt-8 md-card-outlined p-5 sm:p-6">
+          <h2 className="md-title-medium">Como navegar</h2>
+          <ol className="mt-3 space-y-2 md-body-medium">
             <li>
-              <strong className="text-gray-900">1.</strong> Escolha um módulo abaixo para ver o
-              programa (objetivos, carga e estrutura das sessões).
+              <strong className="text-[var(--md-sys-color-on-surface)]">1.</strong> Escolha um
+              módulo abaixo para ver o programa (objetivos, carga e estrutura das sessões).
             </li>
             <li>
-              <strong className="text-gray-900">2.</strong> Na mesma página, veja{" "}
-              <strong className="text-gray-900">O que cada área recebe</strong>: entregas
-              adaptadas por perfil (analistas, operações, jurídico, comercial, administrativo).
+              <strong className="text-[var(--md-sys-color-on-surface)]">2.</strong> Na mesma
+              página, veja{" "}
+              <strong className="text-[var(--md-sys-color-on-surface)]">
+                O que cada área recebe
+              </strong>
+              : entregas adaptadas por perfil (analistas, operações, jurídico, comercial,
+              administrativo).
             </li>
           </ol>
         </div>

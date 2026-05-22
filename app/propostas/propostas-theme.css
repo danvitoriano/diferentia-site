@@ -1,0 +1,440 @@
+/**
+ * Material Design 3 — tema claro (escopo: .propostas-theme)
+ * Referência: https://m3.material.io/styles/color/static/baseline
+ */
+
+.propostas-theme {
+  /* Primary */
+  --md-sys-color-primary: #6750a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #eaddff;
+  --md-sys-color-on-primary-container: #21005d;
+
+  /* Secondary */
+  --md-sys-color-secondary: #625b71;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e8def8;
+  --md-sys-color-on-secondary-container: #1d192b;
+
+  /* Tertiary */
+  --md-sys-color-tertiary: #7d5260;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #ffd8e4;
+  --md-sys-color-on-tertiary-container: #31111d;
+
+  /* Error */
+  --md-sys-color-error: #b3261e;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #f9dedc;
+  --md-sys-color-on-error-container: #410e0b;
+
+  /* Surface */
+  --md-sys-color-surface: #fef7ff;
+  --md-sys-color-on-surface: #1c1b1f;
+  --md-sys-color-surface-variant: #e7e0ec;
+  --md-sys-color-on-surface-variant: #49454f;
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-outline-variant: #cac4d0;
+
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f7f2fa;
+  --md-sys-color-surface-container: #f3edf7;
+  --md-sys-color-surface-container-high: #ece6f0;
+  --md-sys-color-surface-container-highest: #e6e0e9;
+
+  /* Shape */
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* Elevation */
+  --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+}
+
+.propostas-theme ::-webkit-scrollbar {
+  width: 8px;
+}
+.propostas-theme ::-webkit-scrollbar-track {
+  background: var(--md-sys-color-surface-container-low);
+}
+.propostas-theme ::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-full);
+}
+.propostas-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-outline);
+}
+
+/* Surfaces */
+.propostas-theme .md-surface {
+  background-color: var(--md-sys-color-surface);
+}
+.propostas-theme .md-surface-container {
+  background-color: var(--md-sys-color-surface-container);
+}
+.propostas-theme .md-surface-container-high {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+/* Cards */
+.propostas-theme .md-card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--md-sys-shape-corner-medium);
+  box-shadow: var(--md-sys-elevation-1);
+  border: none;
+}
+.propostas-theme .md-card:hover {
+  box-shadow: var(--md-sys-elevation-2);
+}
+.propostas-theme .md-card-outlined {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--md-sys-shape-corner-medium);
+  border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* Top app bar */
+.propostas-theme .md-top-app-bar {
+  background-color: var(--md-sys-color-surface-container);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+/* Navigation */
+.propostas-theme .md-nav-item {
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.006rem;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.propostas-theme .md-nav-item:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 8%, transparent);
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-nav-item-active {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+/* Chips */
+.propostas-theme .md-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--md-sys-shape-corner-small);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+}
+.propostas-theme .md-chip-filled {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+.propostas-theme .md-chip-assist {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+/* Buttons */
+.propostas-theme .md-filled-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.006rem;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+.propostas-theme .md-filled-button:hover:not(:disabled) {
+  box-shadow: var(--md-sys-elevation-2);
+}
+.propostas-theme .md-filled-button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.propostas-theme .md-text-button {
+  border: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: transparent;
+  color: var(--md-sys-color-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.propostas-theme .md-text-button:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+}
+
+/* Text fields */
+.propostas-theme .md-text-field {
+  width: 100%;
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  border: 1px solid var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface-container-highest);
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--md-sys-color-on-surface);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.propostas-theme .md-text-field::placeholder {
+  color: var(--md-sys-color-on-surface-variant);
+}
+.propostas-theme .md-text-field:focus {
+  border-color: var(--md-sys-color-primary);
+  border-width: 2px;
+  padding: calc(1rem - 1px) calc(1rem - 1px);
+}
+.propostas-theme .md-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Typography helpers */
+.propostas-theme .md-headline-large {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-headline-medium {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-headline-small {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-title-large {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-title-medium {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.009rem;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-body-large {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.031rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+.propostas-theme .md-body-medium {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.016rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+.propostas-theme .md-label-large {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.006rem;
+  text-transform: uppercase;
+  color: var(--md-sys-color-primary);
+}
+
+/* List items (roteiro) */
+.propostas-theme .md-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--md-sys-shape-corner-medium);
+  background-color: var(--md-sys-color-surface-container-lowest);
+  box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.2s ease;
+}
+.propostas-theme .md-list-item:hover {
+  box-shadow: var(--md-sys-elevation-2);
+}
+.propostas-theme .md-list-item-number {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Sidebar nav */
+.propostas-theme .md-nav-rail {
+  border-radius: var(--md-sys-shape-corner-medium);
+  background-color: var(--md-sys-color-surface-container);
+  padding: 1.25rem;
+}
+.propostas-theme .md-nav-rail-link {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.propostas-theme .md-nav-rail-link:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 8%, transparent);
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .md-nav-rail-link-active {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  font-weight: 500;
+}
+
+/* Prose (markdown) */
+.propostas-theme .propostas-prose h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .propostas-prose h2 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--md-sys-color-primary);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+.propostas-theme .propostas-prose h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--md-sys-color-on-surface);
+}
+.propostas-theme .propostas-prose p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.031rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+.propostas-theme .propostas-prose ul,
+.propostas-theme .propostas-prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+.propostas-theme .propostas-prose li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5rem;
+}
+.propostas-theme .propostas-prose strong {
+  color: var(--md-sys-color-on-surface);
+  font-weight: 500;
+}
+.propostas-theme .propostas-prose a {
+  color: var(--md-sys-color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.propostas-theme .propostas-prose a:hover {
+  color: var(--md-sys-color-on-primary-container);
+}
+.propostas-theme .propostas-prose code {
+  background: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  font-size: 0.875em;
+}
+.propostas-theme .propostas-prose pre {
+  background: var(--md-sys-color-surface-container);
+  padding: 1rem;
+  border-radius: var(--md-sys-shape-corner-medium);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.propostas-theme .propostas-prose hr {
+  border: none;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  margin: 2rem 0;
+}
+.propostas-theme .propostas-prose blockquote {
+  border-left: 4px solid var(--md-sys-color-primary);
+  padding: 0.75rem 1rem;
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  margin-bottom: 1rem;
+  border-radius: 0 var(--md-sys-shape-corner-small) var(--md-sys-shape-corner-small) 0;
+}
+.propostas-theme .propostas-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  border-radius: var(--md-sys-shape-corner-small);
+  overflow: hidden;
+  box-shadow: var(--md-sys-elevation-1);
+}
+.propostas-theme .propostas-prose th,
+.propostas-theme .propostas-prose td {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+.propostas-theme .propostas-prose th {
+  background: var(--md-sys-color-surface-container-high);
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+}
+
+.propostas-theme .md-error-text {
+  font-size: 0.875rem;
+  color: var(--md-sys-color-error);
+}
+
+.propostas-theme .md-divider {
+  border: none;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
