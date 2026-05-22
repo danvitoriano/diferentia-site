@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { PropostasNav } from "@/components/propostas/propostas-nav";
 import { Breadcrumbs } from "@/components/propostas/breadcrumbs";
 import { MarkdownContent } from "@/components/propostas/markdown-content";
+import { AreaExemplosAccordion } from "@/components/propostas/area-exemplos-accordion";
 import {
   getCourse,
   getResumoMarkdown,
@@ -57,7 +58,7 @@ export default async function CursoResumoPage({
                 : " (analistas, operações, jurídico, comercial e administrativo)."}
             </p>
             <div className="mt-6">
-              <MarkdownContent content={exemplos} />
+              <AreaExemplosAccordion content={exemplos} />
             </div>
           </section>
         ) : null}

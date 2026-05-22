@@ -473,3 +473,92 @@
   border: none;
   border-top: 1px solid var(--md-sys-color-outline-variant);
 }
+
+/* Expansion panels (O que cada área recebe) */
+.propostas-theme .md-area-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.propostas-theme .md-expansion-panel {
+  border-radius: var(--md-sys-shape-corner-medium);
+  background-color: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.propostas-theme .md-expansion-panel[open] {
+  box-shadow: var(--md-sys-elevation-1);
+  background-color: var(--md-sys-color-surface-container-lowest);
+}
+
+.propostas-theme .md-expansion-panel-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.propostas-theme .md-expansion-panel-summary::-webkit-details-marker {
+  display: none;
+}
+
+.propostas-theme .md-expansion-panel-summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.2rem;
+  border-right: 2px solid var(--md-sys-color-on-surface-variant);
+  border-bottom: 2px solid var(--md-sys-color-on-surface-variant);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease, margin 0.2s ease;
+}
+
+.propostas-theme .md-expansion-panel[open] .md-expansion-panel-summary::after {
+  transform: rotate(-135deg);
+  margin-top: 0.2rem;
+}
+
+.propostas-theme .md-expansion-panel-summary:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 4%, transparent);
+}
+
+.propostas-theme .md-expansion-panel-title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.009rem;
+  color: var(--md-sys-color-on-surface);
+}
+
+.propostas-theme .md-expansion-panel-content {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.propostas-theme .md-expansion-panel-content .propostas-prose > :first-child {
+  margin-top: 1rem;
+}
+
+.propostas-theme .md-expansion-panel-content .propostas-prose h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: var(--md-sys-color-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1.25rem;
+}
+
+.propostas-theme .md-expansion-panel-content .propostas-prose h2:first-child,
+.propostas-theme .md-expansion-panel-content .propostas-prose > p:first-child + h2 {
+  margin-top: 0;
+}
