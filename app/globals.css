@@ -63,3 +63,17 @@ body {
     border: 1px solid rgba(30, 30, 46, 0.8);
   }
 }
+
+/* Propostas — markdown */
+.propostas-prose h1 { font-size: 1.75rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #F0F0FA; }
+.propostas-prose h2 { font-size: 1.35rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #E8B84B; }
+.propostas-prose h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #F0F0FA; }
+.propostas-prose p { margin-bottom: 1rem; line-height: 1.7; color: #c8c8e0; }
+.propostas-prose ul, .propostas-prose ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #c8c8e0; }
+.propostas-prose li { margin-bottom: 0.35rem; }
+.propostas-prose strong { color: #F0F0FA; }
+.propostas-prose a { color: #7C6FF7; text-decoration: underline; }
+.propostas-prose code { background: #0F0F1A; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+.propostas-prose pre { background: #0F0F1A; padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1rem; border: 1px solid #1E1E2E; }
+.propostas-prose hr { border-color: #1E1E2E; margin: 2rem 0; }
+.propostas-prose blockquote { border-left: 3px solid #7C6FF7; padding-left: 1rem; color: #9090B0; margin-bottom: 1rem; }

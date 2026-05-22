@@ -1,0 +1,105 @@
+{
+  "client": "oceana",
+  "title": "Trilha Oceana",
+  "description": "Sequência de capacitação em IA generativa e agentes para o mercado financeiro, com casos adaptados à Oceana. Núcleo recomendado para a maioria do time; módulos técnicos e workshops opcionais.",
+  "layers": [
+    {
+      "id": "nucleo",
+      "label": "Núcleo recomendado"
+    },
+    {
+      "id": "code",
+      "label": "Trilha Claude Code (opcional)"
+    },
+    {
+      "id": "workshop",
+      "label": "Workshops (opcional)"
+    }
+  ],
+  "courses": [
+    {
+      "slug": "introdutorio",
+      "title": "Claude Introdutório",
+      "subtitle": "Claude no navegador: prompt, artefatos, MCP, Skills",
+      "duration": "8h (4× 2h)",
+      "layer": "nucleo",
+      "optional": false,
+      "prerequisites": [],
+      "moduleNumber": 1
+    },
+    {
+      "slug": "cowork-demonstrativo",
+      "title": "Cowork — Demonstrativo",
+      "subtitle": "App desktop: o que muda vs navegador; decisão sobre licença Pro",
+      "duration": "2h30",
+      "layer": "nucleo",
+      "optional": false,
+      "prerequisites": [
+        "introdutorio"
+      ],
+      "moduleNumber": 2
+    },
+    {
+      "slug": "decisoes-criticas",
+      "title": "Claude para Decisões Críticas",
+      "subtitle": "Chain-of-thought, system prompts, fluxos e auditoria de outputs",
+      "duration": "~6h (2× 3h)",
+      "layer": "nucleo",
+      "optional": true,
+      "prerequisites": [
+        "introdutorio"
+      ],
+      "moduleNumber": 5
+    },
+    {
+      "slug": "cowork-workshop",
+      "title": "Workshop Prático de Cowork",
+      "subtitle": "Laboratório hands-on com licença Pro e app instalado",
+      "duration": "3h",
+      "layer": "workshop",
+      "optional": true,
+      "prerequisites": [
+        "introdutorio",
+        "cowork-demonstrativo"
+      ],
+      "moduleNumber": 3
+    },
+    {
+      "slug": "vibe-coders",
+      "title": "Claude Code — Vibe Coders",
+      "subtitle": "Construir e publicar ferramentas com IA no terminal",
+      "duration": "~5h45",
+      "layer": "code",
+      "optional": true,
+      "prerequisites": [
+        "introdutorio"
+      ],
+      "moduleNumber": 4
+    },
+    {
+      "slug": "claude-code-avancado",
+      "title": "Claude Code — Avançado",
+      "subtitle": "Git, slash commands, hooks, MCP no terminal e visão de API",
+      "duration": "~6h (+ 1h30 opc.)",
+      "layer": "code",
+      "optional": true,
+      "prerequisites": [
+        "vibe-coders"
+      ],
+      "moduleNumber": null
+    },
+    {
+      "slug": "workshop-claude-code",
+      "title": "Workshop Claude Code",
+      "subtitle": "Automação intensiva no terminal para o time técnico",
+      "duration": "A definir",
+      "layer": "workshop",
+      "optional": true,
+      "prerequisites": [
+        "vibe-coders"
+      ],
+      "moduleNumber": 6,
+      "status": "em-definicao"
+    }
+  ]
+}
