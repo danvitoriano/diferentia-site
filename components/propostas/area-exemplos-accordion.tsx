@@ -1,24 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { parseAreaSections } from "@/lib/propostas/parse-area-sections";
 import { MarkdownContent } from "./markdown-content";
 
 export function AreaExemplosAccordion({ content }: { content: string }) {
   const { intro, sections } = parseAreaSections(content);
-  const [openTitles, setOpenTitles] = useState<Set<string>>(() => new Set());
 
   if (sections.length === 0) {
     return <MarkdownContent content={content} />;
-  }
-
-  function toggle(title: string) {
-    setOpenTitles((prev) => {
-      const next = new Set(prev);
-      if (next.has(title)) next.delete(title);
-      else next.add(title);
-      return next;
-    });
   }
 
   return (
@@ -28,30 +17,20 @@ export function AreaExemplosAccordion({ content }: { content: string }) {
           <MarkdownContent content={intro} />
         </div>
       ) : null}
-      <div className="flex flex-col gap-3">
-        {sections.map((section) => {
-          const isOpen = openTitles.has(section.title);
-          return (
-            <div key={section.title} className="mw-area-block">
-              <md-elevated-card>
-                <md-list className="mw-area-list">
-                  <md-list-item
-                    type="button"
-                    headline={section.title}
-                    onClick={() => toggle(section.title)}
-                  >
-                    <md-icon slot="end">{isOpen ? "expand_less" : "expand_more"}</md-icon>
-                  </md-list-item>
-                </md-list>
-                {isOpen ? (
-                  <div className="mw-area-panel-content">
-                    <MarkdownContent content={section.body} />
-                  </div>
-                ) : null}
-              </md-elevated-card>
+      <div className="mw-expansion-group">
+        {sections.map((section) => (
+          <details key={section.title} className="mw-expansion">
+            <summary className="mw-expansion-summary">
+              <span className="mw-expansion-title">{section.title}</span>
+              <span className="mw-expansion-icon material-symbols-outlined" aria-hidden>
+                expand_more
+              </span>
+            </summary>
+            <div className="mw-expansion-body">
+              <MarkdownContent content={section.body} />
             </div>
-          );
-        })}
+          </details>
+        ))}
       </div>
     </div>
   );

@@ -17,9 +17,9 @@ export default function OceanaTrilhaPage() {
         </div>
       </div>
       <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
-        <md-elevated-card style={{ display: "block", padding: "1.25rem 1.5rem", borderRadius: "1.75rem" }}>
+        <div className="mw-info-box">
           <h2 className="mw-title-medium">Como navegar</h2>
-          <ol className="mt-3 space-y-2 mw-body-medium" style={{ paddingLeft: "1.25rem" }}>
+          <ol className="mt-3 space-y-2 mw-body-medium" style={{ paddingLeft: "1.25rem", margin: 0 }}>
             <li>
               <strong style={{ color: "var(--md-sys-color-on-surface)" }}>1.</strong> Escolha um
               módulo abaixo para ver o programa (objetivos, carga e estrutura das sessões).
@@ -34,11 +34,11 @@ export default function OceanaTrilhaPage() {
               administrativo).
             </li>
           </ol>
-        </md-elevated-card>
+        </div>
 
-        <section className="mt-10">
+        <section className="mt-8">
           <h2 className="sr-only">Módulos da trilha</h2>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {courses.map((course, i) => (
               <CourseCard key={course.slug} course={course} step={i + 1} />
             ))}

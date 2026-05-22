@@ -23,7 +23,7 @@ export function DetalhePager({
     <nav aria-label="Módulos anterior e próximo" className="mw-pager">
       {prev ? (
         <Link href={`${base}/${prev.slug}`} className="mw-pager-link">
-          <md-outlined-button style={{ width: "100%", minHeight: "4rem" }}>
+          <md-outlined-button style={{ width: "100%", minHeight: "3.5rem" }}>
             ← {prev.title}
           </md-outlined-button>
         </Link>
@@ -32,7 +32,7 @@ export function DetalhePager({
       )}
       {next ? (
         <Link href={`${base}/${next.slug}`} className="mw-pager-link" style={{ marginLeft: "auto" }}>
-          <md-outlined-button style={{ width: "100%", minHeight: "4rem" }}>
+          <md-outlined-button style={{ width: "100%", minHeight: "3.5rem" }}>
             {next.title} →
           </md-outlined-button>
         </Link>

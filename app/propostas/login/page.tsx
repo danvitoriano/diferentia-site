@@ -47,9 +47,9 @@ function LoginForm() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4">
-      <md-elevated-card className="mw-login-card">
+      <div className="mw-login-card">
         <p className="mw-label-large">Área restrita</p>
-        <h1 className="mw-display-small" style={{ marginTop: "0.5rem" }}>
+        <h1 className="mw-display-small" style={{ marginTop: "0.5rem", fontSize: "1.5rem" }}>
           Proposta Oceana
         </h1>
         <p className="mw-body-large" style={{ marginTop: "0.5rem" }}>
@@ -63,7 +63,7 @@ function LoginForm() {
             {loading ? "Entrando…" : "Entrar"}
           </md-filled-button>
         </form>
-      </md-elevated-card>
+      </div>
     </div>
   );
 }

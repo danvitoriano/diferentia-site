@@ -38,7 +38,7 @@ export default async function CursoResumoPage({
             <h1 className="mw-display-small">{course.title}</h1>
             <p className="mt-2 mw-body-large">{course.subtitle}</p>
             <p className="mt-3">
-              <md-assist-chip label={course.duration} />
+              <span className="mw-module-tag">{course.duration}</span>
             </p>
           </header>
         </div>

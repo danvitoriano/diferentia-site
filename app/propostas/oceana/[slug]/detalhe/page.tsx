@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PropostasNav } from "@/components/propostas/propostas-nav";
 import { Breadcrumbs } from "@/components/propostas/breadcrumbs";
@@ -34,23 +35,26 @@ export default async function DetalheIndexPage({
       </div>
       <main className="mw-page-body mx-auto max-w-5xl px-4 pb-12 sm:px-6">
         {files.length === 0 ? (
-          <md-elevated-card style={{ display: "block", padding: "1.5rem", marginTop: "1rem" }}>
+          <div className="mw-info-box mt-4">
             <p className="mw-body-medium" style={{ textAlign: "center", margin: 0 }}>
               Roteiro em preparação.
             </p>
-          </md-elevated-card>
+          </div>
         ) : (
           <div className="mt-4 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
-            <md-list style={{ padding: 0 }}>
+            <ul className="mw-roteiro-list">
               {files.map((f, i) => (
-                <md-list-item
-                  key={f.slug}
-                  type="link"
-                  href={`/propostas/oceana/${slug}/detalhe/${f.slug}`}
-                  headline={`${i + 1}. ${f.title}`}
-                />
+                <li key={f.slug}>
+                  <Link
+                    href={`/propostas/oceana/${slug}/detalhe/${f.slug}`}
+                    className="mw-roteiro-item"
+                  >
+                    <span className="mw-step-badge">{i + 1}</span>
+                    <span className="mw-roteiro-item-title">{f.title}</span>
+                  </Link>
+                </li>
               ))}
-            </md-list>
+            </ul>
             <div className="lg:sticky lg:top-24 lg:self-start">
               <DetalheNav courseSlug={slug} courseTitle={course.title} files={files} />
             </div>
