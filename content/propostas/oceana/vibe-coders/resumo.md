@@ -1,14 +1,5 @@
 # Claude Code para Vibe Coders
 
-### Exemplos Oceana
-
-**O QUE O TIME TÉCNICO DA OCEANA VAI CONSTRUIR**
-
-- Painel HTML de visualização de KPIs de releases (receita, EBITDA, lucro líquido, dívida)
-- Script de comparação de trimestres a partir de texto colado diretamente
-- Automação de extração de indicadores de múltiplos releases de uma pasta
-
----
 
 ### Programa Detalhado
 

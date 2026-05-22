@@ -1,15 +1,5 @@
 # Claude para Decisões Críticas
 
-### Exemplos Oceana
-
-**O QUE O TIME DA OCEANA VAI DOMINAR**
-
-- Chain-of-thought para análise de risco de crédito de emissores e empresas do portfólio
-- System prompts reutilizáveis para o time de análise de utilities e energia
-- Fluxo multi-etapas: do release à nota interna, sem sair do Claude
-- Framework de revisão de outputs com números financeiros (protocolo anti-alucinação)
-
----
 
 ### Programa Detalhado
 

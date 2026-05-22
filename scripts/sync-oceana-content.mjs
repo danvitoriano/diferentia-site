@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Copia resumos e exemplos-oceana de cursos-oceana para content/propostas/oceana.
- * Roteiro (detalhe/) e guia-areas não são expostos à Oceana no portal.
+ * Copia entregas por área (exemplos-oceana.md) de cursos-oceana para o portal.
+ * Roteiro (detalhe/) e guia-areas não são expostos à Oceana.
  */
 import fs from "fs";
 import path from "path";

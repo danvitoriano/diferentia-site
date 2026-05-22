@@ -1,15 +1,5 @@
 # Workshop Claude Code
 
-### Exemplos Oceana
-
-**O QUE O TIME TÉCNICO DA OCEANA VAI AUTOMATIZAR**
-
-- Repositório Git com scripts de análise de releases versionados e documentados
-- Slash command /analisar-release para processar resultados trimestrais via terminal
-- Agente autônomo: coleta dados de fechamento, compara com limites de risco e rascunha alerta
-- Integração ao fluxo de análise quantitativa do time de portfólio
-
----
 
 ### Programa Detalhado
 

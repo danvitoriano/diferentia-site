@@ -1,16 +1,5 @@
 # Claude Essentials: do prompt ao agente
 
-### Exemplos Oceana (nova seção no slide, após "O que você vai aprender")
-
-**O QUE VOCÊ VAI PRATICAR COM CASOS DA OCEANA**
-
-- Extrair KPIs de releases de resultados e comparar trimestres de empresas do portfólio
-- Estruturar atas de reuniões com executivos de companhias do setor de utilities e energia
-- Rascunhar respostas a formulários de due diligence de investidores
-- Comparar dois documentos: extrato do custodiante vs. sistema interno
-- Revisar e-mails institucionais quanto a linguagem de compliance
-
----
 
 ### Programa Detalhado (slide novo após o slide do módulo)
 

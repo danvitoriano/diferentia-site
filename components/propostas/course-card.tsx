@@ -30,7 +30,7 @@ export function CourseCard({ course, step }: { course: TrilhaCourse; step?: numb
       <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">{course.subtitle}</p>
       <p className="mt-4 text-sm font-medium text-violet-600">{course.duration}</p>
       <span className="mt-3 text-xs font-medium text-gray-400 group-hover:text-violet-600">
-        Ver programa e exemplos →
+        Ver programa e entregas por área →
       </span>
     </Link>
   );

@@ -1,14 +1,5 @@
 # Workshop: Claude Cowork (prático)
 
-### Exemplos Oceana
-
-**O QUE VOCÊ VAI CONFIGURAR COM DADOS DA OCEANA**
-
-- Pasta de releases e modelos financeiros conectada ao Cowork
-- Plugin de monitoramento de ativos relevante para o fluxo de análise
-- Tarefa agendada real: resumo diário de documentos novos ou alerta de indicador fora do limite
-
----
 
 ### Programa Detalhado
 

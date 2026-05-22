@@ -26,9 +26,9 @@ export default function OceanaTrilhaPage() {
               programa (objetivos, carga e estrutura das sessões).
             </li>
             <li>
-              <strong className="text-gray-900">2.</strong> Na mesma página, role até{" "}
-              <strong className="text-gray-900">Exemplos para a Oceana</strong>: prompts e casos
-              prontos para usar no dia a dia do time.
+              <strong className="text-gray-900">2.</strong> Na mesma página, veja{" "}
+              <strong className="text-gray-900">O que cada área recebe</strong>: entregas
+              adaptadas por perfil (analistas, operações, jurídico, comercial, administrativo).
             </li>
           </ol>
         </div>

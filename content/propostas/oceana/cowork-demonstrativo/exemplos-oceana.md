@@ -1,124 +1,78 @@
-Prompts e fluxos para o app desktop do Claude com a pasta de trabalho conectada. Exemplos em utilities e energia (podem usar dados fictícios para teste).
+Demonstrativo: a Oceana vê o que o app desktop permite antes de decidir licença Pro. Entregas por área ao final da sessão.
 
 ---
 
-## Organize sua pasta de trabalho
+## Analistas de investimento
 
-Exemplo de estrutura útil:
+**Entregas**
 
-```
-/pasta-oceana/
-  release-cpfl-1t25.pdf
-  release-cpfl-4t24.pdf
-  relatorio-gestao-abr25.docx
-  acompanhamento-carteira.xlsx
-```
+- Ver Claude lendo releases e documentos da pasta de investimentos sem copiar e colar
+- Nota de análise, comparativo de trimestres e apresentação gerados a partir dos arquivos reais
+- Mapa de processos com ganho imediato (síntese de release, comparativo, briefing de pasta)
 
----
+**Processos priorizados**
 
-## Trabalhar com arquivos locais
-
-**Busca e mapeamento**
-
-```
-Quais arquivos desta pasta têm relação com resultados financeiros do primeiro trimestre?
-Liste os nomes, as datas de modificação e um resumo de uma linha do que cada um contém.
-```
-
-**Leitura e síntese**
-
-```
-Abra o arquivo release-cpfl-1t25.pdf e faça um resumo executivo das principais métricas
-financeiras do trimestre. Use o formato de nota interna da Oceana: três pontos positivos,
-dois pontos de atenção, uma linha de conclusão.
-```
-
-**Comparação de trimestres**
-
-```
-Compare os dois releases desta pasta. Me diga o que melhorou, o que piorou e o que ficou
-estável entre os dois trimestres. Use uma tabela de comparação com as linhas: receita
-líquida, EBITDA, margem EBITDA, lucro líquido, dívida líquida.
-```
+- Leitura de resultados, comparativo trimestral, documentação para reunião de revisão
 
 ---
 
-## Criar documentos a partir dos seus arquivos
+## Operações / Backoffice
 
-**Nota de análise em Word**
+**Entregas**
 
-```
-Com base no resumo que você fez do release agora há pouco, crie um documento Word chamado
-"Nota de Análise Q1 2025". Use formatação profissional: título, data, seção de métricas
-principais em tabela, seção de pontos de atenção e uma conclusão de dois parágrafos.
-Salve na pasta de trabalho.
-```
+- Ver leitura e comparação de extratos e relatórios operacionais na pasta local
+- Entender tarefas agendadas para resumo de movimentação e pendências do dia
+- Identificar se Cowork acelera conciliação e relatório de divergências (com validação humana)
 
-**Comparativo em Excel**
+**Processos priorizados**
 
-```
-Crie uma planilha Excel com os dados financeiros dos dois trimestres que você comparou.
-Coluna por trimestre, linhas com as métricas principais: receita, EBITDA, lucro líquido,
-margem, dívida líquida. Inclua uma linha de variação percentual entre os dois períodos.
-Salve como "Comparativo Q1 vs Q4" na pasta de trabalho.
-```
-
-**Apresentação PowerPoint**
-
-```
-Com base na planilha que você criou, gere uma apresentação de 4 slides: capa com o título
-"Resultados Q1 2025: Oceana", um slide de métricas em tabela, um slide com os pontos de
-atenção em bullets e um slide de conclusão com próximos catalisadores.
-Salve como "Apresentação Q1" na pasta.
-```
+- Conciliação, batimento, monitoramento de pendências operacionais
 
 ---
 
-## Google Drive e conectores
+## Jurídico / Compliance
 
-**Busca no Drive**
+**Entregas**
 
-```
-Busque no meu Google Drive os três documentos mais recentes da pasta "Relatórios de Gestão".
-Me diga o nome, a data e um resumo de uma linha de cada um.
-```
+- Ver triagem de contratos e documentos de due diligence na pasta
+- Entender automação de monitoramento de pasta no Drive (documentos novos, checklist)
+- Clareza sobre o que a IA faz (estruturar) e o que exige advogado (interpretação)
 
-**Leitura de arquivo no Drive**
+**Processos priorizados**
 
-```
-Abra o arquivo [nome do documento] que está no Drive e me diga os três pontos principais
-que precisariam de atenção antes de uma reunião de revisão.
-```
+- Due diligence, revisão de atas, checagem de documentos regulatórios
 
 ---
 
-## Tarefas agendadas
+## Comercial
 
-**Briefing matinal**
+**Entregas**
 
-```
-Todo dia útil às 7h30, acesse o Google Drive, leia os arquivos modificados nas últimas 24h
-na pasta "Relatórios de Gestão", verifique as tarefas abertas no sistema de gestão e gere
-um resumo de "o que mudou e o que está pendente para hoje".
-```
+- Ver rascunho de comunicação e síntese de material de fundo a partir de arquivos locais
+- Entender triagem de e-mails e preparação de resposta com contexto da gestora
+- Mapa de ganho em formulários de investidor e atendimento recorrente
 
-**Monitoramento de releases**
+**Processos priorizados**
 
-```
-Toda segunda-feira às 8h, busque na web notícias sobre resultados trimestrais de empresas
-de utilities e energia do Brasil publicadas nos últimos 7 dias. Liste por empresa com data,
-fonte e uma linha de destaque. Se não houver novidade relevante, responda apenas:
-"Nenhum release relevante publicado esta semana."
-```
+- Due diligence de investidores, atas, material para reunião com cliente
 
 ---
 
-## Ideias de automação por área
+## Administrativo
 
-| Área | O que automatizar | Como começar |
-|---|---|---|
-| Análise de renda variável | Síntese de release, comparativo de trimestres | Leitura de PDF na pasta + criação de Word/Excel |
-| Crédito privado | Extração de indicadores, nota de risco | Leitura de relatórios de emissor na pasta |
-| Due diligence | Checklist de pontos de atenção | Leitura de contratos e documentos de DD |
-| Compliance | Triagem de e-mails, revisão de linguagem | Conector de e-mail + tarefa agendada |
-| Comercial | Ata de reunião, preparação de reunião | Transcrição ou notas na pasta + síntese |
+**Entregas**
+
+- Ver organização de e-mails e documentos administrativos na pasta
+- Entender tarefa agendada para resumo do que mudou na pasta nas últimas 24h
+- Mapa de uso em viagens, fornecedores e controle interno
+
+**Processos priorizados**
+
+- Solicitações de viagem, consolidação de demandas por e-mail, controle de gastos
+
+---
+
+## Entrega coletiva da sessão
+
+- Relatório de demanda: quais áreas e perfis se beneficiam de licença Pro e para qual processo
+- Próximo passo claro: workshop prático (quem tiver Pro) ou continuidade no navegador

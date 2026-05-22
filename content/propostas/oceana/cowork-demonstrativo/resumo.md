@@ -1,14 +1,5 @@
 # Automação com Claude Cowork
 
-### Exemplos Oceana
-
-**O QUE A OCEANA VAI VER EM AÇÃO**
-
-- Claude lendo releases e documentos internos direto da pasta de investimentos
-- Processos com potencial imediato de ganho de tempo: conciliação, due diligence, e-mails
-- Mapeamento coletivo de quais áreas e pessoas têm maior urgência de licença Pro
-
----
 
 ### Programa Detalhado
 

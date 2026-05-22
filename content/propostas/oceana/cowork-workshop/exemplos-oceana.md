@@ -1,147 +1,82 @@
-Prompts para usar com sua pasta de trabalho e licença Pro. Adapte nomes de arquivos e pastas ao seu dia a dia.
+Workshop hands-on: cada participante configura Cowork com **dados reais da própria área**. Entregas ao sair da sessão.
 
 ---
 
-## Trabalhando com arquivos
+## Analistas de investimento
 
-**Busca por conteúdo**
+**Entregas**
 
-```
-Nos arquivos da minha pasta, qual deles contém dados financeiros ou métricas numéricas?
-Me diga o nome do arquivo e o que está descrito.
-```
+- Pasta de releases e modelos conectada ao Cowork
+- Fluxo funcionando: leitura, síntese e comparativo de documentos da pasta
+- Tarefa agendada (ex.: resumo de documentos novos ou alerta de indicador fora do limite)
+- Demonstração do próprio fluxo para o time
 
-**Renda variável**
+**Processos priorizados**
 
-```
-Nos arquivos da minha pasta, quais têm relação com resultados de empresas listadas?
-Liste os nomes, as datas e um resumo de uma linha de cada um.
-```
-
-**Crédito privado**
-
-```
-Nos arquivos da minha pasta, quais têm relação com emissores ou operações de crédito?
-Liste os nomes e destaque os que contêm dados de rating ou covenants.
-```
-
-**Leitura e síntese**
-
-```
-Abra o arquivo mais recente da pasta e faça um resumo executivo com:
-os três pontos principais, o que está pendente ou em aberto, e uma linha de conclusão.
-```
-
-**Comparação entre documentos**
-
-```
-Compare os arquivos [A] e [B]. Me diga o que mudou entre os dois, o que melhorou,
-o que piorou e o que ficou igual. Use uma tabela de comparação.
-```
+- Monitoramento de releases, comparativo de trimestres, briefing matinal da pasta de análise
 
 ---
 
-## Criar documentos reais
+## Operações / Backoffice
 
-**Nota de análise em Word**
+**Entregas**
 
-```
-Com base nos arquivos da minha pasta, crie um documento Word chamado
-"Síntese de [data de hoje]". Inclua: um parágrafo de contexto, os três pontos mais
-relevantes que você encontrou nos documentos e uma seção de próximos passos sugeridos.
-Salve na pasta de trabalho.
-```
+- Pasta operacional conectada (extratos, relatórios de batimento)
+- Plugin ou fluxo de leitura de arquivos operacionais configurado
+- Tarefa agendada para resumo de pendências ou divergências ao fechamento do dia
+- Demonstração do próprio fluxo para o time
 
-**Planilha com dados extraídos**
+**Processos priorizados**
 
-```
-Com base nos dados numéricos que você encontrou nos arquivos, crie uma planilha Excel
-com as métricas principais organizadas em colunas por período ou por categoria.
-Inclua uma linha de total ou média onde fizer sentido.
-Salve como "Dados extraídos [data]" na pasta.
-```
-
-**Planilha de acompanhamento**
-
-```
-Crie uma planilha Excel de acompanhamento semanal para o meu trabalho.
-Colunas: tarefa, responsável, prazo, status, observações.
-Preencha com exemplos realistas baseados nos documentos que você leu.
-Salve na pasta.
-```
-
-**Apresentação PowerPoint**
-
-```
-Crie uma apresentação PowerPoint de 4 slides com o conteúdo mais relevante dos arquivos
-desta pasta. Slide 1: capa com título e data. Slide 2: principais pontos em bullets.
-Slide 3: dados ou métricas em tabela. Slide 4: próximos passos sugeridos.
-Salve como "Apresentação Cowork [data]" na pasta.
-```
+- Conciliação, relatório diário de operações, identificação de divergências
 
 ---
 
-## Google Drive
+## Jurídico / Compliance
 
-```
-Busque no meu Google Drive os documentos modificados nos últimos 7 dias.
-Liste os nomes e as datas.
-```
+**Entregas**
 
-```
-Abra o arquivo [nome] que está no Drive e me diga os três pontos principais
-que precisariam de atenção antes de uma reunião de revisão.
-```
+- Pasta de contratos e due diligence conectada
+- Fluxo de triagem ou checklist documental configurado
+- Tarefa agendada para monitorar pasta no Drive (se aplicável)
+- Demonstração do próprio fluxo para o time
 
-```
-Compare o documento [nome] que está na minha pasta de trabalho com os arquivos recentes
-do meu Google Drive sobre o mesmo tema. Me diga se há informações novas no Drive que
-não estão no documento local.
-```
+**Processos priorizados**
+
+- Triagem de due diligence, revisão de documentos novos na pasta
 
 ---
 
-## Tarefas agendadas
+## Comercial
 
-**Briefing diário na pasta**
+**Entregas**
 
-```
-Todo dia útil às [horário], leia os arquivos da pasta de trabalho modificados nas últimas
-24h e gere um resumo com os três pontos mais relevantes.
-Salve o resumo como "Briefing [data]" na pasta.
-```
+- Pasta com regulamentos, propostas e histórico de cliente conectada
+- Fluxo de apoio a formulário de investidor ou triagem de e-mails configurado
+- Tarefa agendada para resumo de pendências comerciais (se aplicável)
+- Demonstração do próprio fluxo para o time
 
-**Briefing com Drive**
+**Processos priorizados**
 
-```
-Todo dia útil às 8h, acesse o Google Drive e liste os documentos modificados nas últimas
-24h na pasta "[nome da pasta]". Para cada um, mostre o nome, a data e uma linha de resumo.
-```
-
-**Acompanhamento semanal**
-
-```
-Toda segunda-feira às 8h30, leia os arquivos da pasta de trabalho e gere um resumo de
-"o que mudou e o que está pendente para esta semana". Inclua: principais eventos da semana
-anterior, documentos novos ou modificados, e tarefas em aberto identificadas nos arquivos.
-```
-
-**Monitoramento setorial**
-
-```
-Todo dia útil às 7h30, busque na web notícias sobre [setor ou empresas específicas]
-publicadas nas últimas 24h. Liste por fonte com data e uma linha de destaque.
-Se não houver novidade relevante, responda: "Nenhuma novidade relevante nas últimas 24h."
-```
+- Resposta a due diligence de investidores, preparação de material para reunião
 
 ---
 
-## Sugestões por área
+## Administrativo
 
-| Área | Pasta de trabalho | Tarefa agendada |
-|---|---|---|
-| Análise de renda variável | Releases, modelos, relatórios setoriais | Briefing de releases e notícias do setor |
-| Crédito privado | Relatórios de emissor, covenants, rating | Monitoramento de rating e vencimentos |
-| Due diligence | Documentos de DD, contratos | Resumo semanal de documentos novos |
-| Compliance | Regulatórios, e-mails, formulários | Atualizações regulatórias |
-| Comercial | Propostas, relatórios de reunião | Pendências por cliente |
+**Entregas**
+
+- Pasta administrativa conectada (e-mails, solicitações, despesas)
+- Fluxo de resumo ou consolidação configurado
+- Tarefa agendada para briefing diário da pasta
+- Demonstração do próprio fluxo para o time
+
+**Processos priorizados**
+
+- Organização de viagens, consolidação de solicitações, controle de despesas
+
+---
+
+## Entrega obrigatória do workshop
+
+- Cada participante sai com **pelo menos um fluxo rodando** no próprio computador (pasta + automação ou tarefa agendada)
