@@ -1,36 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap");
 
 /**
- * Material Design 3 — foundations (escopo: .propostas-theme)
- * Color: baseline light — https://m3.material.io/styles/color/static/baseline
- * Type scale + shape + tonal surfaces — https://m3.material.io/get-started
- * Referência tokens: https://material-web.dev/theming/typography/
+ * M3 Expressive (inspirado IO26) — escopo: .propostas-theme
+ * https://m3.material.io/blog/whats-new-at-io26
+ * https://m3.material.io/styles/color/static/baseline
  */
 
 .propostas-theme {
-  /* ── Color (baseline light) ─────────────────────────────────────────── */
-  --md-sys-color-primary: #6750a4;
+  /* ── Color (expressive: containers mais vivos) ──────────────────────── */
+  --md-sys-color-primary: #5b4aa8;
   --md-sys-color-on-primary: #ffffff;
-  --md-sys-color-primary-container: #eaddff;
-  --md-sys-color-on-primary-container: #21005d;
+  --md-sys-color-primary-container: #d4c2ff;
+  --md-sys-color-on-primary-container: #1f1147;
 
-  --md-sys-color-secondary: #625b71;
+  --md-sys-color-secondary: #5c5678;
   --md-sys-color-on-secondary: #ffffff;
-  --md-sys-color-secondary-container: #e8def8;
-  --md-sys-color-on-secondary-container: #1d192b;
+  --md-sys-color-secondary-container: #e3dfff;
+  --md-sys-color-on-secondary-container: #19122f;
 
-  --md-sys-color-tertiary: #7d5260;
+  --md-sys-color-tertiary: #8b4a62;
   --md-sys-color-on-tertiary: #ffffff;
-  --md-sys-color-tertiary-container: #ffd8e4;
-  --md-sys-color-on-tertiary-container: #31111d;
+  --md-sys-color-tertiary-container: #ffcce0;
+  --md-sys-color-on-tertiary-container: #3d1024;
 
   --md-sys-color-error: #b3261e;
   --md-sys-color-on-error: #ffffff;
   --md-sys-color-error-container: #f9dedc;
   --md-sys-color-on-error-container: #410e0b;
 
-  --md-sys-color-surface: #fef7ff;
-  --md-sys-color-on-surface: #1d1b20;
+  --md-sys-color-surface: #fffbfe;
+  --md-sys-color-on-surface: #1c1b1f;
   --md-sys-color-surface-variant: #e7e0ec;
   --md-sys-color-on-surface-variant: #49454f;
   --md-sys-color-outline: #79747e;
@@ -53,7 +52,14 @@
   --md-sys-shape-corner-medium: 12px;
   --md-sys-shape-corner-large: 16px;
   --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-expressive: 2rem;
   --md-sys-shape-corner-full: 9999px;
+
+  /* Motion (expressive — IO26) */
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.34, 1.25, 0.64, 1);
+  --md-sys-motion-duration-short: 200ms;
+  --md-sys-motion-duration-medium: 350ms;
 
   /* ── Typography (Roboto type scale — M3 baseline) ───────────────────── */
   --md-sys-typescale-display-large-size: 3.5625rem;
@@ -116,6 +122,19 @@
 }
 
 /* ── Type scale utilities ─────────────────────────────────────────────── */
+.propostas-theme .md-display-small {
+  font-size: var(--md-sys-typescale-headline-small-size);
+  line-height: var(--md-sys-typescale-headline-small-line-height);
+  font-weight: 500;
+  letter-spacing: -0.0125rem;
+  color: var(--md-sys-color-on-surface);
+}
+@media (min-width: 640px) {
+  .propostas-theme .md-display-small {
+    font-size: var(--md-sys-typescale-headline-medium-size);
+    line-height: var(--md-sys-typescale-headline-medium-line-height);
+  }
+}
 .propostas-theme .md-headline-large {
   font-size: var(--md-sys-typescale-headline-large-size);
   line-height: var(--md-sys-typescale-headline-large-line-height);
@@ -191,10 +210,32 @@
   border-radius: var(--md-sys-shape-corner-full);
 }
 
-/* ── Top app bar (flat surface, sem sombra MD2) ─────────────────────── */
+/* ── Hero + shell (gradiente IO26 / M3 Expressive) ────────────────────── */
+.propostas-theme .md-hero-band {
+  background: linear-gradient(
+    165deg,
+    var(--md-sys-color-primary-container) 0%,
+    color-mix(in srgb, var(--md-sys-color-tertiary-container) 55%, var(--md-sys-color-surface)) 42%,
+    var(--md-sys-color-surface) 88%
+  );
+  padding-bottom: 2.5rem;
+}
+.propostas-theme .md-hero-band-compact {
+  padding-bottom: 1.5rem;
+}
+.propostas-theme .md-page-body {
+  margin-top: -0.5rem;
+}
+
+/* ── Top app bar (vidro + tonal) ──────────────────────────────────────── */
 .propostas-theme .md-top-app-bar {
-  background-color: var(--md-sys-color-surface);
-  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--md-sys-color-surface) 82%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid color-mix(in srgb, var(--md-sys-color-outline-variant) 65%, transparent);
 }
 
 /* ── Navigation pill ──────────────────────────────────────────────────── */
@@ -206,7 +247,7 @@
   font-weight: var(--md-sys-typescale-label-large-weight);
   letter-spacing: var(--md-sys-typescale-label-large-tracking);
   color: var(--md-sys-color-on-surface-variant);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-standard);
 }
 .propostas-theme .md-nav-item:hover {
   background-color: color-mix(
@@ -221,18 +262,24 @@
   color: var(--md-sys-color-on-secondary-container);
 }
 
-/* ── Cards: tonal surface (M3), não elevation box-shadow ──────────────── */
+/* ── Cards (expressive: cantos amplos + cor ao hover) ───────────────── */
 .propostas-theme .md-card {
-  background-color: var(--md-sys-color-surface-container-low);
-  border-radius: var(--md-sys-shape-corner-large);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--md-sys-shape-corner-expressive);
+  border: 1px solid color-mix(in srgb, var(--md-sys-color-primary) 14%, transparent);
+  transition:
+    transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
+    background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-standard),
+    border-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-standard);
 }
 .propostas-theme .md-card:hover {
-  background-color: var(--md-sys-color-surface-container);
+  transform: translateY(-3px);
+  background-color: color-mix(in srgb, var(--md-sys-color-primary-container) 65%, white);
+  border-color: color-mix(in srgb, var(--md-sys-color-primary) 28%, transparent);
 }
 .propostas-theme .md-card-outlined {
-  background-color: var(--md-sys-color-surface-container-lowest);
-  border-radius: var(--md-sys-shape-corner-large);
+  background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low) 80%, white);
+  border-radius: var(--md-sys-shape-corner-expressive);
   border: 1px solid var(--md-sys-color-outline-variant);
 }
 
@@ -250,8 +297,9 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 .propostas-theme .md-chip-filled {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-radius: var(--md-sys-shape-corner-full);
 }
 .propostas-theme .md-chip-assist {
   background-color: var(--md-sys-color-surface-container-highest);
@@ -274,7 +322,7 @@
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   cursor: pointer;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-standard);
 }
 .propostas-theme .md-filled-button:hover:not(:disabled) {
   background-color: color-mix(in srgb, var(--md-sys-color-primary) 92%, var(--md-sys-color-on-primary));
@@ -342,12 +390,16 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem 1.25rem;
-  border-radius: var(--md-sys-shape-corner-extra-large);
+  border-radius: var(--md-sys-shape-corner-expressive);
   background-color: var(--md-sys-color-surface-container-low);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  border: 1px solid color-mix(in srgb, var(--md-sys-color-outline-variant) 80%, transparent);
+  transition:
+    transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
+    background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-standard);
 }
 .propostas-theme .md-list-item:hover {
-  background-color: var(--md-sys-color-surface-container);
+  transform: translateX(4px);
+  background-color: var(--md-sys-color-primary-container);
 }
 .propostas-theme .md-list-item-number {
   display: flex;
@@ -520,24 +572,23 @@
   color: var(--md-sys-color-error);
 }
 
-/* ── Expansion list (áreas) — padrão lista M3, não caixa com sombra ─── */
+/* ── Expansion list (expressive) ────────────────────────────────────── */
 .propostas-theme .md-area-accordion {
   display: flex;
   flex-direction: column;
-  border-radius: var(--md-sys-shape-corner-large);
-  overflow: hidden;
-  background-color: var(--md-sys-color-surface-container-low);
+  gap: 0.5rem;
 }
 
 .propostas-theme .md-expansion-panel {
-  background-color: transparent;
-  border-bottom: 1px solid var(--md-sys-color-outline-variant);
-}
-.propostas-theme .md-expansion-panel:last-child {
-  border-bottom: none;
+  border-radius: var(--md-sys-shape-corner-expressive);
+  overflow: hidden;
+  background-color: var(--md-sys-color-surface-container-low);
+  border: 1px solid color-mix(in srgb, var(--md-sys-color-outline-variant) 70%, transparent);
+  transition: background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-standard);
 }
 .propostas-theme .md-expansion-panel[open] {
   background-color: var(--md-sys-color-surface-container-lowest);
+  border-color: color-mix(in srgb, var(--md-sys-color-primary) 22%, transparent);
 }
 
 .propostas-theme .md-expansion-panel-summary {
@@ -545,8 +596,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 3.5rem;
-  padding: 0.75rem 1.25rem;
+  min-height: 3.75rem;
+  padding: 1rem 1.25rem;
   cursor: pointer;
   list-style: none;
   user-select: none;
@@ -561,10 +612,19 @@
   font-weight: normal;
   line-height: 1;
   color: var(--md-sys-color-on-surface-variant);
-  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transition: transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
 }
 .propostas-theme .md-expansion-panel[open] .md-expansion-panel-summary::after {
   transform: rotate(180deg);
+}
+.propostas-theme .md-expansion-panel[open] .md-expansion-panel-summary {
+  background-color: var(--md-sys-color-primary-container);
+}
+.propostas-theme .md-expansion-panel[open] .md-expansion-panel-title {
+  color: var(--md-sys-color-on-primary-container);
+}
+.propostas-theme .md-expansion-panel[open] .md-expansion-panel-summary::after {
+  color: var(--md-sys-color-on-primary-container);
 }
 .propostas-theme .md-expansion-panel-summary:hover {
   background-color: color-mix(
@@ -582,6 +642,7 @@
 }
 .propostas-theme .md-expansion-panel-content {
   padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--md-sys-color-outline-variant) 50%, transparent);
 }
 .propostas-theme .md-expansion-panel-content .propostas-prose > :first-child {
   margin-top: 0.5rem;

@@ -26,30 +26,30 @@ export default async function CursoResumoPage({
   return (
     <>
       <PropostasNav />
-      <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-        <Breadcrumbs
-          items={[
-            { label: "Trilha", href: "/propostas/oceana" },
-            { label: course.title },
-          ]}
-        />
-
-        <header className="mt-6 border-b border-[var(--md-sys-color-outline-variant)] pb-6">
-          <h1 className="md-headline-medium">{course.title}</h1>
-          <p className="mt-2 md-body-large text-[length:1.125rem] leading-7">
-            {course.subtitle}
-          </p>
-          <p className="mt-3">
-            <span className="md-chip md-chip-filled">{course.duration}</span>
-          </p>
-        </header>
-
-        <div className="mt-8">
+      <div className="md-hero-band md-hero-band-compact">
+        <div className="mx-auto max-w-3xl px-4 pb-4 pt-6 sm:px-6">
+          <Breadcrumbs
+            items={[
+              { label: "Trilha", href: "/propostas/oceana" },
+              { label: course.title },
+            ]}
+          />
+          <header className="mt-4">
+            <h1 className="md-display-small">{course.title}</h1>
+            <p className="mt-2 md-body-large">{course.subtitle}</p>
+            <p className="mt-3">
+              <span className="md-chip md-chip-filled">{course.duration}</span>
+            </p>
+          </header>
+        </div>
+      </div>
+      <main className="md-page-body mx-auto max-w-3xl px-4 pb-12 sm:px-6">
+        <div className="mt-2">
           <MarkdownContent content={resumo} />
         </div>
 
         {showExemplos ? (
-          <section className="mt-12 border-t border-[var(--md-sys-color-outline-variant)] pt-10">
+          <section className="mt-12 pt-4">
             <h2 className="md-title-large">O que cada área recebe</h2>
             <p className="mt-2 md-body-medium">
               O programa é comum a toda a Oceana. Abaixo, o que muda por perfil
