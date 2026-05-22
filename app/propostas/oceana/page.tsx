@@ -14,7 +14,7 @@ export default function OceanaTrilhaPage() {
       <PropostasNav />
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-violet-600">
-          Trilha de adoção de IA
+          Agentes de IA · mercado de capitais
         </p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gradient">{trilha.title}</h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">

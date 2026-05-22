@@ -1,0 +1,20 @@
+---
+description: Posicionamento Diferentia e portal Oceana — agentes de IA, mercado de capitais
+alwaysApply: true
+---
+
+# Posicionamento Diferentia / Oceana
+
+**Não** descrever a trilha, proposta ou cursos como "treinamento em IA generativa" ou "adoção de IA generativa".
+
+**Sim** — a Diferentia trabalha com **agentes de IA para o mercado de capitais**: metodologia de adoção de agentes, casos do mercado financeiro, outputs auditáveis para decisões críticas.
+
+## Linguagem preferida (UI e conteúdo sync)
+
+- "Agentes de IA para o mercado de capitais"
+- "Trilha de agentes de IA" (não "trilha de adoção de IA generativa")
+
+## Evitar em `trilha.json`, páginas `/propostas/oceana` e resumos
+
+- "IA generativa" como descriptor do programa
+- "Treinamento em IA generativa"
