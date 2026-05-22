@@ -1,6 +1,6 @@
 ## Programa detalhado
 
-### Curso introdutório: programa completo
+### Curso introdutório
 
 *4 sessões de 2h | 100% online via Teams ou Meet*
 

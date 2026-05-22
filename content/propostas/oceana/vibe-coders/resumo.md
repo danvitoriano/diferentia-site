@@ -1,6 +1,6 @@
 ## Programa detalhado
 
-### Vibe Coders: programa
+### Vibe Coders
 
 *2 sessões de ~3h | Até 30 pessoas | Perfis técnicos*
 

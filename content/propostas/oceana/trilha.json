@@ -50,7 +50,7 @@
     {
       "slug": "cowork-workshop",
       "title": "Workshop: Claude Cowork (prático)",
-      "subtitle": "Laboratório hands-on com licença Pro e app instalado",
+      "subtitle": "Laboratório hands-on com app desktop instalado",
       "duration": "3h",
       "layer": "workshop",
       "optional": true,

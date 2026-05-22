@@ -1,6 +1,6 @@
 ## Programa detalhado
 
-### Módulo avançado: programa
+### Claude para Decisões Críticas
 
 *3 sessões de 2h | Até 30 pessoas | Pré-requisito: Curso Introdutório*
 

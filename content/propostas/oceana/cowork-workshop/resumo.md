@@ -1,14 +1,14 @@
 ## Programa detalhado
 
-### Workshop prático de Cowork: programa
+### Workshop prático de Cowork
 
-*Sessão única de 3h | Até 15 pessoas | Requer licença Pro ativa*
+*Sessão única de 3h | Até 15 pessoas*
 
 #### Parte 1: Instalação e configuração (45 min)
 
 - Instalação do app desktop e primeiras configurações
 - Conexão de pasta da empresa ao Cowork
-- Tour pelos recursos que a licença Pro desbloqueia
+- Tour pelos recursos do app desktop
 
 #### Parte 2: Plugins e automações (60 min)
 

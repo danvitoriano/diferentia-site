@@ -1,4 +1,4 @@
-Demonstrativo: a Oceana vê o que o app desktop permite antes de decidir licença Pro. Entregas por área ao final da sessão.
+Demonstrativo: a Oceana vê o que o app desktop permite no fluxo de trabalho. Entregas por área ao final da sessão.
 
 ---
 

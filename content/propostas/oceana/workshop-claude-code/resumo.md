@@ -1,6 +1,6 @@
 ## Programa detalhado
 
-### Workshop Claude Code: programa
+### Workshop Claude Code
 
 *Duração a definir | Até 15 pessoas | Pré-requisito: Vibe Coders*
 

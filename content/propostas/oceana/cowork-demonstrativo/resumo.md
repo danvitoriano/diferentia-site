@@ -1,14 +1,14 @@
 ## Programa detalhado
 
-### Demonstrativo de Cowork: programa
+### Demonstrativo de Cowork
 
-*Sessão única de 2h30 | Até 30 pessoas | Sem necessidade de licença Pro*
+*Sessão única de 2h30 | Até 30 pessoas*
 
 #### Parte 1: O app em ação sobre documentos reais (45 min)
 
 - Tour pelo Claude desktop com pasta da empresa conectada
 - Demo: Claude lendo e analisando arquivo da Oceana em tempo real
-- Diferenças práticas entre plano gratuito e Pro
+- O que muda com o app desktop vs. Claude no navegador
 
 #### Parte 2: Conectores e tarefas automáticas (45 min)
 
@@ -23,5 +23,5 @@
 
 #### Encerramento (15 min)
 
-- Facilitador entrega relatório de demanda: quem precisa de licença, para qual uso
+- Facilitador entrega relatório de demanda por área e prioridade de adoção
 - Próximos passos: sequência recomendada de módulos por área
