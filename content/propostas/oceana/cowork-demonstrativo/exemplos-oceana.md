@@ -69,10 +69,3 @@ Demonstrativo: a Oceana vê o que o app desktop permite antes de decidir licenç
 **Processos priorizados**
 
 - Solicitações de viagem, consolidação de demandas por e-mail, controle de gastos
-
----
-
-## Entrega coletiva da sessão
-
-- Relatório de demanda: quais áreas e perfis se beneficiam de licença Pro e para qual processo
-- Próximo passo claro: workshop prático (quem tiver Pro) ou continuidade no navegador
