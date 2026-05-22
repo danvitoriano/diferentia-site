@@ -6,5 +6,9 @@ export const metadata: Metadata = {
 };
 
 export default function PropostasLayout({ children }: { children: React.ReactNode }) {
-  return <div className="min-h-screen bg-[#080810] text-[#F0F0FA]">{children}</div>;
+  return (
+    <div className="propostas-theme min-h-screen bg-white text-gray-900 antialiased">
+      {children}
+    </div>
+  );
 }
