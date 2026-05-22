@@ -18,7 +18,7 @@ export function DetalheNav({
 
   return (
     <aside className="md-nav-rail">
-      <p className="md-label-large">Índice do roteiro</p>
+      <p className="md-label-medium">Índice do roteiro</p>
       <p className="mt-1 md-title-medium">{courseTitle}</p>
       <ol className="mt-4 space-y-1">
         {files.map((f, i) => {

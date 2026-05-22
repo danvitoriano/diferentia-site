@@ -26,7 +26,7 @@ export function DetalhePager({
     >
       {prev ? (
         <Link href={`${base}/${prev.slug}`} className="md-card group flex-1 p-4 sm:max-w-[48%]">
-          <span className="md-label-large normal-case">← Anterior</span>
+          <span className="md-label-medium">← Anterior</span>
           <span className="mt-1 block md-title-medium group-hover:text-[var(--md-sys-color-primary)]">
             {prev.title}
           </span>
@@ -39,7 +39,7 @@ export function DetalhePager({
           href={`${base}/${next.slug}`}
           className="md-card group flex-1 p-4 sm:max-w-[48%] sm:text-right"
         >
-          <span className="md-label-large normal-case">Próximo →</span>
+          <span className="md-label-medium">Próximo →</span>
           <span className="mt-1 block md-title-medium group-hover:text-[var(--md-sys-color-primary)]">
             {next.title}
           </span>

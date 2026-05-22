@@ -9,7 +9,7 @@ export function CourseCard({ course, step }: { course: TrilhaCourse; step?: numb
           <span className="md-list-item-number h-7 w-7 text-xs">{step}</span>
         ) : null}
         {course.moduleNumber ? (
-          <span className="md-label-large normal-case tracking-normal text-[var(--md-sys-color-tertiary)]">
+          <span className="md-label-medium text-[var(--md-sys-color-tertiary)]">
             Módulo {String(course.moduleNumber).padStart(2, "0")}
           </span>
         ) : null}
@@ -21,7 +21,7 @@ export function CourseCard({ course, step }: { course: TrilhaCourse; step?: numb
         {course.title}
       </h3>
       <p className="mt-2 flex-1 md-body-medium">{course.subtitle}</p>
-      <p className="mt-4 md-label-large normal-case tracking-normal">{course.duration}</p>
+      <p className="mt-4 md-label-medium text-[var(--md-sys-color-primary)]">{course.duration}</p>
       <span className="mt-3 md-body-medium text-[var(--md-sys-color-primary)]">
         Ver programa e entregas por área →
       </span>

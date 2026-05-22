@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./propostas-theme.css";
 
-const roboto = Roboto({
+const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function PropostasLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`propostas-theme ${roboto.className} min-h-screen antialiased`}>
+    <div className={`propostas-theme ${robotoFlex.className} min-h-screen antialiased`}>
       {children}
     </div>
   );
