@@ -38,6 +38,16 @@
       "moduleNumber": 2
     },
     {
+      "slug": "computer-use",
+      "title": "Computer use: Chrome, Excel e PowerPoint",
+      "subtitle": "Extensão no navegador, planilhas e apresentações com IA no fluxo de trabalho",
+      "duration": "4h (2× 2h)",
+      "layer": "nucleo",
+      "optional": true,
+      "prerequisites": ["introdutorio"],
+      "moduleNumber": 2.5
+    },
+    {
       "slug": "decisoes-criticas",
       "title": "Claude para Decisões Críticas",
       "subtitle": "Chain-of-thought, system prompts, fluxos e auditoria de outputs",
