@@ -15,12 +15,8 @@ export function AreaExemplosAccordion({ content }: { content: string }) {
           <MarkdownContent content={intro} />
         </div>
       ) : null}
-      {sections.map((section, index) => (
-        <details
-          key={section.title}
-          className="md-expansion-panel"
-          open={index === 0}
-        >
+      {sections.map((section) => (
+        <details key={section.title} className="md-expansion-panel">
           <summary className="md-expansion-panel-summary">
             <span className="md-expansion-panel-title">{section.title}</span>
           </summary>
