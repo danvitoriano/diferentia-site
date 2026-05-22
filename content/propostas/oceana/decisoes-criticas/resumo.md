@@ -10,14 +10,16 @@
 - Few-shot prompting: treinar o Claude com exemplos internos da Oceana
 - Exercício: aplicar as técnicas em caso real do trabalho
 
-#### Sessão 2: System prompts e fluxos multi-etapas (2h)
+#### Sessão 2: System prompts, fluxos e computer use no Chrome (2h)
 
 - System prompts: instruções robustas e reutilizáveis para toda a equipe
 - Fluxos multi-etapas: do release à nota interna, sem sair do Claude
-- Exercício: cada área escreve o próprio system prompt de uso recorrente
+- Computer use e extensão Claude no Chrome: portais, formulários e fluxos web
+- Exercício: cada área escreve o próprio system prompt e testa um fluxo no browser
 
-#### Sessão 3: Auditoria, casos práticos e playbook (2h)
+#### Sessão 3: Auditoria, Excel, PowerPoint e playbook (2h)
 
 - Auditoria de outputs: framework de revisão para resultados com números críticos
+- Extensões Claude no Excel e no PowerPoint: modelos, decks e revisão institucional
 - Casos práticos da Oceana: utilities, crédito privado, due diligence e comunicação
 - Entrega coletiva: playbook de prompts avançados da Oceana

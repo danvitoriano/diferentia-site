@@ -5,7 +5,7 @@ title: Sobre o curso
 # Curso: Claude para Decisões Críticas
 
 **Produto:** Diferentia  
-**Carga horária total:** 6h (3 sessões de 2h)  
+**Carga horária total:** 6h (3 sessões de 2h), incluindo computer use (Chrome) e extensões Excel e PowerPoint  
 **Formato:** Online síncrono via Teams ou Meet  
 **Público:** Times que já completaram o Claude Essentials e querem extrair mais qualidade e consistência dos resultados  
 **Pré-requisito:** Claude Essentials: do prompt ao agente  
@@ -39,19 +39,21 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 - Few-shot prompting: treinar o Claude com exemplos internos da Oceana
 - Exercício: aplicar as técnicas em caso real do trabalho
 
-### Sessão 02: System prompts e fluxos multi-etapas
+### Sessão 02: System prompts, fluxos e computer use no Chrome
 **Arquivo:** `aula-02-system-prompts-e-fluxos.md`  
 **Duração:** 2h
 
 - System prompts: instruções robustas e reutilizáveis para toda a equipe
 - Fluxos multi-etapas: do release à nota interna sem sair do Claude
-- Exercício: cada área escreve o próprio system prompt de uso recorrente
+- Computer use e extensão Claude no Chrome
+- Exercício: system prompt da área e fluxo testado no browser
 
-### Sessão 03: Auditoria, casos práticos e playbook
+### Sessão 03: Auditoria, Excel, PowerPoint e playbook
 **Arquivo:** `aula-03-auditoria-casos-e-playbook.md`  
 **Duração:** 2h
 
 - Auditoria de outputs: framework de revisão para resultados com números críticos
+- Extensões Claude no Excel e no PowerPoint
 - Casos práticos: análise de utilities, crédito privado, due diligence, comunicação
 - Entrega coletiva: playbook de prompts avançados da Oceana
 

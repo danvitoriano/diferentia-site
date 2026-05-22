@@ -22,7 +22,6 @@ const CURSO_DIRS = {
   "vibe-coders": "curso-claude-code",
   "claude-code-avancado": "curso-claude-code-avancado",
   "decisoes-criticas": "curso-decisoes-criticas",
-  "computer-use": "curso-computer-use",
 };
 
 function copyIfExists(src, dest) {
