@@ -6,7 +6,7 @@ title: Modulo 01 O Que E Vibe Coding
 
 **Curso:** Claude Code para Vibe Coders  
 **Duração:** 1h15 (75 min)  
-**Formato:** Online síncrono, demonstrativo — o facilitador opera; a turma participa pelo chat (não é necessário ter o Claude Code instalado)
+**Formato:** Online síncrono, demonstrativo: o facilitador opera; a turma participa pelo chat (não é necessário ter o Claude Code instalado)
 
 ---
 
@@ -32,7 +32,7 @@ title: Modulo 01 O Que E Vibe Coding
 
 ### Visão geral
 
-Gancho rápido. Não entrar em teoria ainda — a turma precisa ver algo acontecendo em poucos minutos.
+Gancho rápido. Não entrar em teoria ainda: a turma precisa ver algo acontecendo em poucos minutos.
 
 ### Roteiro
 
@@ -48,7 +48,7 @@ Segunda: se pudessem criar qualquer ferramenta simples para o trabalho de vocês
 
 [Pausa para respostas]
 
-Perfeito. Guardem essas ideias — vamos voltar nelas daqui a pouco.
+Perfeito. Guardem essas ideias: vamos voltar nelas daqui a pouco.
 
 Hoje é uma aula demonstrativa. Eu vou operar o Claude Code aqui na tela. Vocês não precisam ter nada instalado ainda. O papel de vocês é dirigir: dizer o que querem ver, votar ajustes, reagir ao que aparece no navegador.
 
@@ -64,7 +64,7 @@ Esta é a parte mais importante do módulo. Comece cedo, sem teoria longa antes.
 
 Prepare o ambiente antes da aula (terminal, pasta limpa, Claude Code autenticado), mas execute ao vivo sem revelar o resultado final com antecedência.
 
-Se a IA demorar, narre o que está acontecendo ('está criando os arquivos', 'está instalando o que precisa'). Não preencha com palestra — mantenha o foco na tela.
+Se a IA demorar, narre o que está acontecendo ('está criando os arquivos', 'está instalando o que precisa'). Não preencha com palestra: mantenha o foco na tela.
 
 ### Sugestão de projeto para a demo
 
@@ -72,7 +72,7 @@ Calculadora de rentabilidade: valor investido, taxa CDI e período em meses; mos
 
 ### Roteiro da demo
 
-"Vou criar do zero, na frente de vocês, uma ferramenta simples. Só vou descrever o que quero — zero código digitado por mim.
+"Vou criar do zero, na frente de vocês, uma ferramenta simples. Só vou descrever o que quero: zero código digitado por mim.
 
 [Abre o terminal]
 
@@ -106,7 +106,7 @@ Exemplos de ajustes que funcionam bem: mudar cor do fundo, adicionar campo de ap
 
 Olhem o que está na tela e mandem no chat **uma** mudança que fariam. Pode ser visual, de texto ou de funcionalidade simples.
 
-[Aguarda sugestões — 2 a 3 min]
+[Aguarda sugestões: 2 a 3 min]
 
 Vou pegar a sugestão de [nome ou tema mais votado] e pedir para a IA agora.
 
@@ -122,15 +122,15 @@ Viu? Não precisei saber programar. Só precisei dizer o que queria diferente. E
 
 ### Visão geral
 
-Nomear o que a turma acabou de ver. Fundir contexto histórico + definição + ciclo prático — sem repetir a demo.
+Nomear o que a turma acabou de ver. Fundir contexto histórico + definição + ciclo prático: sem repetir a demo.
 
 ### Roteiro
 
 "O que vocês viram nos últimos minutos tem nome: **vibe coding**.
 
-O termo foi popularizado por Andrej Karpathy no começo de 2025. É programar descrevendo o que você quer e deixando a IA escrever o código — sem se preocupar com variáveis, funções ou sintaxe.
+O termo foi popularizado por Andrej Karpathy no começo de 2025. É programar descrevendo o que você quer e deixando a IA escrever o código: sem se preocupar com variáveis, funções ou sintaxe.
 
-Por que isso é possível agora e não era há cinco anos? Porque os modelos de linguagem ficaram bons o suficiente para entender instruções em português, escolher tecnologia, criar arquivos e entregar algo funcionando — não só texto de exemplo.
+Por que isso é possível agora e não era há cinco anos? Porque os modelos de linguagem ficaram bons o suficiente para entender instruções em português, escolher tecnologia, criar arquivos e entregar algo funcionando: não só texto de exemplo.
 
 Pensa na analogia da casa: antes você precisava saber construir. Agora você tem uma equipe que entende quando você diz 'quero dois andares, sala ampla, cozinha americana'. Você precisa saber **o que quer** e **como comunicar**.
 
@@ -142,7 +142,7 @@ O ciclo que acabamos de fazer é o ciclo completo:
 4. Você pede ajustes em linguagem natural.
 5. Repete até ficar do jeito que quer.
 
-Não é mágica. Às vezes a IA entende errado ou algo quebra — vamos ver como lidar com isso nos próximos módulos. Mas a barreira de entrada para criar software caiu de forma dramática."
+Não é mágica. Às vezes a IA entende errado ou algo quebra: vamos ver como lidar com isso nos próximos módulos. Mas a barreira de entrada para criar software caiu de forma dramática."
 
 ---
 
@@ -154,7 +154,7 @@ Segunda passada fixa no roteiro (para garantir um fechamento forte), ainda ao vi
 
 ### Roteiro
 
-"Vou fazer mais um ajuste para fechar o ciclo — algo que costuma aparecer no dia a dia de vocês.
+"Vou fazer mais um ajuste para fechar o ciclo: algo que costuma aparecer no dia a dia de vocês.
 
 [Instrução digitada ao vivo:]
 
@@ -180,13 +180,13 @@ Esclarecer ferramentas e mentalidade **depois** da demo, quando a turma já viu 
 
 "Duas coisas importantes antes de encerrar.
 
-**Ferramentas.** Muitos de vocês já usam o Claude no navegador, no claude.ai — ótimo para texto, análise, e-mails. É a receita.
+**Ferramentas.** Muitos de vocês já usam o Claude no navegador, no claude.ai: ótimo para texto, análise, e-mails. É a receita.
 
 O Claude Code, que usei aqui, roda no computador e mexe nos arquivos do projeto: cria pastas, instala o necessário, testa, corrige. É o chef na cozinha.
 
 Para o que vamos construir neste curso, precisamos do Claude Code. Na próxima aula instalamos juntos, passo a passo.
 
-**Mentalidade.** No vibe coding, você é o diretor e a IA é a engenheira. A pergunta certa não é 'esse código está certo?'. É: **o que está na tela é o que eu quero?** Se não for, você descreve o que quer diferente — como fizemos no chat há pouco.
+**Mentalidade.** No vibe coding, você é o diretor e a IA é a engenheira. A pergunta certa não é 'esse código está certo?'. É: **o que está na tela é o que eu quero?** Se não for, você descreve o que quer diferente: como fizemos no chat há pouco.
 
 O erro mais comum é tentar entender cada linha de código e travar. Você precisa entender o **resultado**, não a implementação."
 
@@ -202,7 +202,7 @@ Visão realista e inspiradora, conectada ao que acabaram de ver (calculadora) e 
 
 "Sendo honesto sobre o que dá e o que ainda não dá.
 
-**Dá para construir:** sites e landing pages; ferramentas internas simples — calculadoras, formulários, painéis; protótipos e MVPs para mostrar ideia; automações simples de arquivos e relatórios.
+**Dá para construir:** sites e landing pages; ferramentas internas simples: calculadoras, formulários, painéis; protótipos e MVPs para mostrar ideia; automações simples de arquivos e relatórios.
 
 **Ainda tem limitação:** sistemas com muitos usuários ao mesmo tempo; integrações pesadas com ERPs legados; apps mobile nativos com complexidade alta.
 
@@ -214,7 +214,7 @@ Para inovação e automação no mercado financeiro, o vibe coding já cobre mui
 
 ### Instrução para o facilitador
 
-Participação síncrona **sem** Claude Code instalado. Quem não tiver conta pode escrever no chat ou em bloco de notas — o importante é praticar articular o que quer.
+Participação síncrona **sem** Claude Code instalado. Quem não tiver conta pode escrever no chat ou em bloco de notas: o importante é praticar articular o que quer.
 
 Não precisa gerar código funcional aqui; o objetivo é exercitar a descrição do resultado.
 
@@ -222,13 +222,13 @@ Não precisa gerar código funcional aqui; o objetivo é exercitar a descrição
 
 "Agora 5 minutos de vocês.
 
-Abram o claude.ai no navegador — ou escrevam no chat se preferirem.
+Abram o claude.ai no navegador: ou escrevam no chat se preferirem.
 
 Montem um prompt de **quatro a cinco frases** descrevendo uma ferramenta que vocês usariam no trabalho. Usem a ideia que mandaram no começo da aula, se quiserem.
 
 Incluam: o que é, para quem, quais campos ou entradas, o que aparece na tela no final.
 
-[5 minutos — circule pelos comentários no chat, destaque 1 ou 2 bons exemplos]
+[5 minutos: circule pelos comentários no chat, destaque 1 ou 2 bons exemplos]
 
 Isso já é metade do vibe coding: saber o que pedir. Na próxima aula vocês vão pedir isso para o Claude Code no próprio computador."
 
@@ -264,9 +264,9 @@ Se alguém perguntar sobre os itens abaixo, agradeça a pergunta e informe que o
 
 ## Notas de facilitação
 
-- **Ritmo:** se a Demo 1 atrasar, encurte o Bloco 3 para 5 min e mantenha a atividade no claude.ai — ela fixa o aprendizado.
+- **Ritmo:** se a Demo 1 atrasar, encurte o Bloco 3 para 5 min e mantenha a atividade no claude.ai: ela fixa o aprendizado.
 - **Chat:** designe alguém da equipe para filtrar sugestões durante a participação, se a turma for grande.
-- **Fallback:** se a IA travar na demo, narre o erro com calma ('isso também acontece, pedimos de outro jeito') e reformule a instrução — vira lição sobre iteração.
+- **Fallback:** se a IA travar na demo, narre o erro com calma ('isso também acontece, pedimos de outro jeito') e reformule a instrução: vira lição sobre iteração.
 - **Sem instalação:** deixe claro no início e no fim que hoje ninguém precisa instalar nada.
 
 ---

@@ -1,4 +1,4 @@
-# Guia de Adaptação por Área — Trilha Differentia / Oceana
+# Guia de Adaptação por Área: Trilha Diferentia / Oceana
 
 Como usar este guia: cada seção descreve como adaptar os exercícios, exemplos e
 demos da trilha para um perfil de área específico. O conteúdo dos módulos não muda.
@@ -194,7 +194,7 @@ financeiro, precisa de ganho de tempo visível.
 
 No Módulo 2, artefatos simples têm o maior impacto: tabelas de controle,
 rascunhos de e-mail, organização de listas de solicitações. Não force Deep
-Research aqui — é o recurso de menor relevância para este perfil.
+Research aqui: é o recurso de menor relevância para este perfil.
 
 No Módulo 3, App Mobile é especialmente relevante para este perfil: quem
 lida com demandas por WhatsApp e e-mail tem ganho imediato com a câmera

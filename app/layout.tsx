@@ -6,11 +6,11 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Diferentia — Agentic AI para o Mercado Financeiro",
+  title: "Diferentia: Agentic AI para o Mercado Financeiro",
   description:
     "Metodologia de adoção de Agentic AI para fundos, gestoras e fintechs. Do diagnóstico à autonomia operacional.",
   openGraph: {
-    title: "Diferentia — Agentic AI para o Mercado Financeiro",
+    title: "Diferentia: Agentic AI para o Mercado Financeiro",
     description:
       "Metodologia de adoção de Agentic AI para fundos, gestoras e fintechs.",
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diferentia — Agentic AI para o Mercado Financeiro",
+    title: "Diferentia: Agentic AI para o Mercado Financeiro",
     description:
       "Metodologia de adoção de Agentic AI para fundos, gestoras e fintechs.",
   },

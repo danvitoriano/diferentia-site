@@ -26,7 +26,7 @@ A distribuição completa por módulo (referência rápida, igual aos Módulos 1
 | 7, Projetos | Contexto restrito, instruções, arquivos | 3 |
 | **8, Skills (Habilidades)** | **Criação de automações com /skill-creator** | **4** |
 
-> **Regra prática:** este módulo cobre a Seção 8 da apresentação. O track técnico é um **teaser** de 15–20 min (não substitui o curso [Claude Code — Vibe Coders](../../curso-claude-code/) nem o [Avançado](../../curso-claude-code-avancado/)).
+> **Regra prática:** este módulo cobre a Seção 8 da apresentação. O track técnico é um **teaser** de 15 a 20 min (não substitui o curso [Claude Code: Vibe Coders](../../curso-claude-code/) nem o [Avançado](../../curso-claude-code-avancado/)).
 
 ---
 
@@ -36,7 +36,7 @@ Antes da aula, o facilitador deve enviar um e-mail (24h antes) lembrando:
 
 1. Ter conta no claude.ai ativa com o Claude Cowork instalado (ou Desktop app com acesso ao modo Cowork). Skills e /skill-creator funcionam apenas no Cowork.
 2. Revisitar o Projeto criado no Módulo 3 e trazer pelo menos um caso de uso repetitivo que vocês gostariam de automatizar. Não precisa ser técnico: "toda semana eu monto um sumário de resultados no mesmo formato" já é suficiente.
-3. Track técnico (opcional): **não** é necessário instalar Claude Code nesta aula. Quem quiser aprofundar depois segue para o curso [Claude Code — Vibe Coders](../../curso-claude-code/).
+3. Track técnico (opcional): **não** é necessário instalar Claude Code nesta aula. Quem quiser aprofundar depois segue para o curso [Claude Code: Vibe Coders](../../curso-claude-code/).
 4. Reservar 2h sem interrupções, com fone se estiver em sala compartilhada.
 
 ---
@@ -85,7 +85,7 @@ Aguardar a skill executar. Não falar nada enquanto a resposta aparece.
 
 **[0:12 a 0:15] Visão geral do módulo**
 
-> "Em 2 horas: primeiro, o que são Skills e como instalar as prontas. Depois, /skill-creator para cada um de vocês descrever e criar uma skill própria. No final, um bloco curto sobre Claude Code — o que é e qual curso fazer depois — sem instalação pesada nesta aula. Quem quiser construir software e publicar na internet segue para o curso Claude Code para Vibe Coders; quem quiser Git, MCP no terminal e API, para o Avançado depois disso."
+> "Em 2 horas: primeiro, o que são Skills e como instalar as prontas. Depois, /skill-creator para cada um de vocês descrever e criar uma skill própria. No final, um bloco curto sobre Claude Code: o que é e qual curso fazer depois: sem instalação pesada nesta aula. Quem quiser construir software e publicar na internet segue para o curso Claude Code para Vibe Coders; quem quiser Git, MCP no terminal e API, para o Avançado depois disso."
 
 ---
 
@@ -209,11 +209,11 @@ Acompanhar tentativas pelo chat. Pedir que 1 ou 2 participantes compartilhem a t
 
 ---
 
-## BLOCO 5: Teaser — Claude Code e próximos passos na trilha (1:10 a 1:28)
+## BLOCO 5: Teaser: Claude Code e próximos passos na trilha (1:10 a 1:28)
 
 ### Objetivo
 
-Posicionar Claude Code na trilha Differentia **sem** instalação longa nem MCP no terminal nesta aula. Skills no Cowork continuam sendo o foco principal do Módulo 4.
+Posicionar Claude Code na trilha Diferentia **sem** instalação longa nem MCP no terminal nesta aula. Skills no Cowork continuam sendo o foco principal do Módulo 4.
 
 > **Nota de slides:** este bloco não usa slides. Opcional: tela do terminal com gravação curta ou demo de 3 min do facilitador.
 
@@ -221,17 +221,17 @@ Posicionar Claude Code na trilha Differentia **sem** instalação longa nem MCP 
 
 **[1:10 a 1:16] O que é Claude Code (e o que não é)**
 
-> "Claude Code é o Claude no **terminal**: lê e escreve arquivos no seu computador, executa comandos e evolui projetos em pasta — como um engenheiro ao lado de você. Não substitui o claude.ai nem o Cowork; complementa quando a entrega é **software**, pasta de projeto ou integração local."
+> "Claude Code é o Claude no **terminal**: lê e escreve arquivos no seu computador, executa comandos e evolui projetos em pasta: como um engenheiro ao lado de você. Não substitui o claude.ai nem o Cowork; complementa quando a entrega é **software**, pasta de projeto ou integração local."
 
-> "No Módulo 3 desta trilha vocês viram **MCP no navegador** — Drive, Slack. No Claude Code avançado vocês verão **MCP no terminal** — outro capítulo, outro curso."
+> "No Módulo 3 desta trilha vocês viram **MCP no navegador**: Drive, Slack. No Claude Code avançado vocês verão **MCP no terminal**: outro capítulo, outro curso."
 
 **[1:16 a 1:22] Demo curta (opcional, 3 min)**
 
 Se houver tempo e ambiente preparado **antes** da aula, mostrar só o **resultado**: pasta com `index.html` aberta no navegador + uma frase no terminal. **Não** conduzir instalação `npm install` com a turma inteira aqui.
 
-> "Quem quiser fazer isso nas próprias máquinas: curso **Claude Code para Vibe Coders** — quatro aulas, do zero ao link na Vercel, sem precisar saber programar."
+> "Quem quiser fazer isso nas próprias máquinas: curso **Claude Code para Vibe Coders**: quatro aulas, do zero ao link na Vercel, sem precisar saber programar."
 
-**[1:22 a 1:28] Mapa da trilha — distribuir no chat**
+**[1:22 a 1:28] Mapa da trilha: distribuir no chat**
 
 > "Resumo do que vem depois desta trilha introdutória:"
 
@@ -239,11 +239,11 @@ Se houver tempo e ambiente preparado **antes** da aula, mostrar só o **resultad
 |---|---|---|
 | [Cowork demonstrativo](https://github.com/diferentia/curso-cowork) | **Quase todo mundo** após este intro | App desktop: o que muda vs navegador |
 | [Workshop Cowork](https://github.com/diferentia/curso-cowork-workshop) | Quem já tem Pro + app instalado | Laboratório 3h (opcional) |
-| [Claude Code — Vibe Coders](https://github.com/diferentia/curso-claude-code) | Quem quer **criar e publicar** no terminal | Instalação, prompts, Vercel (opcional) |
-| [Claude Code — Avançado](https://github.com/diferentia/curso-claude-code-avancado) | Pós-Vibe ou perfil técnico | Git, hooks, MCP, API (opcional) |
+| [Claude Code: Vibe Coders](https://github.com/diferentia/curso-claude-code) | Quem quer **criar e publicar** no terminal | Instalação, prompts, Vercel (opcional) |
+| [Claude Code: Avançado](https://github.com/diferentia/curso-claude-code-avancado) | Pós-Vibe ou perfil técnico | Git, hooks, MCP, API (opcional) |
 | [cursos-oceana](https://github.com/diferentia/cursos-oceana) | Facilitadores e gestores | Mapa completo |
 
-> "Para a maioria, o próximo passo recomendado é o Cowork demonstrativo — não o workshop ainda. Workshop e Claude Code são opcionais, para quem precisar de prática intensiva ou construir software."
+> "Para a maioria, o próximo passo recomendado é o Cowork demonstrativo: não o workshop ainda. Workshop e Claude Code são opcionais, para quem precisar de prática intensiva ou construir software."
 
 ---
 
@@ -268,7 +268,7 @@ Em duplas (5 min):
 
 No chat (5 min):
 
-4. Cada dupla posta o prompt mais forte que testaram — o que produziu
+4. Cada dupla posta o prompt mais forte que testaram: o que produziu
    o resultado mais útil.
 
 O facilitador coleta tudo e centraliza na biblioteca compartilhada.
@@ -291,7 +291,7 @@ O facilitador coleta tudo e centraliza na biblioteca compartilhada.
 Abra um documento compartilhado (Notion, Google Docs, ou planilha)
 durante a aula e cole os prompts conforme chegam no chat.
 Ao final da aula, compartilhe o link com toda a turma.
-Esse documento se torna a base da biblioteca — participantes continuam
+Esse documento se torna a base da biblioteca: participantes continuam
 contribuindo depois do curso.
 
 Exemplos de prompts da Oceana para inspirar a turma: [exemplos-oceana.md](exemplos-oceana.md).
@@ -303,7 +303,7 @@ Exemplos de prompts da Oceana para inspirar a turma: [exemplos-oceana.md](exempl
 ### Roteiro
 
 > "Antes de encerrar, quero falar sobre como isso funciona dentro da Oceana
-> — não como tecnologia, mas como prática de trabalho.
+>: não como tecnologia, mas como prática de trabalho.
 
 Quatro perguntas que todo time precisa responder antes de escalar o uso de IA:
 
@@ -314,25 +314,25 @@ humana antes de usar o resultado.
 
 **2. Que dados não entram no Claude?**
 Dados de clientes identificados, posição real da carteira, material insider,
-relatórios em período de silêncio — nada disso vai para o Claude sem
+relatórios em período de silêncio: nada disso vai para o Claude sem
 aprovação formal de compliance. Em dúvida, pergunte antes.
 
 **3. O que fazer quando o modelo erra?**
 Documente o erro com o prompt que gerou, o resultado incorreto e o contexto.
-Isso alimenta a biblioteca de prompts com o que não funciona — tão valioso
+Isso alimenta a biblioteca de prompts com o que não funciona: tão valioso
 quanto o que funciona.
 
 **4. Como aprovar um novo uso?**
-Antes de usar Claude em um processo novo — especialmente se envolver dado
-sensível ou comunicação com cliente — passe por: (1) você mesmo testa,
+Antes de usar Claude em um processo novo: especialmente se envolver dado
+sensível ou comunicação com cliente: passe por: (1) você mesmo testa,
 (2) alguém do time revisa, (3) compliance valida se necessário.
 
-Isso não é burocracia — é o que garante que o uso de IA na Oceana vai
+Isso não é burocracia: é o que garante que o uso de IA na Oceana vai
 crescer de forma sustentável, sem incidentes que travem a adoção."
 
 ### Nota de facilitação
 
-Esse bloco não precisa de exercício — é uma conversa. Abra para perguntas.
+Esse bloco não precisa de exercício: é uma conversa. Abra para perguntas.
 As dúvidas mais comuns são sobre o que é considerado 'dado sensível' e
 sobre como formalizar a aprovação de novos usos. Para ambas, a resposta
 padrão é: alinhar com compliance e TI antes, não depois.
@@ -357,7 +357,7 @@ Aguardar. Comentar 2 ou 3 resultados publicados no chat ao vivo.
 
 > "Quatro módulos. Oito horas. Vou fazer um recap rápido do que a trilha cobriu:"
 
-> "Módulo 1 a 4: base no navegador e Skills no Cowork. **Próximo passo recomendado para quase todos:** Cowork demonstrativo — ver o app desktop ao vivo. Workshop Cowork e Claude Code são opcionais — links no chat e no repositório cursos-oceana."
+> "Módulo 1 a 4: base no navegador e Skills no Cowork. **Próximo passo recomendado para quase todos:** Cowork demonstrativo: ver o app desktop ao vivo. Workshop Cowork e Claude Code são opcionais: links no chat e no repositório cursos-oceana."
 
 > "O que não muda: a qualidade do output vai continuar sendo proporcional à qualidade do contexto que vocês fornecem. Tudo que aprendemos sobre prompt nesses quatro módulos continua valendo. Skills e automações reduzem o esforço de repetição, mas não substituem o julgamento analítico de vocês. O Claude é um acelerador, não um substituto."
 
@@ -379,7 +379,7 @@ Este é o último módulo da trilha. Mas alguns temas ficam além do escopo da t
 | Prática Cowork com Pro | [Workshop Cowork](https://github.com/diferentia/curso-cowork-workshop) |
 | Instalação completa e publicação (Vercel) | [Vibe Coders](https://github.com/diferentia/curso-claude-code) |
 | Git, slash commands, hooks, MCP no terminal | [Avançado](https://github.com/diferentia/curso-claude-code-avancado) |
-| Deploys de agentes em produção | [Avançado — M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md) |
+| Deploys de agentes em produção | [Avançado: M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md) |
 | Integração com sistemas legados da Oceana | Projeto específico de TI + curso Avançado |
 | Fine-tuning de modelos | Fora do escopo do claude.ai (requer API) |
 | Computer use automatizado em produção | Claude Computer Use API (beta) |
@@ -393,11 +393,11 @@ Este é o último módulo da trilha. Mas alguns temas ficam além do escopo da t
 - Documentação de Skills: https://support.claude.com (buscar "skills")
 - Claude Code: https://claude.ai/code
 - Documentação do Claude Code: https://docs.anthropic.com/claude-code
-- Trilha Differentia: https://github.com/diferentia/cursos-oceana
+- Trilha Diferentia: https://github.com/diferentia/cursos-oceana
 - Cowork demonstrativo: https://github.com/diferentia/curso-cowork
 - Workshop Cowork: https://github.com/diferentia/curso-cowork-workshop
-- Claude Code — Vibe Coders: https://github.com/diferentia/curso-claude-code
-- Claude Code — Avançado: https://github.com/diferentia/curso-claude-code-avancado
+- Claude Code: Vibe Coders: https://github.com/diferentia/curso-claude-code
+- Claude Code: Avançado: https://github.com/diferentia/curso-claude-code-avancado
 - Template de descrição de skill: incluído abaixo
 - Exemplos específicos Oceana: [exemplos-oceana.md](exemplos-oceana.md)
 - Apresentação usada: "Aprendendo Claude, do básico ao intermediário" (Seção 8)

@@ -6,7 +6,7 @@ title: Modulo 04 Api E Agent Sdk
 
 **Curso:** Claude Code Avançado  
 **Duração:** 1h30  
-**Formato:** Online síncrono — workshop conceitual com demo curta  
+**Formato:** Online síncrono: workshop conceitual com demo curta  
 **Público:** Participantes do Módulo 3 que querem visão de produção e integração com times de engenharia
 
 ---
@@ -30,7 +30,7 @@ title: Modulo 04 Api E Agent Sdk
 
 "Este módulo é **opcional**. Não é necessário para usar Claude Code no dia a dia como vibe coder ou analista com Git e MCP.
 
-É para quem precisa conversar com **desenvolvimento**, **dados** ou **automação em pipeline** — e para entender o que acontece 'por baixo' quando o terminal não basta."
+É para quem precisa conversar com **desenvolvimento**, **dados** ou **automação em pipeline**: e para entender o que acontece 'por baixo' quando o terminal não basta."
 
 ---
 
@@ -51,7 +51,7 @@ Fluxo típico na Oceana:
 2. Validação com negócio
 3. Engenharia reimplementa ou orquestra via API com testes, logs e compliance
 
-Mostrem um trecho da documentação https://docs.anthropic.com — endpoint Messages, conceito de system prompt — **sem** expor API key na tela."
+Mostrem um trecho da documentação https://docs.anthropic.com: endpoint Messages, conceito de system prompt: **sem** expor API key na tela."
 
 ---
 
@@ -116,12 +116,12 @@ Compartilhem uma dupla no chat. Facilitador comenta viabilidade: Claude Code onl
 
 "Trilha Avançada completa:
 
-- M1 Git — histórico e GitHub
+- M1 Git: histórico e GitHub
 - M2 Slash, CLAUDE.md, hooks
 - M3 MCP no terminal
-- M4 API/SDK — ponte para produção
+- M4 API/SDK: ponte para produção
 
-Continuem evoluindo o projeto do [Vibe Coders](https://github.com/diferentia/curso-claude-code) com o que aprenderam. A trilha Differentia segue com adoção na empresa.
+Continuem evoluindo o projeto do [Vibe Coders](https://github.com/diferentia/curso-claude-code) com o que aprenderam. A trilha Diferentia segue com adoção na empresa.
 
 Obrigado."
 

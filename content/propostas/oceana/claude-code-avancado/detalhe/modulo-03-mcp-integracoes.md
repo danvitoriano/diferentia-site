@@ -46,20 +46,20 @@ Quem lembra o que é MCP? [pausa para respostas]
 
 No curso Introdutório vocês conectaram o Google Drive ao claude.ai pelo navegador, no menu de configurações. Arrastaram um arquivo, fizeram perguntas, receberam respostas. Ótimo.
 
-Hoje o conceito é o mesmo. O que muda é o **lugar** onde o servidor roda — e o que ele consegue acessar.
+Hoje o conceito é o mesmo. O que muda é o **lugar** onde o servidor roda: e o que ele consegue acessar.
 
 No terminal, com o Claude Code, vocês podem conectar:
 
-- Uma pasta específica do projeto — com controle cirúrgico de quais arquivos o modelo vê
+- Uma pasta específica do projeto: com controle cirúrgico de quais arquivos o modelo vê
 - Um banco de dados **de desenvolvimento** em modo read-only
 - Um sistema interno que tem API mas não tem interface gráfica
 - Uma fila de arquivos que chega por automação noturna
 
-Isso é diferente de fazer upload de um PDF no claude.ai. É uma **integração persistente** — o modelo sabe onde buscar, toda vez que você abre o projeto.
+Isso é diferente de fazer upload de um PDF no claude.ai. É uma **integração persistente**: o modelo sabe onde buscar, toda vez que você abre o projeto.
 
-Antes de começar: uma regra que vale o módulo inteiro. Dados de clientes, posição real, material não público — **fora daqui**. Trabalhamos só com dados fictícios ou aprovados pela sua equipe de compliance. Se alguém tiver dúvida sobre o que pode conectar, a resposta padrão é: perguntar ao TI primeiro.
+Antes de começar: uma regra que vale o módulo inteiro. Dados de clientes, posição real, material não público: **fora daqui**. Trabalhamos só com dados fictícios ou aprovados pela sua equipe de compliance. Se alguém tiver dúvida sobre o que pode conectar, a resposta padrão é: perguntar ao TI primeiro.
 
-Dito isso — vamos ver como isso funciona na prática."
+Dito isso: vamos ver como isso funciona na prática."
 
 ---
 
@@ -69,7 +69,7 @@ Dito isso — vamos ver como isso funciona na prática."
 
 "**MCP** significa Model Context Protocol. É um padrão aberto que define como um modelo de linguagem chama ferramentas externas.
 
-Pensa assim: o Claude Code, sozinho, sabe editar arquivos, rodar bash e conversar. Com MCP, ele ganha **braços extras** — cada servidor MCP é um braço com uma habilidade específica.
+Pensa assim: o Claude Code, sozinho, sabe editar arquivos, rodar bash e conversar. Com MCP, ele ganha **braços extras**: cada servidor MCP é um braço com uma habilidade específica.
 
 Um braço para ler arquivos de uma pasta.
 Um braço para fazer query em um banco.
@@ -80,13 +80,13 @@ O modelo não muda. Os braços mudam conforme o projeto.
 
 **Como funciona no Claude Code:**
 
-1. Vocês registram um servidor MCP na configuração — um arquivo que diz: 'para este projeto, existe este servidor, com este comando de inicialização e essas variáveis de ambiente'.
+1. Vocês registram um servidor MCP na configuração: um arquivo que diz: 'para este projeto, existe este servidor, com este comando de inicialização e essas variáveis de ambiente'.
 
 2. Na próxima vez que o Claude Code abre na pasta do projeto, ele carrega os servidores registrados.
 
-3. O modelo enxerga as **ferramentas** que cada servidor expõe — como `read_file`, `list_directory`, `query_database`.
+3. O modelo enxerga as **ferramentas** que cada servidor expõe: como `read_file`, `list_directory`, `query_database`.
 
-4. Quando vocês fazem um prompt, o modelo decide sozinho quando usar uma ferramenta. Vocês podem forçar isso sendo explícitos no prompt — já vamos ver como.
+4. Quando vocês fazem um prompt, o modelo decide sozinho quando usar uma ferramenta. Vocês podem forçar isso sendo explícitos no prompt: já vamos ver como.
 
 **Diferença do upload manual:**
 
@@ -96,22 +96,22 @@ MCP é uma conexão. O servidor está sempre disponível enquanto o projeto esti
 
 **Onde fica a configuração:**
 
-A documentação do Claude Code descreve dois níveis de configuração de MCP: **nível de usuário** (vale para todos os projetos na máquina) e **nível de projeto** (só para aquele repositório). Para trabalho em equipe, o nível de projeto é o certo — fica versionado no Git junto com o código."
+A documentação do Claude Code descreve dois níveis de configuração de MCP: **nível de usuário** (vale para todos os projetos na máquina) e **nível de projeto** (só para aquele repositório). Para trabalho em equipe, o nível de projeto é o certo: fica versionado no Git junto com o código."
 
-### Perguntas frequentes — Bloco 1
+### Perguntas frequentes: Bloco 1
 
 **P: Isso é diferente dos conectores do claude.ai?**
-R: Mesmo protocolo, locais diferentes. Os conectores do claude.ai rodam na nuvem da Anthropic, fora da sua rede. Os servidores MCP do Claude Code rodam onde vocês configurarem — local ou na infraestrutura da empresa. Por isso servem para dados que não podem sair da rede.
+R: Mesmo protocolo, locais diferentes. Os conectores do claude.ai rodam na nuvem da Anthropic, fora da sua rede. Os servidores MCP do Claude Code rodam onde vocês configurarem: local ou na infraestrutura da empresa. Por isso servem para dados que não podem sair da rede.
 
 **P: Todo MCP server precisa de Node?**
-R: Não. Existem servidores escritos em Python, Go e outras linguagens. O servidor de filesystem padrão da Anthropic usa Node. Mas o protocolo é agnóstico — o que vale é que o processo consiga se comunicar via stdio ou HTTP.
+R: Não. Existem servidores escritos em Python, Go e outras linguagens. O servidor de filesystem padrão da Anthropic usa Node. Mas o protocolo é agnóstico: o que vale é que o processo consiga se comunicar via stdio ou HTTP.
 
 **P: O modelo usa a ferramenta sempre que pode, ou só quando eu peço?**
-R: O modelo decide com base no prompt. Se o contexto deixar claro que há um arquivo para ler, ele provavelmente usa a ferramenta. Se o prompt for ambíguo, pode não usar. A boa prática é ser explícito: 'Use a ferramenta MCP para ler o arquivo X' — já vamos praticar isso no Bloco 4.
+R: O modelo decide com base no prompt. Se o contexto deixar claro que há um arquivo para ler, ele provavelmente usa a ferramenta. Se o prompt for ambíguo, pode não usar. A boa prática é ser explícito: 'Use a ferramenta MCP para ler o arquivo X': já vamos praticar isso no Bloco 4.
 
 ---
 
-## Bloco 2: Configurar um MCP server — demo ao vivo (30 min)
+## Bloco 2: Configurar um MCP server: demo ao vivo (30 min)
 
 ### Visão geral
 
@@ -121,9 +121,9 @@ O facilitador demonstra a configuração do `@modelcontextprotocol/server-filesy
 
 "Vou mostrar a configuração mais simples possível: um servidor que dá ao Claude Code acesso a uma pasta específica do projeto. Nada mais, nada menos.
 
-**Passo 1 — criar a pasta e o arquivo de demonstração**
+**Passo 1: criar a pasta e o arquivo de demonstração**
 
-Todos na pasta do projeto do curso — o repositório que vocês clonaram no M1. No terminal:
+Todos na pasta do projeto do curso: o repositório que vocês clonaram no M1. No terminal:
 
 ```
 mkdir -p dados
@@ -145,11 +145,11 @@ Gerdau PN,GGBR4,5.8,21.60,Siderurgia
 Caixa livre,-,9.5,-,Caixa
 ```
 
-Esses dados são fictícios — nomes reais de empresas, mas pesos e preços inventados para fins didáticos.
+Esses dados são fictícios: nomes reais de empresas, mas pesos e preços inventados para fins didáticos.
 
-**Passo 2 — registrar o servidor MCP**
+**Passo 2: registrar o servidor MCP**
 
-A forma de registrar depende da versão do Claude Code instalada. Vejam na documentação atual em docs.anthropic.com/claude-code — procurem 'MCP configuration'. O formato que mostro aqui é o padrão mais comum:
+A forma de registrar depende da versão do Claude Code instalada. Vejam na documentação atual em docs.anthropic.com/claude-code: procurem 'MCP configuration'. O formato que mostro aqui é o padrão mais comum:
 
 ```json
 {
@@ -166,11 +166,11 @@ A forma de registrar depende da versão do Claude Code instalada. Vejam na docum
 }
 ```
 
-Esse bloco vai em um arquivo de configuração do Claude Code — o caminho exato está na documentação. Substituam `/caminho/absoluto/para/seu/projeto/dados` pelo caminho real da pasta `dados/` no computador de vocês.
+Esse bloco vai em um arquivo de configuração do Claude Code: o caminho exato está na documentação. Substituam `/caminho/absoluto/para/seu/projeto/dados` pelo caminho real da pasta `dados/` no computador de vocês.
 
 [facilitador mostra na tela como encontrar o caminho com `pwd` no terminal e como abrir o arquivo de configuração]
 
-**Passo 3 — reiniciar o Claude Code**
+**Passo 3: reiniciar o Claude Code**
 
 Fechem o Claude Code e abram novamente na pasta do projeto:
 
@@ -180,7 +180,7 @@ claude
 
 Na inicialização, o Claude Code vai mostrar os servidores MCP carregados. Procurem uma linha mencionando `filesystem` na saída de boas-vindas.
 
-**Passo 4 — confirmar que as ferramentas estão disponíveis**
+**Passo 4: confirmar que as ferramentas estão disponíveis**
 
 Digitem no prompt do Claude Code:
 
@@ -190,7 +190,7 @@ Que ferramentas MCP você tem disponíveis agora?
 
 O modelo deve listar as ferramentas do servidor filesystem: `read_file`, `list_directory`, `write_file`, entre outras. A presença delas confirma que a configuração funcionou.
 
-**Passo 5 — primeiro prompt com MCP**
+**Passo 5: primeiro prompt com MCP**
 
 Agora o prompt real:
 
@@ -202,9 +202,9 @@ Apresente uma tabela com os 5 maiores pesos em ordem decrescente.
 
 [facilitador aguarda a execução e mostra a resposta na tela]
 
-Vejam o que aconteceu: o modelo usou a ferramenta `list_directory` para listar a pasta, depois `read_file` para ler o CSV, depois processou os dados. Ele não precisou de upload — ele buscou diretamente.
+Vejam o que aconteceu: o modelo usou a ferramenta `list_directory` para listar a pasta, depois `read_file` para ler o CSV, depois processou os dados. Ele não precisou de upload: ele buscou diretamente.
 
-**Plano B — sem MCP externo**
+**Plano B: sem MCP externo**
 
 Se a instalação do servidor npm não funcionou na sua máquina ou foi bloqueada pelo TI: o Claude Code já lê arquivos locais nativamente, sem MCP. O prompt fica assim:
 
@@ -214,9 +214,9 @@ tem o maior peso na carteira fictícia.
 Apresente uma tabela com os 5 maiores pesos em ordem decrescente.
 ```
 
-A diferença prática é que o MCP funciona mesmo para arquivos fora da pasta do projeto, e para fontes de dados que não são arquivos — como um banco de dados. Para arquivos dentro do projeto, a leitura nativa já resolve bem."
+A diferença prática é que o MCP funciona mesmo para arquivos fora da pasta do projeto, e para fontes de dados que não são arquivos: como um banco de dados. Para arquivos dentro do projeto, a leitura nativa já resolve bem."
 
-### Nota de facilitação — Bloco 2
+### Nota de facilitação: Bloco 2
 
 - Teste a configuração completa na sua máquina 24h antes da aula
 - Prepare o caminho absoluto da pasta de demonstração escrito num bloco de notas para copiar rapidamente
@@ -232,7 +232,7 @@ A diferença prática é que o MCP funciona mesmo para arquivos fora da pasta do
 
 "Antes de avançar para prompts mais elaborados, precisamos parar aqui e falar sobre o que **não** conectar e como proteger o que você conecta.
 
-**A regra de ouro:** O servidor MCP roda com as credenciais e permissões de quem o configurou. Se você conectar um banco com um usuário que tem `DELETE` e `UPDATE`, o modelo pode usar essas permissões — por acidente ou por um prompt mal escrito.
+**A regra de ouro:** O servidor MCP roda com as credenciais e permissões de quem o configurou. Se você conectar um banco com um usuário que tem `DELETE` e `UPDATE`, o modelo pode usar essas permissões: por acidente ou por um prompt mal escrito.
 
 **Regras não negociáveis:**
 
@@ -246,7 +246,7 @@ A diferença prática é que o MCP funciona mesmo para arquivos fora da pasta do
 
 **Variáveis de ambiente na prática:**
 
-Credenciais não ficam no arquivo de configuração do MCP. Ficam em um arquivo `.env` na raiz do projeto — que está no `.gitignore`.
+Credenciais não ficam no arquivo de configuração do MCP. Ficam em um arquivo `.env` na raiz do projeto: que está no `.gitignore`.
 
 O arquivo de configuração referencia a variável pelo nome:
 
@@ -283,10 +283,10 @@ Assim qualquer pessoa que clonar o repositório sabe que variável precisa, mas 
 ```
 Crie um .env.example para este projeto com as variáveis necessárias
 para conectar o servidor MCP de filesystem e o servidor MCP de postgres.
-Não coloque valores reais — só os nomes das variáveis com comentários explicativos.
+Não coloque valores reais: só os nomes das variáveis com comentários explicativos.
 ```
 
-**Para fundos e gestoras — linha clara:**
+**Para fundos e gestoras: linha clara:**
 
 Dados de clientes, posição real da carteira, material insider, relatórios em período de silêncio: **fora do Claude Code em qualquer configuração**, a menos que haja aprovação formal de compliance e TI. Essa regra vale mesmo para read-only, mesmo para ambiente de desenvolvimento.
 
@@ -298,18 +298,18 @@ Se você nunca usou `.env` antes, pense assim: é como uma agenda de contatos qu
 
 ### Desafio nível avançado
 
-Configure um servidor MCP de filesystem com **dois escopos diferentes** — um apontando para `dados/publicos/` e outro para `dados/internos/` — e escreva uma instrução no CLAUDE.md que define quando o modelo deve usar cada um. Teste com um prompt que força o modelo a escolher a fonte correta baseado no tipo de dado solicitado.
+Configure um servidor MCP de filesystem com **dois escopos diferentes**: um apontando para `dados/publicos/` e outro para `dados/internos/`: e escreva uma instrução no CLAUDE.md que define quando o modelo deve usar cada um. Teste com um prompt que força o modelo a escolher a fonte correta baseado no tipo de dado solicitado.
 
-### Perguntas frequentes — Bloco 3
+### Perguntas frequentes: Bloco 3
 
 **P: E se eu trabalhar em um Mac corporativo onde o TI impede a instalação de qualquer npm?**
-R: Três caminhos: (1) pedir ao TI para whitelist do pacote específico — a maioria das empresas consegue fazer isso; (2) usar servidores MCP escritos em Python se Python já estiver instalado; (3) trabalhar com leitura nativa do Claude Code para arquivos locais, sem MCP externo. O plano B que fizemos aqui funciona bem para maioria dos casos.
+R: Três caminhos: (1) pedir ao TI para whitelist do pacote específico: a maioria das empresas consegue fazer isso; (2) usar servidores MCP escritos em Python se Python já estiver instalado; (3) trabalhar com leitura nativa do Claude Code para arquivos locais, sem MCP externo. O plano B que fizemos aqui funciona bem para maioria dos casos.
 
 **P: Posso conectar o Slack da empresa como MCP?**
 R: Tecnicamente sim, existe servidor MCP para Slack. Mas isso envolve criar um app no workspace do Slack e gerar um token com escopos definidos. Precisa de aprovação do admin do Slack e de TI. Faça o pedido antes, não durante a aula.
 
 **P: Como eu sei se um servidor MCP da internet é seguro?**
-R: Verifique o repositório no GitHub: número de estrelas, data do último commit, issues abertas sobre segurança, licença. Leia o código — servidores MCP bem escritos são pequenos e auditáveis. Para ambiente corporativo, toda instalação passa pelo TI antes de entrar em qualquer projeto.
+R: Verifique o repositório no GitHub: número de estrelas, data do último commit, issues abertas sobre segurança, licença. Leia o código: servidores MCP bem escritos são pequenos e auditáveis. Para ambiente corporativo, toda instalação passa pelo TI antes de entrar em qualquer projeto.
 
 ---
 
@@ -330,7 +330,7 @@ Entrega: [formato da resposta]
 Restrições: [o que o modelo não deve fazer]
 ```
 
-**Exemplo 1 — análise de carteira:**
+**Exemplo 1: análise de carteira:**
 
 ```
 Contexto: a pasta dados/ contém o arquivo posicao_demo.csv com
@@ -347,7 +347,7 @@ por peso decrescente. Depois da tabela, escreva um parágrafo de
 Restrições: não escreva nenhum arquivo. Só leitura.
 ```
 
-**Exemplo 2 — quando o modelo não usa a ferramenta:**
+**Exemplo 2: quando o modelo não usa a ferramenta:**
 
 Se o modelo responder do conhecimento geral sem ler o arquivo, seja explícito:
 
@@ -357,9 +357,9 @@ Depois que ler o arquivo, responda: qual é o segundo maior peso
 da carteira e em que setor ele está?
 ```
 
-Nomear a ferramenta — `read_file`, `list_directory` — força o comportamento. O modelo sabe que tem essa ferramenta e vai usá-la.
+Nomear a ferramenta: `read_file`, `list_directory`: força o comportamento. O modelo sabe que tem essa ferramenta e vai usá-la.
 
-**Exemplo 3 — fluxo de múltiplos arquivos:**
+**Exemplo 3: fluxo de múltiplos arquivos:**
 
 ```
 Use a ferramenta MCP list_directory para listar tudo em dados/.
@@ -374,11 +374,11 @@ Entregue a tabela consolidada e diga qual arquivo tem mais linhas.
 - Comece sempre com um prompt simples de validação: `Liste os arquivos em dados/`
 - Peça uma coisa de cada vez enquanto estiver testando a integração
 - Se o modelo errar a leitura, inclua o caminho completo no prompt
-- Prefira ler e responder a ler e escrever — escrever via MCP pode sobrescrever arquivos se o prompt não for cuidadoso
+- Prefira ler e responder a ler e escrever: escrever via MCP pode sobrescrever arquivos se o prompt não for cuidadoso
 
 **O que não funciona:**
 
-Prompts vagos como 'analise minha carteira' sem indicar onde está o arquivo. O modelo pode inventar dados se não souber onde buscar. Seja específico sobre a fonte — MCP existe justamente para garantir que a resposta vem dos seus dados, não de uma estimativa."
+Prompts vagos como 'analise minha carteira' sem indicar onde está o arquivo. O modelo pode inventar dados se não souber onde buscar. Seja específico sobre a fonte: MCP existe justamente para garantir que a resposta vem dos seus dados, não de uma estimativa."
 
 ---
 
@@ -390,14 +390,14 @@ Prompts vagos como 'analise minha carteira' sem indicar onde está o arquivo. O 
 
 Escolham **uma das duas opções** dependendo do que funciona na sua máquina hoje:
 
-**Opção A — com MCP configurado:**
+**Opção A: com MCP configurado:**
 
 1. Confirme que o servidor MCP de filesystem está rodando com `Que ferramentas MCP você tem disponíveis?`
 2. Use o arquivo `posicao_demo.csv` ou qualquer outro CSV fictício que vocês tenham
 3. Façam **três prompts diferentes** sobre o mesmo arquivo, cada um explorando um ângulo diferente: concentração por setor, ativos acima de determinado peso, ou simulação de uma venda e recálculo dos pesos
 4. Identifiquem em qual dos três prompts o modelo usou a ferramenta de forma mais eficiente e por quê
 
-**Opção B — leitura local (sem MCP externo):**
+**Opção B: leitura local (sem MCP externo):**
 
 1. Abram `claude` na pasta do projeto
 2. Façam o mesmo exercício de três prompts, mas usando leitura nativa (`leia o arquivo dados/posicao_demo.csv`)
@@ -406,10 +406,10 @@ Escolham **uma das duas opções** dependendo do que funciona na sua máquina ho
 **O que postar no chat ao final:**
 
 - O que você conectou (ou qual arquivo usou)
-- O prompt que gerou o resultado mais útil — escreva o prompt exato
+- O prompt que gerou o resultado mais útil: escreva o prompt exato
 - Uma frase de insight do resultado: o que você aprendeu sobre a carteira fictícia?
 
-Quem usar banco de dados: compartilhem screenshot ou descrição do resultado **sem** dados sensíveis — nunca o conteúdo real da query."
+Quem usar banco de dados: compartilhem screenshot ou descrição do resultado **sem** dados sensíveis: nunca o conteúdo real da query."
 
 ### Resultado esperado
 
@@ -418,12 +418,12 @@ Cada participante sai com:
 - Um prompt estruturado testado e refinado na prática
 - Clareza sobre quando usar a ferramenta explicitamente no prompt
 
-### Nota de facilitação — Exercício
+### Nota de facilitação: Exercício
 
 - Monitore o chat para identificar quem travou na configuração do MCP e mova para Opção B sem fazer disso um problema
 - Circule (via chat ou voz) nos primeiros 5 minutos para garantir que todos têm pelo menos o arquivo CSV disponível
 - Se alguém postar resultado com dado real de mercado, peça para remover e lembrar a regra de dados fictícios
-- Reserve 2 minutos no final para mostrar um prompt que não funcionou e como você corrigiu — isso normaliza a iteração
+- Reserve 2 minutos no final para mostrar um prompt que não funcionou e como você corrigiu: isso normaliza a iteração
 
 ---
 
@@ -441,13 +441,13 @@ O que vocês agora sabem fazer:
 
 Esses três módulos juntos descrevem um **fluxo completo de trabalho com IA no terminal**: código versionado, contexto persistente, dados integrados.
 
-**O que vem depois — o Módulo 4 é opcional:**
+**O que vem depois: o Módulo 4 é opcional:**
 
-Para quem precisar conversar com o time de engenharia sobre automatizar esse fluxo em produção — pipelines noturnos, bots internos, CI com revisão automatizada — o Módulo 4 apresenta a API Anthropic e o Claude Agent SDK em nível conceitual. Não é necessário para usar o que aprendemos nos três módulos.
+Para quem precisar conversar com o time de engenharia sobre automatizar esse fluxo em produção: pipelines noturnos, bots internos, CI com revisão automatizada: o Módulo 4 apresenta a API Anthropic e o Claude Agent SDK em nível conceitual. Não é necessário para usar o que aprendemos nos três módulos.
 
 **Na trilha DiferentIA:**
 
-O próximo passo é levar isso para o projeto real de vocês na Oceana. Escolham um caso de uso — o leitor de releases, a análise de carteira, a checagem de atas — e montem a configuração completa: CLAUDE.md com contexto do projeto, slash command para o fluxo principal, e MCP para a fonte de dados relevante. Comecem com dados fictícios, validem com compliance antes de conectar dado real.
+O próximo passo é levar isso para o projeto real de vocês na Oceana. Escolham um caso de uso: o leitor de releases, a análise de carteira, a checagem de atas: e montem a configuração completa: CLAUDE.md com contexto do projeto, slash command para o fluxo principal, e MCP para a fonte de dados relevante. Comecem com dados fictícios, validem com compliance antes de conectar dado real.
 
 Obrigado pela trilha. Continuem evoluindo."
 
@@ -487,9 +487,9 @@ Salvar em arquivo de configuração do Claude Code (consultar documentação par
 ### Template de .env.example
 
 ```
-# Configuração MCP — não commitar o .env com valores reais
+# Configuração MCP: não commitar o .env com valores reais
 
-# Filesystem MCP — não precisa de credencial, só definir o path na configuração
+# Filesystem MCP: não precisa de credencial, só definir o path na configuração
 # Ver mcp-config.json para o caminho configurado
 
 # Postgres MCP (somente dev, read-only)
@@ -532,19 +532,19 @@ Se não reconhecer: verificar configuração ou usar plano B.
 
 ### Sequência de prompts para exercício completo
 
-**Prompt 1 — exploração básica:**
+**Prompt 1: exploração básica:**
 ```
 Use a ferramenta MCP para ler dados/posicao_demo.csv.
 Me diga quantos ativos tem a carteira e qual é o maior e o menor peso.
 ```
 
-**Prompt 2 — análise por setor:**
+**Prompt 2: análise por setor:**
 ```
 Com base no mesmo arquivo, calcule o peso total por setor.
 Mostre uma tabela ordenada por peso decrescente.
 ```
 
-**Prompt 3 — simulação:**
+**Prompt 3: simulação:**
 ```
 Simule a venda de 50% da posição em PETR4.
 Recalcule os pesos da carteira após a venda,
@@ -558,9 +558,9 @@ Mostre a carteira antes e depois em colunas paralelas.
 
 | Tema | Onde |
 |---|---|
-| Conectores MCP no navegador (Drive UI) | [Introdutório — M3](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-03-conectores-mobile-projetos.md) |
+| Conectores MCP no navegador (Drive UI) | [Introdutório: M3](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-03-conectores-mobile-projetos.md) |
 | Claude Agent SDK completo | Módulo 4 (opcional) |
-| Deploy e Vercel | [Vibe Coders — M4](https://github.com/diferentia/curso-claude-code/blob/main/modulo-04-iterando-e-publicando.md) |
+| Deploy e Vercel | [Vibe Coders: M4](https://github.com/diferentia/curso-claude-code/blob/main/modulo-04-iterando-e-publicando.md) |
 | Compliance LGPD em escala | Projeto jurídico + TI |
 | Fine-tuning ou modelos customizados | Fora da trilha |
 
@@ -569,7 +569,7 @@ Mostre a carteira antes e depois em colunas paralelas.
 ## Material de apoio
 
 - MCP specification: https://modelcontextprotocol.io
-- Claude Code docs — MCP: https://docs.anthropic.com/claude-code
+- Claude Code docs: MCP: https://docs.anthropic.com/claude-code
 - Lista de servidores oficiais: https://github.com/modelcontextprotocol/servers
 - Repositório do curso (avançado): https://github.com/diferentia/curso-claude-code-avancado
 - Trilha completa: [introdutório](https://github.com/diferentia/curso-claude-introdutorio) · [vibe coders](https://github.com/diferentia/curso-claude-code) · [avançado](https://github.com/diferentia/curso-claude-code-avancado)

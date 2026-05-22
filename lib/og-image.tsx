@@ -10,7 +10,7 @@ export const ogSize = {
 export const ogContentType = "image/png";
 
 export const ogAlt =
-  "Diferentia — metodologia de Agentic AI para fundos, gestoras e fintechs";
+  "Diferentia: metodologia de Agentic AI para fundos, gestoras e fintechs";
 
 async function loadLocalFont(file: string): Promise<ArrayBuffer> {
   const buffer = await readFile(
@@ -191,7 +191,7 @@ export async function createOgImageResponse() {
               margin: 0,
             }}
           >
-            Do diagnóstico de maturidade à autonomia operacional — fundos,
+            Do diagnóstico de maturidade à autonomia operacional: fundos,
             gestoras e fintechs.
           </p>
           <span

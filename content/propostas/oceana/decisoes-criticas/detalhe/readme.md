@@ -56,7 +56,7 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 | Tema | Onde buscar |
 |---|---|
 | Primeiros passos no Claude | [curso-claude-introdutorio](https://github.com/diferentia/curso-claude-introdutorio) |
-| Skills e /skill-creator | [curso-claude-introdutorio — Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
+| Skills e /skill-creator | [curso-claude-introdutorio: Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
 | App desktop e automações Cowork | [curso-cowork](https://github.com/diferentia/curso-cowork) |
 | Claude Code e vibe coding | [curso-claude-code](https://github.com/diferentia/curso-claude-code) |
 | MCP no terminal e API | [curso-claude-code-avancado](https://github.com/diferentia/curso-claude-code-avancado) |
@@ -68,7 +68,7 @@ O foco é em técnicas que fazem diferença em contextos de análise, síntese e
 | Ordem | Curso |
 |---|---|
 | 1 (obrigatório) | [Claude Essentials: do prompt ao agente](https://github.com/diferentia/curso-claude-introdutorio) |
-| 2 | **Este curso** — Claude para Decisões Críticas |
+| 2 | **Este curso**: Claude para Decisões Críticas |
 | Paralelo (opcional) | [Automação com Claude Cowork](https://github.com/diferentia/curso-cowork) |
 | Paralelo (opcional, técnico) | [Claude Code para Vibe Coders](https://github.com/diferentia/curso-claude-code) |
 

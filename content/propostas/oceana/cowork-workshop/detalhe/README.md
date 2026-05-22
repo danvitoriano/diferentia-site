@@ -4,10 +4,10 @@ title: Readme
 
 # Workshop: Claude Cowork (prático)
 
-**Produto:** Differentia  
+**Produto:** Diferentia  
 **Carga horária:** 3h  
-**Formato:** Laboratório — presencial ou online síncrono  
-**Trilha:** [cursos-oceana](https://github.com/diferentia/cursos-oceana) — **workshop opcional**
+**Formato:** Laboratório: presencial ou online síncrono  
+**Trilha:** [cursos-oceana](https://github.com/diferentia/cursos-oceana): **workshop opcional**
 
 ---
 
@@ -22,7 +22,7 @@ Não substitui o [Cowork demonstrativo](https://github.com/diferentia/curso-cowo
 ## Pré-requisitos
 
 - [Curso Introdutório](https://github.com/diferentia/curso-claude-introdutorio) concluído (recomendado).
-- [Cowork demonstrativo](https://github.com/diferentia/curso-cowork) (recomendado — contexto e decisão sobre Pro).
+- [Cowork demonstrativo](https://github.com/diferentia/curso-cowork) (recomendado: contexto e decisão sobre Pro).
 - **Licença Claude Pro ativa** e app desktop instalado **antes** da aula.
 - E-mail de preparação do facilitador com **72h de antecedência**.
 
@@ -44,6 +44,6 @@ Não substitui o [Cowork demonstrativo](https://github.com/diferentia/curso-cowo
 
 ---
 
-## Sobre a Differentia
+## Sobre a Diferentia
 
 [differentia.com.br](https://differentia.com.br)

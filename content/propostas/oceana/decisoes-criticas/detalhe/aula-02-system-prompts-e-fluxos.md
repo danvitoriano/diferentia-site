@@ -145,4 +145,4 @@ Comentar dois ou três ao vivo.
 |---|---|
 | Chain-of-thought e few-shot | Aula 01 deste curso |
 | Auditoria de outputs e playbook | Aula 03 deste curso |
-| Skills e automações | [Claude Essentials — Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
+| Skills e automações | [Claude Essentials: Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |

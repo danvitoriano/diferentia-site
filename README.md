@@ -1,6 +1,6 @@
 # Diferentia
 
-Landing page institucional (MVP) — metodologia de adoção de IA para empresas do mercado financeiro (fundos, gestoras, fintechs).
+Landing page institucional (MVP): metodologia de adoção de IA para empresas do mercado financeiro (fundos, gestoras, fintechs).
 
 ## Stack
 
@@ -29,14 +29,14 @@ Abra [http://localhost:3000](http://localhost:3000).
 
 ## Estrutura principal
 
-- `app/page.tsx` — página única (nav, hero, problema, método, resultados, contato, footer)
-- `app/layout.tsx` — layout raiz, fontes e metadados
-- `app/globals.css` — estilos globais e tokens visuais
-- `app/api/contact/route.ts` — API do formulário de contato / leads
+- `app/page.tsx`: página única (nav, hero, problema, método, resultados, contato, footer)
+- `app/layout.tsx`: layout raiz, fontes e metadados
+- `app/globals.css`: estilos globais e tokens visuais
+- `app/api/contact/route.ts`: API do formulário de contato / leads
 
 ## Formulário de contato (`/api/contact`)
 
-- **Sem variáveis de ambiente:** em desenvolvimento a rota apenas registra o lead no servidor (`console`) e retorna sucesso — útil para testar o front sem backend.
+- **Sem variáveis de ambiente:** em desenvolvimento a rota apenas registra o lead no servidor (`console`) e retorna sucesso: útil para testar o front sem backend.
 - **Com Supabase:** defina no `.env.local`:
 
   ```env

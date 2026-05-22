@@ -112,7 +112,7 @@ Esses são projetos reais que qualquer pessoa aqui poderia usar no dia a dia. E 
 
 Abra espaço para a turma sugerir ideias de projetos. Esse momento costuma gerar energia e engajamento. Anote as sugestões para usar no exercício.
 
-O exercício de 20 minutos é ambicioso para turma iniciante. Se a maioria travar, ofereça o projeto padrão do Passo 1 e estenda 5 a 10 minutos — priorize projeto funcionando no navegador com pelo menos um ajuste.
+O exercício de 20 minutos é ambicioso para turma iniciante. Se a maioria travar, ofereça o projeto padrão do Passo 1 e estenda 5 a 10 minutos: priorize projeto funcionando no navegador com pelo menos um ajuste.
 
 ---
 
@@ -249,9 +249,9 @@ Se alguém perguntar sobre os itens abaixo, agradeça a pergunta e informe que o
 
 - Como publicar na internet (Módulo 4)
 - Como conectar a APIs externas para dados reais ([Avançado](https://github.com/diferentia/curso-claude-code-avancado))
-- Git e versionamento ([Avançado — M1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md))
+- Git e versionamento ([Avançado: M1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md))
 - Como adicionar login e banco de dados (fora do escopo; envolver desenvolvedor)
-- Slash commands e hooks ([Avançado — M2](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-02-slash-commands-e-hooks.md))
+- Slash commands e hooks ([Avançado: M2](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-02-slash-commands-e-hooks.md))
 
 ---
 

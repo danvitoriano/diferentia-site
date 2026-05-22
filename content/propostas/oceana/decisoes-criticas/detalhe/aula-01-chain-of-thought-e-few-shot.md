@@ -153,6 +153,6 @@ Comentar dois ou três resultados ao vivo.
 
 | Tema | Onde buscar |
 |---|---|
-| Fundamentos de prompt | [Claude Essentials — Módulo 1](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-01-introducao-ia-generativa.md) |
+| Fundamentos de prompt | [Claude Essentials: Módulo 1](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-01-introducao-ia-generativa.md) |
 | System prompts e fluxos | Aula 02 deste curso |
 | Auditoria de outputs e playbook | Aula 03 deste curso |

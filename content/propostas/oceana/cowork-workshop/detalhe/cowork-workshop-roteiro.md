@@ -337,7 +337,7 @@ Aguardar as respostas. Para quem ainda não tem algum dos três, dar suporte rá
 
 ## Material de apoio para distribuir após o workshop
 
-- Trilha Differentia: https://github.com/diferentia/cursos-oceana
+- Trilha Diferentia: https://github.com/diferentia/cursos-oceana
 - Cowork demonstrativo: https://github.com/diferentia/curso-cowork
 - App desktop: https://claude.ai/download
 - Documentação do Cowork: https://support.claude.com (buscar "desktop")

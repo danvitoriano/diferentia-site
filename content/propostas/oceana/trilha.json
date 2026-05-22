@@ -29,7 +29,7 @@
     },
     {
       "slug": "cowork-demonstrativo",
-      "title": "Cowork — Demonstrativo",
+      "title": "Cowork: Demonstrativo",
       "subtitle": "App desktop: o que muda vs navegador; decisão sobre licença Pro",
       "duration": "2h30",
       "layer": "nucleo",
@@ -66,7 +66,7 @@
     },
     {
       "slug": "vibe-coders",
-      "title": "Claude Code — Vibe Coders",
+      "title": "Claude Code: Vibe Coders",
       "subtitle": "Construir e publicar ferramentas com IA no terminal",
       "duration": "~5h45",
       "layer": "code",
@@ -78,7 +78,7 @@
     },
     {
       "slug": "claude-code-avancado",
-      "title": "Claude Code — Avançado",
+      "title": "Claude Code: Avançado",
       "subtitle": "Git, slash commands, hooks, MCP no terminal e visão de API",
       "duration": "~6h (+ 1h30 opc.)",
       "layer": "code",

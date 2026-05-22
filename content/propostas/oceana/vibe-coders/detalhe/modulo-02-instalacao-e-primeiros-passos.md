@@ -31,7 +31,7 @@ title: Modulo 02 Instalacao E Primeiros Passos
 
 "Bom dia, boa tarde. Bem-vindos ao Módulo 2.
 
-Na aula passada, vocês viram o ciclo completo de vibe coding ao vivo — criação, ajustes, resultado no navegador — e participaram pelo chat, dirigindo o que aparecia na tela. Hoje é a vez de vocês: vamos instalar o Claude Code nos computadores de vocês e fazer os primeiros comandos juntos.
+Na aula passada, vocês viram o ciclo completo de vibe coding ao vivo: criação, ajustes, resultado no navegador: e participaram pelo chat, dirigindo o que aparecia na tela. Hoje é a vez de vocês: vamos instalar o Claude Code nos computadores de vocês e fazer os primeiros comandos juntos.
 
 Antes de começar: o Claude Code requer o plano Pro do Claude, que custa 20 dólares por mês. Se alguém ainda não tiver o plano, o link está no canal do grupo. A instalação em si é gratuita.
 
@@ -322,10 +322,10 @@ Se alguém perguntar sobre os itens abaixo, agradeça a pergunta e informe que o
 
 - Boas práticas de prompt em detalhes (Módulo 3)
 - Publicação na internet (Módulo 4)
-- Slash commands, hooks ([Avançado — M2](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-02-slash-commands-e-hooks.md))
-- MCP servers ([Avançado — M3](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-03-mcp-integracoes.md))
-- Git e controle de versão ([Avançado — M1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md))
-- Uso da API ([Avançado — M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md))
+- Slash commands, hooks ([Avançado: M2](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-02-slash-commands-e-hooks.md))
+- MCP servers ([Avançado: M3](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-03-mcp-integracoes.md))
+- Git e controle de versão ([Avançado: M1](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-01-git-e-projeto.md))
+- Uso da API ([Avançado: M4](https://github.com/diferentia/curso-claude-code-avancado/blob/main/modulo-04-api-e-agent-sdk.md))
 
 ---
 

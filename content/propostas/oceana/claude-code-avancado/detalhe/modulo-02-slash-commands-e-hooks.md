@@ -87,7 +87,7 @@ Abrir o terminal e mostrar a estrutura de pastas do projeto.
 
 ### Dica para o nível básico
 
-> "Se a ideia de criar arquivos em `.claude/commands/` parecer técnica demais, peçam ao Claude Code para fazer isso por vocês. 'Cria um slash command chamado revisar-deploy com este conteúdo:' — e descrevem o que o comando deve fazer. Ele cria o arquivo no lugar certo."
+> "Se a ideia de criar arquivos em `.claude/commands/` parecer técnica demais, peçam ao Claude Code para fazer isso por vocês. 'Cria um slash command chamado revisar-deploy com este conteúdo:': e descrevem o que o comando deve fazer. Ele cria o arquivo no lugar certo."
 
 ---
 
@@ -99,7 +99,7 @@ Criar dois slash commands ao vivo, do zero, com o Claude Code. A turma acompanha
 
 ### Roteiro
 
-**[0:00 – 0:05] Estrutura de um slash command**
+**[0:00 a 0:05] Estrutura de um slash command**
 
 Abrir o Claude Code na pasta do projeto.
 
@@ -109,7 +109,7 @@ Abrir o Claude Code na pasta do projeto.
 
 > Vou criar o primeiro ao vivo."
 
-**[0:05 – 0:15] Demo 1: slash command de revisão de deploy**
+**[0:05 a 0:15] Demo 1: slash command de revisão de deploy**
 
 Digitar no Claude Code:
 
@@ -125,7 +125,7 @@ Aguardar a execução. Mostrar o resultado com a turma.
 
 > "Reparem que o Claude Code executou o checklist completo sem que eu precisasse digitar nada além do comando. Se eu quiser mudar o que ele verifica, edito o arquivo. Se quiser compartilhar com o time, está no repositório depois do próximo push."
 
-**[0:15 – 0:25] Demo 2: slash command específico do contexto financeiro**
+**[0:15 a 0:25] Demo 2: slash command específico do contexto financeiro**
 
 > "Agora um comando que faz sentido direto para a rotina da Oceana."
 
@@ -143,7 +143,7 @@ Mostrar o resultado.
 
 > O padrão aqui é: o slash command carrega o contexto e as restrições. Vocês só passam os dados que mudam. Isso é especialmente útil para atualizações recorrentes com formato fixo."
 
-**[0:23 – 0:25] Commit do que foi criado**
+**[0:23 a 0:25] Commit do que foi criado**
 
 > "Antes de continuar, vamos commitar os novos arquivos. No terminal ou pelo Claude Code:"
 
@@ -157,7 +157,7 @@ git push
 
 ### Dica para o nível avançado
 
-> "Slash commands aceitam argumentos via `$ARGUMENTS`. Se vocês colocarem `$ARGUMENTS` dentro do arquivo `.md`, o Claude Code substitui pelo que vocês digitam depois do nome do comando. Exemplo: `/atualizar-painel PETR4:38,90 VALE3:52,10` — com `$ARGUMENTS` no arquivo, esses valores chegam no prompt automaticamente. Consultem a documentação atual do Claude Code para a sintaxe exata, pois ela pode ter evoluído."
+> "Slash commands aceitam argumentos via `$ARGUMENTS`. Se vocês colocarem `$ARGUMENTS` dentro do arquivo `.md`, o Claude Code substitui pelo que vocês digitam depois do nome do comando. Exemplo: `/atualizar-painel PETR4:38,90 VALE3:52,10`: com `$ARGUMENTS` no arquivo, esses valores chegam no prompt automaticamente. Consultem a documentação atual do Claude Code para a sintaxe exata, pois ela pode ter evoluído."
 
 ---
 
@@ -169,15 +169,15 @@ Mostrar como o `CLAUDE.md` funciona como briefing permanente do projeto, reduzin
 
 ### Roteiro
 
-**[0:00 – 0:07] O problema que o `CLAUDE.md` resolve**
+**[0:00 a 0:07] O problema que o `CLAUDE.md` resolve**
 
 > "Existe uma coisa que vocês provavelmente repetem em vários prompts: explicar o que é o projeto. 'Este projeto é um painel de indicadores para a Oceana, usa HTML estático, não tem backend, os dados são fictícios.' Toda vez que abrem uma nova sessão, o Claude Code não lembra disso.
 
 > O `CLAUDE.md` resolve isso. É um arquivo na raiz do projeto que o Claude Code lê automaticamente toda vez que vocês abrem uma sessão naquela pasta. Tudo que está ali fica disponível como contexto sem precisar repetir no prompt.
 
-> A metáfora prática: o `CLAUDE.md` é o briefing que vocês dariam a um novo estagiário no primeiro dia — quem somos, como trabalhamos, o que não se faz aqui. Diferente do estagiário, o Claude Code lê esse briefing toda vez que a sessão começa."
+> A metáfora prática: o `CLAUDE.md` é o briefing que vocês dariam a um novo estagiário no primeiro dia: quem somos, como trabalhamos, o que não se faz aqui. Diferente do estagiário, o Claude Code lê esse briefing toda vez que a sessão começa."
 
-**[0:07 – 0:17] Demo ao vivo: criar o `CLAUDE.md` do projeto**
+**[0:07 a 0:17] Demo ao vivo: criar o `CLAUDE.md` do projeto**
 
 Abrir o Claude Code no projeto.
 
@@ -185,7 +185,7 @@ Abrir o Claude Code no projeto.
 
 Digitar no Claude Code:
 
-> `"Cria um arquivo CLAUDE.md na raiz do projeto com o seguinte conteúdo. Título: contexto do projeto. Seções: (1) O que é este projeto — painel de indicadores financeiros fictícios para demonstração interna, público-alvo são analistas de fundos; (2) Stack técnica — HTML, CSS e JavaScript vanilla, sem frameworks, sem backend, sem banco de dados; (3) Linguagem — todo o conteúdo e toda a comunicação em português formal; (4) Dados — todos os valores são fictícios e servem só para demonstração. Nunca usar tickers reais de ações sem deixar claro que são dados de exemplo; (5) Antes de qualquer deploy — confirmar que existe index.html na raiz e que não há credenciais no código; (6) O que não fazer — não criar backend, não adicionar login, não conectar a APIs externas a menos que eu peça explicitamente."`
+> `"Cria um arquivo CLAUDE.md na raiz do projeto com o seguinte conteúdo. Título: contexto do projeto. Seções: (1) O que é este projeto: painel de indicadores financeiros fictícios para demonstração interna, público-alvo são analistas de fundos; (2) Stack técnica: HTML, CSS e JavaScript vanilla, sem frameworks, sem backend, sem banco de dados; (3) Linguagem: todo o conteúdo e toda a comunicação em português formal; (4) Dados: todos os valores são fictícios e servem só para demonstração. Nunca usar tickers reais de ações sem deixar claro que são dados de exemplo; (5) Antes de qualquer deploy: confirmar que existe index.html na raiz e que não há credenciais no código; (6) O que não fazer: não criar backend, não adicionar login, não conectar a APIs externas a menos que eu peça explicitamente."`
 
 Aguardar a criação. Mostrar o arquivo gerado.
 
@@ -201,7 +201,7 @@ Aguardar a resposta.
 
 > "Ele respondeu com base no `CLAUDE.md` sem que eu precisasse explicar nada. Isso é o que muda: vocês configuram o contexto uma vez, e ele fica disponível em todas as sessões daquele projeto."
 
-**[0:17 – 0:20] A diferença entre `CLAUDE.md` e slash commands**
+**[0:17 a 0:20] A diferença entre `CLAUDE.md` e slash commands**
 
 > "Existe uma distinção clara entre os dois.
 
@@ -221,7 +221,7 @@ git push
 
 ---
 
-## Bloco 4: Hooks — o que são, quando usar e como configurar (25 min)
+## Bloco 4: Hooks: o que são, quando usar e como configurar (25 min)
 
 ### Objetivo
 
@@ -229,21 +229,21 @@ Apresentar hooks de forma honesta: o que resolvem, quando valem a pena e como co
 
 ### Roteiro
 
-**[0:00 – 0:08] O que é um hook e quando faz sentido**
+**[0:00 a 0:08] O que é um hook e quando faz sentido**
 
-> "Hook significa 'gancho'. Em desenvolvimento de software, hooks são eventos que disparam uma ação automaticamente. No Claude Code, vocês podem configurar ações que rodam antes ou depois de certas operações — como escrever um arquivo, executar um comando no terminal ou fazer um commit.
+> "Hook significa 'gancho'. Em desenvolvimento de software, hooks são eventos que disparam uma ação automaticamente. No Claude Code, vocês podem configurar ações que rodam antes ou depois de certas operações: como escrever um arquivo, executar um comando no terminal ou fazer um commit.
 
 > Dois casos de uso que fazem sentido imediato para o contexto de vocês:
 
 > O primeiro: depois que o Claude Code escreve ou modifica um arquivo HTML, um hook pode lembrar automaticamente que é necessário abrir o navegador para conferir. Parece simples, mas quem já esqueceu de testar depois de uma mudança sabe que funciona.
 
-> O segundo: antes de um commit, um hook pode verificar se existe algum arquivo `.env` na staging area — impedindo que credenciais sejam enviadas para o GitHub por acidente.
+> O segundo: antes de um commit, um hook pode verificar se existe algum arquivo `.env` na staging area: impedindo que credenciais sejam enviadas para o GitHub por acidente.
 
 > Hooks mais complexos podem rodar linters, validadores de HTML ou scripts de checagem. Mas a regra prática é: comecem com hooks informativos, não bloqueantes. Um hook que manda uma mensagem de aviso tem custo de configuração baixo e benefício real. Um hook que bloqueia o fluxo quando há falso positivo frustra mais do que ajuda."
 
-**[0:08 – 0:18] Como hooks são configurados**
+**[0:08 a 0:18] Como hooks são configurados**
 
-> "Hooks ficam em `.claude/settings.json` dentro do projeto, ou em `~/.claude/settings.json` para configurações globais do usuário. A sintaxe exata pode variar conforme a versão do Claude Code — verifiquem a documentação atual em docs.anthropic.com antes de implementar em produção."
+> "Hooks ficam em `.claude/settings.json` dentro do projeto, ou em `~/.claude/settings.json` para configurações globais do usuário. A sintaxe exata pode variar conforme a versão do Claude Code: verifiquem a documentação atual em docs.anthropic.com antes de implementar em produção."
 
 Mostrar a estrutura conceitual na tela:
 
@@ -265,11 +265,11 @@ Mostrar a estrutura conceitual na tela:
 }
 ```
 
-> "O que esse hook faz: toda vez que o Claude Code usa a ferramenta `Write` — que é quando ele cria ou edita um arquivo —, ele roda um comando no terminal. No exemplo, o comando é um `echo` simples que imprime uma mensagem. Podia ser um validador de HTML, um script de lint ou qualquer coisa executável no terminal.
+> "O que esse hook faz: toda vez que o Claude Code usa a ferramenta `Write`: que é quando ele cria ou edita um arquivo :, ele roda um comando no terminal. No exemplo, o comando é um `echo` simples que imprime uma mensagem. Podia ser um validador de HTML, um script de lint ou qualquer coisa executável no terminal.
 
 > Os eventos mais úteis são `PostToolUse`, que roda depois que o Claude Code usa uma ferramenta, e `PreToolUse`, que roda antes. Existe também `Notification`, para enviar alertas."
 
-**[0:18 – 0:25] Demo ao vivo: criar e testar um hook informativo**
+**[0:18 a 0:25] Demo ao vivo: criar e testar um hook informativo**
 
 Abrir o Claude Code no projeto.
 
@@ -289,9 +289,9 @@ Aguardar a execução. Mostrar a mensagem do hook aparecendo no terminal.
 
 > Se vocês quiserem que o hook rode um validador de HTML em vez de um echo, é só trocar o comando. O conceito é o mesmo."
 
-**[0:23 – 0:25] Quando não usar hooks**
+**[0:23 a 0:25] Quando não usar hooks**
 
-> "Uma nota importante: hooks mal configurados podem travar o fluxo de trabalho. Se um hook bloqueante falhar por qualquer motivo — script que não existe, path errado, dependência faltando — o Claude Code pode não conseguir executar certas operações.
+> "Uma nota importante: hooks mal configurados podem travar o fluxo de trabalho. Se um hook bloqueante falhar por qualquer motivo: script que não existe, path errado, dependência faltando: o Claude Code pode não conseguir executar certas operações.
 
 > A orientação prática: comecem com `echo` para validar que o hook está funcionando. Só depois substituam por scripts mais elaborados. E sempre tenham um plano para desativar o hook rapidamente se ele causar problemas."
 
@@ -305,7 +305,7 @@ Se hooks falharem na turma por diferença de sistema operacional ou versão do C
 
 ### Objetivo
 
-Cada participante sai do exercício com pelo menos um slash command funcional e um `CLAUDE.md` no repositório. O hook é desafiante — quem conseguir, ótimo; quem não conseguir, entrega os dois primeiros.
+Cada participante sai do exercício com pelo menos um slash command funcional e um `CLAUDE.md` no repositório. O hook é desafiante: quem conseguir, ótimo; quem não conseguir, entrega os dois primeiros.
 
 ### Instrução para o facilitador
 
@@ -369,9 +369,9 @@ Repositório com `.claude/commands/` contendo pelo menos um arquivo `.md`, `CLAU
 
 > O que é mais valioso de tudo isso: está no repositório. Qualquer pessoa do time que clonar o projeto a partir de agora tem os mesmos atalhos, o mesmo contexto e as mesmas regras automaticamente. Sem documentação extra, sem reunião de alinhamento.
 
-> Na próxima aula: MCP no terminal. Vocês vão conectar o Claude Code a fontes de dados externas — uma pasta de arquivos CSV, um banco de desenvolvimento read-only, Google Drive — diretamente pelo terminal. É o módulo que conecta o que vocês constroem ao dado real da Oceana.
+> Na próxima aula: MCP no terminal. Vocês vão conectar o Claude Code a fontes de dados externas: uma pasta de arquivos CSV, um banco de desenvolvimento read-only, Google Drive: diretamente pelo terminal. É o módulo que conecta o que vocês constroem ao dado real da Oceana.
 
-> Tragam o repositório desta aula e pensem em uma fonte de dados que gostariam de acessar a partir do Claude Code: uma planilha de posição, um CSV de releases, um banco de dev. Não precisa ser dado real — pode ser fictício com a estrutura real."
+> Tragam o repositório desta aula e pensem em uma fonte de dados que gostariam de acessar a partir do Claude Code: uma planilha de posição, um CSV de releases, um banco de dev. Não precisa ser dado real: pode ser fictício com a estrutura real."
 
 ---
 
@@ -384,16 +384,16 @@ Quando alguém perguntar sobre os temas abaixo, anote e redirecione:
 | Git init e primeiro repositório | Módulo 1 deste curso |
 | MCP servers no terminal | Módulo 3 deste curso |
 | API Anthropic e Agent SDK | Módulo 4 (opcional) |
-| Skills do Cowork e `/skill-creator` | [Introdutório — Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
-| Deploy na Vercel | [Vibe Coders — Módulo 4](https://github.com/diferentia/curso-claude-code/blob/main/modulo-04-iterando-e-publicando.md) |
+| Skills do Cowork e `/skill-creator` | [Introdutório: Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
+| Deploy na Vercel | [Vibe Coders: Módulo 4](https://github.com/diferentia/curso-claude-code/blob/main/modulo-04-iterando-e-publicando.md) |
 
 ---
 
 ## Material de apoio para distribuir após a aula
 
-- Documentação Claude Code — slash commands e hooks: https://docs.anthropic.com/claude-code
+- Documentação Claude Code: slash commands e hooks: https://docs.anthropic.com/claude-code
 - Especificação de hooks (tipos e eventos): https://docs.anthropic.com/claude-code
-- Curso básico — primeiros comandos `/help` e `/exit`: [Módulo 2](https://github.com/diferentia/curso-claude-code/blob/main/modulo-02-instalacao-e-primeiros-passos.md)
+- Curso básico: primeiros comandos `/help` e `/exit`: [Módulo 2](https://github.com/diferentia/curso-claude-code/blob/main/modulo-02-instalacao-e-primeiros-passos.md)
 
 ### Template de slash command (copiar e adaptar)
 
@@ -454,7 +454,7 @@ a menos que seja pedido explicitamente.
 **Sobre o ritmo da turma**
 
 - Os blocos de slash commands e `CLAUDE.md` costumam fluir bem. Hooks são onde a turma trava.
-- Se o Bloco 4 estiver consumindo mais tempo do que o previsto, comprima a parte de configuração e foque no conceito. O exercício pode ser feito só com slash commands e `CLAUDE.md` — já é o núcleo.
+- Se o Bloco 4 estiver consumindo mais tempo do que o previsto, comprima a parte de configuração e foque no conceito. O exercício pode ser feito só com slash commands e `CLAUDE.md`: já é o núcleo.
 - Para turmas mistas, perfis analíticos tendem a ter casos de uso muito claros para slash commands (formatos de ata, checklist de publicação). Perfis técnicos querem explorar hooks. Use isso a favor para calibrar o nível durante o exercício.
 
 **Sobre o exercício**

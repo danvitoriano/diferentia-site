@@ -112,7 +112,7 @@ Comentar dois ou três ao vivo.
 
 ---
 
-## BLOCO 5: Entrega coletiva — playbook de prompts da Oceana (1:35 a 1:55)
+## BLOCO 5: Entrega coletiva: playbook de prompts da Oceana (1:35 a 1:55)
 
 ### Roteiro
 
@@ -174,5 +174,5 @@ Ler dois ou três prompts do playbook ao vivo. Pedir ao time que identifique qua
 |---|---|
 | Chain-of-thought e few-shot | Aula 01 deste curso |
 | System prompts e fluxos | Aula 02 deste curso |
-| Skills e automações | [Claude Essentials — Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
+| Skills e automações | [Claude Essentials: Módulo 4](https://github.com/diferentia/curso-claude-introdutorio/blob/main/modulo-04-skills-automacoes.md) |
 | Claude Code e scripts | [curso-claude-code](https://github.com/diferentia/curso-claude-code) |

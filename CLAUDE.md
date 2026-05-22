@@ -1,4 +1,4 @@
-# Diferentia — Site MVP
+# Diferentia: Site MVP
 
 ## O produto
 
@@ -28,14 +28,14 @@ Sem logo definida ainda. O site estabelece a identidade:
 - **Background:** `#080810` (near-black com tonalidade azul)
 - **Surface:** `#0F0F1A`
 - **Borda:** `#1E1E2E`
-- **Primary:** `#7C6FF7` (indigo suave — premium, tech)
-- **Accent:** `#E8B84B` (âmbar dourado — mercado financeiro)
+- **Primary:** `#7C6FF7` (indigo suave: premium, tech)
+- **Accent:** `#E8B84B` (âmbar dourado: mercado financeiro)
 - **Texto principal:** `#F0F0FA`
 - **Texto secundário:** `#9090B0`
 
 Tipografia: Inter (Google Fonts), sem-serif limpa.
 
-Dark theme. Sem logo por enquanto — logotipo textual "Diferentia." com ponto indigo.
+Dark theme. Sem logo por enquanto: logotipo textual "Diferentia." com ponto indigo.
 
 ---
 
@@ -44,12 +44,12 @@ Dark theme. Sem logo por enquanto — logotipo textual "Diferentia." com ponto i
 Tudo em `app/page.tsx` para facilitar iteração no MVP. Componentes inline no arquivo.
 
 Seções:
-1. **Nav** — logo + links âncora + CTA "Agendar diagnóstico"
-2. **Hero** — headline, subtext, métricas rápidas
-3. **Problem** — 3 cards com os problemas do mercado
-4. **Method** — 4 fases da metodologia
-5. **Results** — quote + 3 métricas de resultado
-6. **Contact** — formulário com estado local (sem backend ainda)
+1. **Nav**: logo + links âncora + CTA "Agendar diagnóstico"
+2. **Hero**: headline, subtext, métricas rápidas
+3. **Problem**: 3 cards com os problemas do mercado
+4. **Method**: 4 fases da metodologia
+5. **Results**: quote + 3 métricas de resultado
+6. **Contact**: formulário com estado local (sem backend ainda)
 7. **Footer**
 
 ---

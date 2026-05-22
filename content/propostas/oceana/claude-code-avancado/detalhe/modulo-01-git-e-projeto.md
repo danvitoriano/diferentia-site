@@ -105,19 +105,19 @@ Conduzir a criação de repositório e o fluxo de primeiro commit ao vivo. O fac
 
 ### Roteiro
 
-**[0:00 – 0:05] Criar o repositório no GitHub**
+**[0:00 a 0:05] Criar o repositório no GitHub**
 
 Abrir github.com na tela compartilhada. Fazer login.
 
 > "Vou criar um repositório novo agora. Repositório é o nome que o GitHub dá para o espaço onde o projeto fica guardado. É como uma pasta no GitHub, com histórico de versões.
 
-> Clico em 'New repository'. Dou um nome para o projeto — vou usar 'painel-demo' por enquanto. Deixo como público ou privado conforme a política de vocês. **Importante:** não marco a opção de criar README nem .gitignore aqui. Vou criar tudo pelo terminal para que vocês vejam o fluxo completo."
+> Clico em 'New repository'. Dou um nome para o projeto: vou usar 'painel-demo' por enquanto. Deixo como público ou privado conforme a política de vocês. **Importante:** não marco a opção de criar README nem .gitignore aqui. Vou criar tudo pelo terminal para que vocês vejam o fluxo completo."
 
 Clicar em 'Create repository'. Mostrar a tela que aparece com os comandos sugeridos pelo GitHub.
 
 > "O GitHub já mostra os comandos que precisamos rodar. Vamos executar cada um deles agora."
 
-**[0:05 – 0:15] Fluxo mínimo: init, add, commit, push**
+**[0:05 a 0:15] Fluxo mínimo: init, add, commit, push**
 
 Abrir o terminal na pasta do projeto de demo.
 
@@ -141,7 +141,7 @@ git add .
 git commit -m "Primeira versão do projeto"
 ```
 
-> "O commit é a foto em si. O `-m` é a mensagem que descreve o que mudou. Essa mensagem fica no histórico para sempre — quanto mais descritiva, mais útil quando vocês precisarem entender o que aconteceu em cada momento."
+> "O commit é a foto em si. O `-m` é a mensagem que descreve o que mudou. Essa mensagem fica no histórico para sempre: quanto mais descritiva, mais útil quando vocês precisarem entender o que aconteceu em cada momento."
 
 ```bash
 git branch -M main
@@ -159,13 +159,13 @@ git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
 git push -u origin main
 ```
 
-> "Envia os commits para o GitHub. O `-u origin main` define o destino padrão para os próximos pushes — depois disso, `git push` já basta."
+> "Envia os commits para o GitHub. O `-u origin main` define o destino padrão para os próximos pushes: depois disso, `git push` já basta."
 
 Mostrar o repositório no GitHub com os arquivos aparecendo.
 
 > "Pronto. O projeto está no GitHub com histórico. Qualquer mudança que eu fizer e commitar vai aparecer aqui."
 
-**[0:15 – 0:20] Autenticação: o que fazer quando o GitHub pedir login**
+**[0:15 a 0:20] Autenticação: o que fazer quando o GitHub pedir login**
 
 > "Na primeira vez que vocês tentarem fazer push, o GitHub vai pedir autenticação. Existem dois caminhos.
 
@@ -181,7 +181,7 @@ gh auth login
 
 > "Quem estiver usando empresa com SSO no GitHub, vai precisar autorizar o token para a organização depois de gerá-lo. Se aparecer um erro de permissão mesmo com token ativo, é provavelmente isso."
 
-**[0:20 – 0:25] O segundo commit: o fluxo do dia a dia**
+**[0:20 a 0:25] O segundo commit: o fluxo do dia a dia**
 
 > "Vou fazer uma mudança no projeto para mostrar o fluxo que vocês vão repetir toda vez."
 
@@ -219,7 +219,7 @@ Mostrar que a maioria das operações de Git pode ser pedida em português dentr
 
 ### Roteiro
 
-**[0:00 – 0:07] O que o Claude Code faz pelo Git**
+**[0:00 a 0:07] O que o Claude Code faz pelo Git**
 
 Abrir o Claude Code na pasta do projeto.
 
@@ -233,7 +233,7 @@ Ir para uma pasta de projeto limpa (sem Git inicializado).
 
 Digitar no Claude Code:
 
-> `"Inicializa um repositório Git nesta pasta. Cria um .gitignore adequado para projeto HTML estático — ignora node_modules, .env e arquivos de sistema do Mac e Windows. Faz o primeiro commit com a mensagem 'Inicialização do projeto'. Antes de executar, lista o que vai entrar no commit para eu aprovar."`
+> `"Inicializa um repositório Git nesta pasta. Cria um .gitignore adequado para projeto HTML estático: ignora node_modules, .env e arquivos de sistema do Mac e Windows. Faz o primeiro commit com a mensagem 'Inicialização do projeto'. Antes de executar, lista o que vai entrar no commit para eu aprovar."`
 
 Aguardar a resposta. Mostrar a lista que o Claude Code apresenta antes de executar.
 
@@ -257,13 +257,13 @@ Simular um erro de push (rodar `git push` para um repositório sem acesso config
 
 > "O Claude Code lê a mensagem de erro, identifica o problema e dá os comandos exatos para resolver. Para erros de autenticação, conflito de branch ou remote incorreto, essa abordagem funciona bem. Copiem o erro, colem, deixem ele diagnosticar."
 
-**[0:15 – 0:20] A regra de ouro: vocês aprovam antes de executar**
+**[0:15 a 0:20] A regra de ouro: vocês aprovam antes de executar**
 
 > "Uma coisa que não muda mesmo com o Claude Code ajudando: vocês precisam revisar o que vai entrar no commit antes de confirmar.
 
 > Nunca commitem um arquivo `.env` com senhas ou tokens. Nunca commitem dados reais de clientes ou posições.
 
-> A instrução que mostrei na Demo 1 — 'lista o que vai entrar antes de executar' — é um hábito que vale em qualquer situação. Pede a lista, confere, confirma.
+> A instrução que mostrei na Demo 1: 'lista o que vai entrar antes de executar': é um hábito que vale em qualquer situação. Pede a lista, confere, confirma.
 
 > Se aparecer um arquivo que não deveria estar, digam ao Claude Code: 'Remove esse arquivo do commit e adiciona ao .gitignore.'"
 
@@ -281,7 +281,7 @@ Fechar o argumento aberto na abertura: mostrar como recuperar o projeto em qualq
 
 ### Roteiro
 
-**[0:00 – 0:07] O cenário**
+**[0:00 a 0:07] O cenário**
 
 > "Voltando à pergunta da abertura: se vocês perderem o computador agora, o que acontece com o projeto?
 
@@ -302,7 +302,7 @@ claude
 
 > "Entro na pasta clonada e abro o Claude Code. A partir daqui é exatamente igual ao que faziam antes: o contexto do projeto está todo aqui."
 
-**[0:07 – 0:12] Manter atualizado com git pull**
+**[0:07 a 0:12] Manter atualizado com git pull**
 
 > "Uma vez que o repositório está clonado, quando alguém fizer um push de outro computador ou pelo GitHub, vocês atualizam com um comando só:"
 
@@ -314,7 +314,7 @@ git pull
 
 > O fluxo completo para quem trabalha em dois computadores: no computador A, faz as mudanças, `git add .`, `git commit`, `git push`. No computador B, antes de começar a trabalhar, `git pull` para pegar o que mudou. Isso evita conflito."
 
-**[0:12 – 0:15] Dica: não precisa do GitHub CLI no segundo computador**
+**[0:12 a 0:15] Dica: não precisa do GitHub CLI no segundo computador**
 
 > "Se estiverem clonando em um computador que nunca teve o projeto, vão precisar autenticar de novo. O `gh auth login` funciona para isso, ou o Personal Access Token como senha.
 
@@ -336,7 +336,7 @@ Cada participante termina o exercício com o próprio projeto no GitHub, com pel
 
 Este é o exercício mais importante do módulo. Proteja os 30 minutos. Se o tempo atrasar nos blocos anteriores, compacte o Bloco 4, mas não reduza o exercício.
 
-Para quem não tem projeto do curso básico: oferecer o painel padrão como ponto de partida — criar ao vivo em 5 minutos com Claude Code antes de inicializar o Git.
+Para quem não tem projeto do curso básico: oferecer o painel padrão como ponto de partida: criar ao vivo em 5 minutos com Claude Code antes de inicializar o Git.
 
 ### Roteiro do exercício
 
@@ -378,7 +378,7 @@ Aguardar os links no chat. Comentar 2 ou 3 ao vivo.
 
 > "**Passo 5 (opcional, para quem terminou cedo): segundo commit**
 >
-> Façam uma mudança pequena no projeto pelo Claude Code — mudar um título, uma cor — e criem um segundo commit. Vejam o histórico de commits no GitHub. São as duas fotos lado a lado."
+> Façam uma mudança pequena no projeto pelo Claude Code: mudar um título, uma cor: e criem um segundo commit. Vejam o histórico de commits no GitHub. São as duas fotos lado a lado."
 
 ### Resultado esperado
 
@@ -394,7 +394,7 @@ Link `github.com/usuario/repo` visível no chat com `index.html` e pelo menos um
 
 > Entendemos por que Git vai além de copiar pasta. Vimos o fluxo completo de init, add, commit e push. Usamos o Claude Code para ajudar com as operações. E aprendemos como recuperar o projeto em qualquer máquina com git clone.
 
-> Na próxima aula: slash commands e hooks. Vocês vão criar atalhos de terminal customizados — um `CLAUDE.md` que configura o contexto do projeto uma vez para sempre, e hooks que automatizam checagens antes e depois de ações do Claude Code.
+> Na próxima aula: slash commands e hooks. Vocês vão criar atalhos de terminal customizados: um `CLAUDE.md` que configura o contexto do projeto uma vez para sempre, e hooks que automatizam checagens antes e depois de ações do Claude Code.
 
 > Tragam o repositório GitHub desta aula. Vamos usá-lo como base para os exercícios do Módulo 2.
 
@@ -408,8 +408,8 @@ Quando alguém perguntar sobre os temas abaixo, anote e redirecione:
 
 | Tema | Onde |
 |---|---|
-| Instalar Claude Code do zero | [Vibe Coders — Módulo 2](https://github.com/diferentia/curso-claude-code/blob/main/modulo-02-instalacao-e-primeiros-passos.md) |
-| Deploy na Vercel | [Vibe Coders — Módulo 4](https://github.com/diferentia/curso-claude-code/blob/main/modulo-04-iterando-e-publicando.md) |
+| Instalar Claude Code do zero | [Vibe Coders: Módulo 2](https://github.com/diferentia/curso-claude-code/blob/main/modulo-02-instalacao-e-primeiros-passos.md) |
+| Deploy na Vercel | [Vibe Coders: Módulo 4](https://github.com/diferentia/curso-claude-code/blob/main/modulo-04-iterando-e-publicando.md) |
 | Pull requests, branches e code review em equipe | Prática interna com TI |
 | Slash commands e hooks | Módulo 2 deste curso |
 | MCP servers no terminal | Módulo 3 deste curso |

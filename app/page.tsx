@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { useState, useTransition } from "react";
 
 // ─────────────────────────────────────────────
-// ICONS (SVG — evita emojis na UI)
+// ICONS (SVG: evita emojis na UI)
 // ─────────────────────────────────────────────
 function IconLightning({ className }: { className?: string }) {
   return (
@@ -286,7 +286,7 @@ function Hero() {
 
         <p className="mx-auto max-w-2xl text-lg md:text-xl text-[#9090B0] leading-relaxed mb-10">
           A Diferentia transforma times de fundos, gestoras e fintechs em
-          equipes que operam com Agentic AI — do diagnóstico de maturidade à
+          equipes que operam com Agentic AI: do diagnóstico de maturidade à
           autonomia operacional.
         </p>
 
@@ -392,7 +392,7 @@ function Method() {
     {
       n: "01",
       title: "Diagnóstico de maturidade",
-      body: "Mapeamos processos, nível da equipe e oportunidades de automação reais. Nada é assumido — tudo é medido.",
+      body: "Mapeamos processos, nível da equipe e oportunidades de automação reais. Nada é assumido: tudo é medido.",
       detail: "Questionário + entrevistas individuais + análise de stack",
     },
     {
@@ -404,7 +404,7 @@ function Method() {
     {
       n: "03",
       title: "Capacitação prática",
-      body: "Sessões focadas em uso real, não teoria. O time aprende fazendo — com casos do próprio trabalho como material.",
+      body: "Sessões focadas em uso real, não teoria. O time aprende fazendo: com casos do próprio trabalho como material.",
       detail: "Sessões individuais + coletivas + desafio prático",
     },
     {
@@ -509,7 +509,7 @@ function Results() {
           </blockquote>
           <cite className="not-italic">
             <span className="text-white font-medium text-sm">Gestora de fundos</span>
-            <span className="text-[#9090B0] text-sm"> — São Paulo, 2025</span>
+            <span className="text-[#9090B0] text-sm">: São Paulo, 2025</span>
           </cite>
         </div>
 
@@ -555,9 +555,9 @@ const COURSES: Course[] = [
   { id: "04", trilha: "Operacional", nome: "Claude Design", formato: "Online · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário", entregavel: "Protótipo funcional ou variações de uma tela real", status: "Disponível" },
   { id: "04B", trilha: "Operacional", nome: "Governança e compliance com IA", formato: "Online · Ind./Grupo", duracao: "1h30", publico: "Todos", nivel: "Intermediário", entregavel: "Política de uso do time + checklist de conformidade", status: "Em breve" },
   { id: "05", trilha: "Operacional", nome: "Conectores, MCP e automações", formato: "Presencial · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário", entregavel: "Mapa de 3 oportunidades com quick wins priorizados", status: "Disponível" },
-  { id: "06", trilha: "Operacional", nome: "Claude Cowork — skills, agentes e tarefas", formato: "Presencial · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário / Avançado", entregavel: "1 skill do time + 1 rotina agendada no ar", status: "Disponível" },
-  { id: "07", trilha: "Operacional", nome: "Sessão prática — fluxos e automações", formato: "Presencial · Ind.", duracao: "3h", publico: "Todos", nivel: "Avançado", entregavel: "1–2 automações em processos reais + base v.1", status: "Disponível" },
-  { id: "08", trilha: "Operacional", nome: "Sessão coletiva de compartilhamento", formato: "Pres./Online · Grupo", duracao: "2h", publico: "Todos", nivel: "Todos os níveis", entregavel: "Biblioteca coletiva — base de conhecimento do time", status: "Disponível" },
+  { id: "06", trilha: "Operacional", nome: "Claude Cowork: skills, agentes e tarefas", formato: "Presencial · Ind./Grupo", duracao: "2h", publico: "Todos", nivel: "Intermediário / Avançado", entregavel: "1 skill do time + 1 rotina agendada no ar", status: "Disponível" },
+  { id: "07", trilha: "Operacional", nome: "Sessão prática: fluxos e automações", formato: "Presencial · Ind.", duracao: "3h", publico: "Todos", nivel: "Avançado", entregavel: "1 a 2 automações em processos reais + base v.1", status: "Disponível" },
+  { id: "08", trilha: "Operacional", nome: "Sessão coletiva de compartilhamento", formato: "Pres./Online · Grupo", duracao: "2h", publico: "Todos", nivel: "Todos os níveis", entregavel: "Biblioteca coletiva: base de conhecimento do time", status: "Disponível" },
   { id: "E1", trilha: "Especialização", nome: "IA para análise de investimentos", formato: "Presencial · Grupo", duracao: "3h", publico: "Analistas equity, research, setorial", nivel: "Intermediário", entregavel: "Template de análise + prompts padrão do time", status: "Em breve" },
   { id: "E2", trilha: "Especialização", nome: "IA para análise de crédito", formato: "Presencial · Grupo", duracao: "3h", publico: "Analistas de crédito", nivel: "Intermediário", entregavel: "Template de parecer + checklist de risco", status: "Em breve" },
   { id: "E3", trilha: "Especialização", nome: "IA para cientistas de dados", formato: "Pres./Online · Grupo", duracao: "4h", publico: "Cientistas de dados, analistas com Python", nivel: "Avançado", entregavel: "Script integrando Claude a pipeline ou fonte de dados real", status: "Em breve" },
@@ -579,11 +579,11 @@ const NIVEL_COLORS: Record<string, string> = {
 const TRILHA_META: Record<string, { desc: string; icon: ReactNode }> = {
   Todos: {
     icon: <IconClipboard className={ICON_TAB} />,
-    desc: "Catálogo completo — filtre por trilha para ver só o que importa para o seu time.",
+    desc: "Catálogo completo: filtre por trilha para ver só o que importa para o seu time.",
   },
   Operacional: {
     icon: <IconCog className={ICON_TAB} />,
-    desc: "Para todos os perfis — do iniciante ao avançado",
+    desc: "Para todos os perfis: do iniciante ao avançado",
   },
   Especialização: {
     icon: <IconTarget className={ICON_TAB} />,
@@ -615,7 +615,7 @@ function Courses() {
             <span className="text-[#9090B0]">para cada perfil do time</span>
           </h2>
           <p className="mx-auto max-w-xl text-[#9090B0] text-base leading-relaxed">
-            Cada empresa monta sua trilha com base no diagnóstico. Você escolhe os módulos que fazem sentido para o seu contexto — não um pacote fechado.
+            Cada empresa monta sua trilha com base no diagnóstico. Você escolhe os módulos que fazem sentido para o seu contexto: não um pacote fechado.
           </p>
         </div>
 
@@ -720,7 +720,7 @@ function Community() {
     {
       icon: <IconMessage className={ICON_COMMUNITY} />,
       title: "Tire dúvidas em tempo real",
-      body: "Canal dedicado para perguntas sobre ferramentas, prompts e automações. Respostas de quem já resolveu o mesmo problema no setor financeiro — não de uma IA genérica.",
+      body: "Canal dedicado para perguntas sobre ferramentas, prompts e automações. Respostas de quem já resolveu o mesmo problema no setor financeiro: não de uma IA genérica.",
     },
     {
       icon: <IconRepeat className={ICON_COMMUNITY} />,
@@ -730,7 +730,7 @@ function Community() {
     {
       icon: <IconSignal className={ICON_COMMUNITY} />,
       title: "Curadoria semanal de IA",
-      body: "O mundo da IA muda toda semana. Na comunidade você recebe curadoria filtrada para o mercado financeiro — sem o ruído de quem não conhece o setor.",
+      body: "O mundo da IA muda toda semana. Na comunidade você recebe curadoria filtrada para o mercado financeiro: sem o ruído de quem não conhece o setor.",
     },
     {
       icon: <IconHandshake className={ICON_COMMUNITY} />,
@@ -970,7 +970,7 @@ function Contact() {
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-4 py-2 text-xs font-medium text-emerald-300">
                 <IconCheck className="h-3.5 w-3.5 shrink-0 text-emerald-400" />
-                Mensagem recebida — retornaremos em até 24 horas.
+                Mensagem recebida: retornaremos em até 24 horas.
               </span>
             </div>
           )}

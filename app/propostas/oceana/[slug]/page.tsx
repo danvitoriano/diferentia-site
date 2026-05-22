@@ -44,7 +44,7 @@ export default async function CursoResumoPage({
           <section className="mt-12 rounded-xl border border-gray-200 bg-gray-50 p-6">
             <h2 className="text-lg font-semibold text-gray-900">Roteiro completo</h2>
             <p className="mt-1 text-sm text-gray-600">
-              Conteúdo detalhado para facilitadores — módulos e sessões, na ordem sugerida.
+              Conteúdo detalhado para facilitadores: módulos e sessões, na ordem sugerida.
             </p>
             <ol className="mt-5 space-y-2">
               {detalhe.map((f, i) => (
