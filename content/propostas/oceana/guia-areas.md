@@ -241,6 +241,30 @@ sentido para ele. Não é necessário aprofundar todos os três.
 
 ---
 
+## Computer use (Chrome, Excel e PowerPoint)
+
+**Perfil:** Qualquer área que usa browser, Excel e PowerPoint diariamente. Complementa o
+Introdutório (chat e artefatos) sem exigir o app Cowork.
+
+**O que priorizar na trilha:**
+
+Na sessão 1, escolha um fluxo web reconhecível pelo grupo (portal de RI, formulário
+interno fictício ou consulta pública). Na sessão 2, priorize **Excel** para analistas e
+operações; **PowerPoint** para comercial, RI e liderança.
+
+Use `exemplos-oceana.md` do módulo Computer use para trocar demo e exercício por área.
+
+**Exercícios prioritários:**
+
+- Sessão 1: uma tarefa real no Chrome com revisão humana do resultado
+- Sessão 2: uma planilha ou deck da área (modelo, relatório ou apresentação)
+
+**Governança:** reforçar que computer use e extensões Office não substituem validação de
+números nem parecer jurídico. Alinhar com TI sobre plano, extensões permitidas e dados
+que não podem sair da máquina.
+
+---
+
 ## Referências cruzadas
 
 - Exemplos por área em cada curso: `exemplos-oceana.md` dentro de cada pasta
