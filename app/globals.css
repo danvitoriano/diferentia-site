@@ -237,8 +237,9 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: -.01
 .contact-form { padding: 48px 0 48px 48px; }
 .field { margin-bottom: 22px; }
 .field label { display: block; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
-.field input, .field textarea { width: 100%; font-family: var(--sans); font-size: 15px; color: var(--ink); background: #fff; border: 1px solid var(--rule); border-radius: 2px; padding: 13px 14px; transition: border-color .2s; }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--purple); }
+.field input, .field textarea, .field select { width: 100%; font-family: var(--sans); font-size: 15px; color: var(--ink); background: #fff; border: 1px solid var(--rule); border-radius: 2px; padding: 13px 14px; transition: border-color .2s; }
+.field select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%239A9AA4' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--purple); }
 .field textarea { resize: vertical; min-height: 118px; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .form-status { font-size: 14px; padding: 12px 14px; border-radius: 2px; margin-bottom: 20px; display: none; }
@@ -257,6 +258,24 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: -.01
 .footer-bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-3); }
 
 section[id] { scroll-margin-top: 88px; }
+
+/* ── Instrutoras / captação ───────────────── */
+.instrutoras-wrap { max-width: 640px; }
+.instrutoras-wrap-wide { max-width: 768px; }
+.instrutoras-head { text-align: center; margin-bottom: clamp(40px, 5vw, 56px); }
+.instrutoras-head .section-title { max-width: 22ch; margin-left: auto; margin-right: auto; }
+.instrutoras-lead { margin-top: 22px; max-width: 52ch; margin-left: auto; margin-right: auto; }
+.instrutoras-copy { margin-top: 18px; font-size: 15px; line-height: 1.62; color: var(--ink-2); max-width: 58ch; margin-left: auto; margin-right: auto; }
+.instrutoras-form { border-top: 1.5px solid var(--rule-2); padding-top: 40px; }
+.instrutoras-submit { width: 100%; justify-content: center; margin-top: 6px; }
+.instrutoras-footer-bottom { margin-top: 0; padding-top: 0; border-top: 0; }
+.field-hint { margin-top: 8px; font-size: 12px; color: var(--ink-3); }
+.field-optional { font-weight: 400; color: var(--ink-3); text-transform: none; letter-spacing: 0; }
+.text-link { color: var(--purple); text-decoration: none; word-break: break-all; }
+.text-link:hover { text-decoration: underline; }
+.perk-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.perk-head h3 { margin-bottom: 0; }
+.perk-body { white-space: pre-wrap; }
 
 /* ── Scroll reveal ────────────────────────── */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
