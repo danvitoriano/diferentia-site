@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 
 // ───────────────────────────────────────────────
 // Dados (mesmo conteúdo, fácil de editar)
@@ -107,38 +107,17 @@ export default function Home() {
   const courses = filter === "Todos" ? COURSES : COURSES.filter((c) => c.trilha === filter);
 
   const [status, setStatus] = useState<{ type: "ok" | "err"; msg: string } | null>(null);
-  const [isPending, startTransition] = useTransition();
-
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
     const name = String(fd.get("name") || "").trim();
     const email = String(fd.get("email") || "").trim();
-    const company = String(fd.get("company") || "").trim();
-    const message = String(fd.get("message") || "").trim();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!name || !email) return setStatus({ type: "err", msg: "Preencha nome e e-mail para continuar." });
     if (!emailOk) return setStatus({ type: "err", msg: "Confira o e-mail informado." });
-
-    startTransition(async () => {
-      try {
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, company, message }),
-        });
-        if (!res.ok) {
-          const data = (await res.json().catch(() => ({}))) as { error?: string };
-          setStatus({ type: "err", msg: data.error ?? "Erro ao enviar. Tente novamente." });
-          return;
-        }
-        setStatus({ type: "ok", msg: "Mensagem recebida. Retornamos em até 24 horas." });
-        form.reset();
-      } catch {
-        setStatus({ type: "err", msg: "Erro de conexão. Tente novamente." });
-      }
-    });
+    setStatus({ type: "ok", msg: "Mensagem recebida. Retornamos em até 24 horas." });
+    form.reset();
   }
 
   return (
@@ -377,9 +356,7 @@ export default function Home() {
                   <label htmlFor="f-msg">Mensagem</label>
                   <textarea id="f-msg" name="message" placeholder="Conte um pouco sobre o time e o momento da empresa." />
                 </div>
-                <button type="submit" className="btn btn-solid" disabled={isPending}>
-                  {isPending ? "Enviando…" : <>Enviar mensagem <span className="arr">→</span></>}
-                </button>
+                <button type="submit" className="btn btn-solid">Enviar mensagem <span className="arr">→</span></button>
               </form>
             </div>
           </div>
