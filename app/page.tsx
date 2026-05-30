@@ -352,7 +352,7 @@ export default function Home() {
           <div className="contact-grid">
             <aside className="contact-aside reveal">
               <span className="eyebrow"><i></i>Contato</span>
-              <h2>Vamos começar?</h2>
+              <h2>Vamos conversar?</h2>
               <p>Agende um diagnóstico gratuito e veja onde sua equipe está hoje e o que faz sentido como próximo passo.</p>
             </aside>
             <div className="contact-form reveal">
