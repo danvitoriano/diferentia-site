@@ -203,18 +203,25 @@ export default function Home() {
       {/* PROBLEMA */}
       <section className="section" id="problema">
         <div className="wrap">
-          <div className="section-head reveal">
-            <span className="eyebrow"><i></i>O problema</span>
-            <h2 className="section-title">Por que a IA ainda não funcionou para a sua empresa</h2>
+          <div className="wrap-narrow">
+            <div className="section-head reveal">
+              <span className="eyebrow"><i></i>O problema</span>
+              <h2 className="section-title">Por que a IA ainda não funcionou para a sua empresa</h2>
+            </div>
           </div>
-          <div className="problem-grid">
-            {PROBLEMS.map((p, i) => (
-              <article key={p.n} className="prob reveal" style={{ transitionDelay: `${i * 0.08}s` }}>
-                <div className="p-num">{p.n}</div>
-                <h3>{p.title}</h3>
-                <p>{p.body}</p>
-              </article>
-            ))}
+        </div>
+        <div className="section-rule" aria-hidden="true" />
+        <div className="wrap">
+          <div className="wrap-narrow">
+            <div className="problem-grid">
+              {PROBLEMS.map((p, i) => (
+                <article key={p.n} className="prob reveal" style={{ transitionDelay: `${i * 0.08}s` }}>
+                  <div className="p-num">{p.n}</div>
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -276,44 +283,50 @@ export default function Home() {
       {/* CURSOS */}
       <section className="section" id="cursos">
         <div className="wrap">
-          <div className="courses-head">
-            <div className="reveal">
-              <span className="eyebrow"><i></i>Catálogo</span>
-              <h2 className="section-title" style={{ marginTop: 18 }}>Módulos sob medida</h2>
+          <div className="wrap-narrow">
+            <div className="courses-head">
+              <div className="reveal">
+                <span className="eyebrow"><i></i>Catálogo</span>
+                <h2 className="section-title" style={{ marginTop: 18 }}>Módulos sob medida</h2>
+              </div>
+              <div className="filter reveal">
+                {FILTERS.map((f) => (
+                  <button
+                    key={f}
+                    className={`filter-btn${filter === f ? " active" : ""}`}
+                    onClick={() => setFilter(f)}
+                  >
+                    {f}
+                  </button>
+                ))}
+              </div>
             </div>
-            <div className="filter reveal">
-              {FILTERS.map((f) => (
-                <button
-                  key={f}
-                  className={`filter-btn${filter === f ? " active" : ""}`}
-                  onClick={() => setFilter(f)}
-                >
-                  {f}
-                </button>
+          </div>
+        </div>
+        <div className="section-rule" aria-hidden="true" />
+        <div className="wrap">
+          <div className="wrap-narrow">
+            <div className="ctable reveal">
+              <div className="ctable-head">
+                <span>Cód</span><span>Módulo</span><span className="ch-format">Formato</span>
+                <span className="ch-dur">Duração</span><span className="ch-level">Nível</span><span>Status</span>
+              </div>
+              {courses.map((c) => (
+                <div key={c.code} className={`crow${c.soon ? " soon" : ""}`}>
+                  <div className="c-code">{c.code}</div>
+                  <div className="c-name">{c.name}</div>
+                  <div className="c-meta c-format">{c.format}</div>
+                  <div className="c-meta c-dur">{c.dur}</div>
+                  <div className="c-meta c-level">{c.level}</div>
+                  <div className={`c-status${c.soon ? " off" : ""}`}>
+                    <span className="d"></span>{c.soon ? "Em breve" : "Disponível"}
+                  </div>
+                </div>
               ))}
             </div>
-          </div>
-
-          <div className="ctable reveal">
-            <div className="ctable-head">
-              <span>Cód</span><span>Módulo</span><span className="ch-format">Formato</span>
-              <span className="ch-dur">Duração</span><span className="ch-level">Nível</span><span>Status</span>
+            <div className="courses-cta reveal">
+              <a href="#contato" className="link-arrow"><span>Montar minha trilha</span> <span className="arr">→</span></a>
             </div>
-            {courses.map((c) => (
-              <div key={c.code} className={`crow${c.soon ? " soon" : ""}`}>
-                <div className="c-code">{c.code}</div>
-                <div className="c-name">{c.name}</div>
-                <div className="c-meta c-format">{c.format}</div>
-                <div className="c-meta c-dur">{c.dur}</div>
-                <div className="c-meta c-level">{c.level}</div>
-                <div className={`c-status${c.soon ? " off" : ""}`}>
-                  <span className="d"></span>{c.soon ? "Em breve" : "Disponível"}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="courses-cta reveal">
-            <a href="#contato" className="link-arrow"><span>Montar minha trilha</span> <span className="arr">→</span></a>
           </div>
         </div>
       </section>
@@ -321,27 +334,29 @@ export default function Home() {
       {/* COMUNIDADE */}
       <section className="section" id="comunidade">
         <div className="wrap">
-          <div className="section-head reveal">
-            <span className="eyebrow"><i></i>Comunidade</span>
-            <h2 className="section-title">Você não fica sem apoio depois do treinamento</h2>
-          </div>
-          <div className="community-grid reveal">
-            {PERKS.map((p) => (
-              <article key={p.title} className="perk">
-                <h3>{p.title}</h3>
-                <p>{p.body}</p>
-              </article>
-            ))}
-          </div>
-          <div className="community-foot reveal">
-            <div className="platforms">
-              {PLATFORMS.map((pl) => (
-                <span key={pl.label} className={`plat${pl.soon ? " soon" : ""}`}>
-                  <span className="d"></span>{pl.label}
-                </span>
+          <div className="wrap-narrow">
+            <div className="section-head reveal">
+              <span className="eyebrow"><i></i>Comunidade</span>
+              <h2 className="section-title">Você não fica sem apoio depois do treinamento</h2>
+            </div>
+            <div className="community-grid reveal">
+              {PERKS.map((p) => (
+                <article key={p.title} className="perk">
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                </article>
               ))}
             </div>
-            <a href="#contato" className="btn btn-solid">Quero fazer parte <span className="arr">→</span></a>
+            <div className="community-foot reveal">
+              <div className="platforms">
+                {PLATFORMS.map((pl) => (
+                  <span key={pl.label} className={`plat${pl.soon ? " soon" : ""}`}>
+                    <span className="d"></span>{pl.label}
+                  </span>
+                ))}
+              </div>
+              <a href="#contato" className="btn btn-solid">Quero fazer parte <span className="arr">→</span></a>
+            </div>
           </div>
         </div>
       </section>
