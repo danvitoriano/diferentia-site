@@ -11,6 +11,7 @@ const NAV: [string, string][] = [
   ["#resultados", "Resultados"],
   ["#cursos", "Cursos"],
   ["#comunidade", "Comunidade"],
+  ["/instrutoras", "Seja uma instrutora"],
 ];
 
 const METRICS: [string, string][] = [
@@ -404,6 +405,7 @@ export default function Home() {
               <h4>Comunidade</h4>
               <a href="#comunidade">Discord</a>
               <a href="#comunidade">WhatsApp</a>
+              <a href="/instrutoras">Seja uma instrutora</a>
             </div>
             <div className="footer-col">
               <h4>Contato</h4>
