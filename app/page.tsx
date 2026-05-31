@@ -162,7 +162,7 @@ export default function Home() {
     <>
       {/* HEADER */}
       <header className={`site-header${scrolled ? " scrolled" : ""}`}>
-        <div className="wrap nav">
+        <div className="wrap wrap-narrow nav">
           <div className="brand">Diferentia<span className="dot">.</span></div>
           <nav className="nav-links">
             {NAV.map(([href, label]) => (
@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="wrap">
+        <div className="wrap wrap-narrow">
           <div className="hero-grid">
             <div className="hero-left">
               <span className="eyebrow reveal"><i></i>Agentic AI · mercado financeiro</span>
@@ -220,7 +220,7 @@ export default function Home() {
 
       {/* MÉTRICAS */}
       <section>
-        <div className="wrap">
+        <div className="wrap wrap-narrow">
           <div className="metrics">
             {METRICS.map(([val, lab], i) => (
               <div key={lab} className="metric reveal" style={{ transitionDelay: `${i * 0.06}s` }}>
