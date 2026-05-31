@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import type { ReactNode } from "react";
 import { ImageResponse } from "next/og";
 
 export const ogSize = {
@@ -12,6 +13,17 @@ export const ogContentType = "image/png";
 export const ogAlt =
   "Diferentia: metodologia de Agentic AI para fundos, gestoras e fintechs";
 
+const theme = {
+  bg: "#FFFFFF",
+  ink: "#15151A",
+  ink2: "#54545E",
+  ink3: "#9A9AA4",
+  rule: "#EAEAEE",
+  rule2: "#15151A",
+  purple: "#5B49E0",
+  gold: "#AC8228",
+};
+
 async function loadLocalFont(file: string): Promise<ArrayBuffer> {
   const buffer = await readFile(
     path.join(process.cwd(), "assets/fonts", file)
@@ -22,6 +34,94 @@ async function loadLocalFont(file: string): Promise<ArrayBuffer> {
 export const instrutorasOgAlt =
   "DiferentIA: Curso para Instrutoras de IA. Vire instrutora de IA e ensine o que o mercado mais quer aprender.";
 
+function OgEyebrow({ label }: { label: string }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 36 }}>
+      <div style={{ width: 26, height: 2, backgroundColor: theme.purple }} />
+      <span
+        style={{
+          fontSize: 16,
+          fontFamily: "Inter",
+          fontWeight: 600,
+          color: theme.ink2,
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+        }}
+      >
+        {label}
+      </span>
+    </div>
+  );
+}
+
+function OgBrand() {
+  return (
+    <div style={{ display: "flex", alignItems: "baseline", marginBottom: 24 }}>
+      <span
+        style={{
+          fontSize: 48,
+          fontFamily: "Inter",
+          fontWeight: 700,
+          color: theme.ink,
+          letterSpacing: "-0.02em",
+        }}
+      >
+        Diferentia
+      </span>
+      <span
+        style={{
+          fontSize: 48,
+          fontFamily: "Inter",
+          fontWeight: 700,
+          color: theme.purple,
+        }}
+      >
+        .
+      </span>
+    </div>
+  );
+}
+
+function OgShell({ children }: { children: ReactNode }) {
+  return (
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        padding: "64px 72px",
+        backgroundColor: theme.bg,
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 72,
+          right: 72,
+          height: 1.5,
+          backgroundColor: theme.rule2,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: 120,
+          left: 72,
+          right: 72,
+          height: 1,
+          backgroundColor: theme.rule,
+        }}
+      />
+      {children}
+    </div>
+  );
+}
+
 export async function createInstrutorasOgImageResponse() {
   const [interSemi, interBold, interExtra] = await Promise.all([
     loadLocalFont("inter-latin-600-normal.woff"),
@@ -31,155 +131,50 @@ export async function createInstrutorasOgImageResponse() {
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "64px 72px",
-          backgroundColor: "#080810",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: -120,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: 900,
-            height: 500,
-            background:
-              "radial-gradient(ellipse 70% 55% at 50% 0%, rgba(124,111,247,0.35), transparent)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(124,111,247,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(124,111,247,0.08) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-            opacity: 0.4,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 24,
-            border: "1px solid rgba(30,30,46,0.9)",
-            borderRadius: 24,
-          }}
-        />
-
+      <OgShell>
         <div style={{ display: "flex", flexDirection: "column", zIndex: 1 }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              marginBottom: 40,
-              padding: "10px 18px",
-              borderRadius: 999,
-              border: "1px solid rgba(124,111,247,0.35)",
-              backgroundColor: "rgba(124,111,247,0.12)",
-              alignSelf: "flex-start",
-            }}
-          >
-            <div
-              style={{
-                width: 8,
-                height: 8,
-                borderRadius: "50%",
-                backgroundColor: "#7C6FF7",
-              }}
-            />
-            <span
-              style={{
-                fontSize: 18,
-                fontFamily: "Inter",
-                fontWeight: 600,
-                color: "#c5c0ff",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Braço social · DiferentIA
-            </span>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              marginBottom: 28,
-            }}
-          >
-            <span
-              style={{
-                fontSize: 52,
-                fontFamily: "Inter",
-                fontWeight: 800,
-                color: "#F0F0FA",
-                letterSpacing: "-0.03em",
-              }}
-            >
-              Diferentia
-            </span>
-            <span
-              style={{
-                fontSize: 52,
-                fontFamily: "Inter",
-                fontWeight: 800,
-                color: "#7C6FF7",
-              }}
-            >
-              .
-            </span>
-          </div>
-
+          <OgEyebrow label="Braço social · DiferentIA" />
+          <OgBrand />
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: 4,
-              maxWidth: 920,
+              gap: 6,
+              maxWidth: 900,
             }}
           >
             <span
               style={{
-                fontSize: 52,
+                fontSize: 58,
                 fontFamily: "Inter",
                 fontWeight: 800,
-                lineHeight: 1.12,
+                lineHeight: 1.02,
                 letterSpacing: "-0.03em",
-                color: "#F0F0FA",
+                color: theme.ink,
               }}
             >
               Vire instrutora de IA
             </span>
             <span
               style={{
-                fontSize: 52,
+                fontSize: 58,
                 fontFamily: "Inter",
                 fontWeight: 800,
-                lineHeight: 1.12,
+                lineHeight: 1.02,
                 letterSpacing: "-0.03em",
-                color: "#7C6FF7",
+                color: theme.purple,
               }}
             >
               e ensine o que o mercado
             </span>
             <span
               style={{
-                fontSize: 52,
+                fontSize: 58,
                 fontFamily: "Inter",
                 fontWeight: 800,
-                lineHeight: 1.12,
+                lineHeight: 1.02,
                 letterSpacing: "-0.03em",
-                color: "#F0F0FA",
+                color: theme.ink,
               }}
             >
               mais quer aprender.
@@ -199,8 +194,8 @@ export async function createInstrutorasOgImageResponse() {
             style={{
               fontSize: 22,
               fontFamily: "Inter",
-              fontWeight: 600,
-              color: "#9090B0",
+              fontWeight: 500,
+              color: theme.ink2,
               lineHeight: 1.45,
               maxWidth: 720,
               margin: 0,
@@ -210,17 +205,17 @@ export async function createInstrutorasOgImageResponse() {
           </p>
           <span
             style={{
-              fontSize: 20,
+              fontSize: 18,
               fontFamily: "Inter",
-              fontWeight: 700,
-              color: "#E8B84B",
+              fontWeight: 600,
+              color: theme.gold,
               letterSpacing: "0.04em",
             }}
           >
             diferentia.com.br/instrutoras
           </span>
         </div>
-      </div>
+      </OgShell>
     ),
     {
       ...ogSize,
@@ -242,143 +237,38 @@ export async function createOgImageResponse() {
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "64px 72px",
-          backgroundColor: "#080810",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: -120,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: 900,
-            height: 500,
-            background:
-              "radial-gradient(ellipse 70% 55% at 50% 0%, rgba(124,111,247,0.35), transparent)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(124,111,247,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(124,111,247,0.08) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-            opacity: 0.4,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 24,
-            border: "1px solid rgba(30,30,46,0.9)",
-            borderRadius: 24,
-          }}
-        />
-
+      <OgShell>
         <div style={{ display: "flex", flexDirection: "column", zIndex: 1 }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              marginBottom: 40,
-              padding: "10px 18px",
-              borderRadius: 999,
-              border: "1px solid rgba(124,111,247,0.35)",
-              backgroundColor: "rgba(124,111,247,0.12)",
-              alignSelf: "flex-start",
-            }}
-          >
-            <div
-              style={{
-                width: 8,
-                height: 8,
-                borderRadius: "50%",
-                backgroundColor: "#7C6FF7",
-              }}
-            />
-            <span
-              style={{
-                fontSize: 18,
-                fontFamily: "Inter",
-                fontWeight: 600,
-                color: "#c5c0ff",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Agentic AI · mercado financeiro
-            </span>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              marginBottom: 28,
-            }}
-          >
-            <span
-              style={{
-                fontSize: 52,
-                fontFamily: "Inter",
-                fontWeight: 800,
-                color: "#F0F0FA",
-                letterSpacing: "-0.03em",
-              }}
-            >
-              Diferentia
-            </span>
-            <span
-              style={{
-                fontSize: 52,
-                fontFamily: "Inter",
-                fontWeight: 800,
-                color: "#7C6FF7",
-              }}
-            >
-              .
-            </span>
-          </div>
-
+          <OgEyebrow label="Agentic AI · mercado financeiro" />
+          <OgBrand />
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: 4,
+              gap: 6,
               maxWidth: 920,
             }}
           >
             <span
               style={{
-                fontSize: 56,
+                fontSize: 62,
                 fontFamily: "Inter",
                 fontWeight: 800,
-                lineHeight: 1.1,
+                lineHeight: 0.98,
                 letterSpacing: "-0.03em",
-                color: "#7C6FF7",
+                color: theme.ink,
               }}
             >
               Agentic AI que o mercado
             </span>
             <span
               style={{
-                fontSize: 56,
+                fontSize: 62,
                 fontFamily: "Inter",
                 fontWeight: 800,
-                lineHeight: 1.1,
+                lineHeight: 0.98,
                 letterSpacing: "-0.03em",
-                color: "#F0F0FA",
+                color: theme.purple,
               }}
             >
               financeiro sabe usar.
@@ -398,8 +288,8 @@ export async function createOgImageResponse() {
             style={{
               fontSize: 22,
               fontFamily: "Inter",
-              fontWeight: 600,
-              color: "#9090B0",
+              fontWeight: 500,
+              color: theme.ink2,
               lineHeight: 1.45,
               maxWidth: 720,
               margin: 0,
@@ -410,17 +300,17 @@ export async function createOgImageResponse() {
           </p>
           <span
             style={{
-              fontSize: 20,
+              fontSize: 18,
               fontFamily: "Inter",
-              fontWeight: 700,
-              color: "#E8B84B",
+              fontWeight: 600,
+              color: theme.gold,
               letterSpacing: "0.04em",
             }}
           >
             diferentia.com.br
           </span>
         </div>
-      </div>
+      </OgShell>
     ),
     {
       ...ogSize,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 
 // ───────────────────────────────────────────────
 // Dados (mesmo conteúdo, fácil de editar)
@@ -11,7 +11,6 @@ const NAV: [string, string][] = [
   ["#resultados", "Resultados"],
   ["#cursos", "Cursos"],
   ["#comunidade", "Comunidade"],
-  ["/instrutoras", "Seja uma instrutora"],
 ];
 
 const METRICS: [string, string][] = [
@@ -108,38 +107,17 @@ export default function Home() {
   const courses = filter === "Todos" ? COURSES : COURSES.filter((c) => c.trilha === filter);
 
   const [status, setStatus] = useState<{ type: "ok" | "err"; msg: string } | null>(null);
-  const [isPending, startTransition] = useTransition();
-
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
     const name = String(fd.get("name") || "").trim();
     const email = String(fd.get("email") || "").trim();
-    const company = String(fd.get("company") || "").trim();
-    const message = String(fd.get("message") || "").trim();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!name || !email) return setStatus({ type: "err", msg: "Preencha nome e e-mail para continuar." });
     if (!emailOk) return setStatus({ type: "err", msg: "Confira o e-mail informado." });
-
-    startTransition(async () => {
-      try {
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, company, message }),
-        });
-        if (!res.ok) {
-          const data = (await res.json().catch(() => ({}))) as { error?: string };
-          setStatus({ type: "err", msg: data.error ?? "Erro ao enviar. Tente novamente." });
-          return;
-        }
-        setStatus({ type: "ok", msg: "Mensagem recebida. Retornamos em até 24 horas." });
-        form.reset();
-      } catch {
-        setStatus({ type: "err", msg: "Erro de conexão. Tente novamente." });
-      }
-    });
+    setStatus({ type: "ok", msg: "Mensagem recebida. Retornamos em até 24 horas." });
+    form.reset();
   }
 
   return (
@@ -203,25 +181,18 @@ export default function Home() {
       {/* PROBLEMA */}
       <section className="section" id="problema">
         <div className="wrap">
-          <div className="wrap-narrow">
-            <div className="section-head reveal">
-              <span className="eyebrow"><i></i>O problema</span>
-              <h2 className="section-title">Por que a IA ainda não funcionou para a sua empresa</h2>
-            </div>
+          <div className="section-head reveal">
+            <span className="eyebrow"><i></i>O problema</span>
+            <h2 className="section-title">Por que a IA ainda não funcionou para a sua empresa</h2>
           </div>
-        </div>
-        <div className="section-rule" aria-hidden="true" />
-        <div className="wrap">
-          <div className="wrap-narrow">
-            <div className="problem-grid">
-              {PROBLEMS.map((p, i) => (
-                <article key={p.n} className="prob reveal" style={{ transitionDelay: `${i * 0.08}s` }}>
-                  <div className="p-num">{p.n}</div>
-                  <h3>{p.title}</h3>
-                  <p>{p.body}</p>
-                </article>
-              ))}
-            </div>
+          <div className="problem-grid">
+            {PROBLEMS.map((p, i) => (
+              <article key={p.n} className="prob reveal" style={{ transitionDelay: `${i * 0.08}s` }}>
+                <div className="p-num">{p.n}</div>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -283,50 +254,44 @@ export default function Home() {
       {/* CURSOS */}
       <section className="section" id="cursos">
         <div className="wrap">
-          <div className="wrap-narrow">
-            <div className="courses-head">
-              <div className="reveal">
-                <span className="eyebrow"><i></i>Catálogo</span>
-                <h2 className="section-title" style={{ marginTop: 18 }}>Módulos sob medida</h2>
-              </div>
-              <div className="filter reveal">
-                {FILTERS.map((f) => (
-                  <button
-                    key={f}
-                    className={`filter-btn${filter === f ? " active" : ""}`}
-                    onClick={() => setFilter(f)}
-                  >
-                    {f}
-                  </button>
-                ))}
-              </div>
+          <div className="courses-head">
+            <div className="reveal">
+              <span className="eyebrow"><i></i>Catálogo</span>
+              <h2 className="section-title" style={{ marginTop: 18 }}>Módulos sob medida</h2>
             </div>
-          </div>
-        </div>
-        <div className="section-rule" aria-hidden="true" />
-        <div className="wrap">
-          <div className="wrap-narrow">
-            <div className="ctable reveal">
-              <div className="ctable-head">
-                <span>Cód</span><span>Módulo</span><span className="ch-format">Formato</span>
-                <span className="ch-dur">Duração</span><span className="ch-level">Nível</span><span>Status</span>
-              </div>
-              {courses.map((c) => (
-                <div key={c.code} className={`crow${c.soon ? " soon" : ""}`}>
-                  <div className="c-code">{c.code}</div>
-                  <div className="c-name">{c.name}</div>
-                  <div className="c-meta c-format">{c.format}</div>
-                  <div className="c-meta c-dur">{c.dur}</div>
-                  <div className="c-meta c-level">{c.level}</div>
-                  <div className={`c-status${c.soon ? " off" : ""}`}>
-                    <span className="d"></span>{c.soon ? "Em breve" : "Disponível"}
-                  </div>
-                </div>
+            <div className="filter reveal">
+              {FILTERS.map((f) => (
+                <button
+                  key={f}
+                  className={`filter-btn${filter === f ? " active" : ""}`}
+                  onClick={() => setFilter(f)}
+                >
+                  {f}
+                </button>
               ))}
             </div>
-            <div className="courses-cta reveal">
-              <a href="#contato" className="link-arrow"><span>Montar minha trilha</span> <span className="arr">→</span></a>
+          </div>
+
+          <div className="ctable reveal">
+            <div className="ctable-head">
+              <span>Cód</span><span>Módulo</span><span className="ch-format">Formato</span>
+              <span className="ch-dur">Duração</span><span className="ch-level">Nível</span><span>Status</span>
             </div>
+            {courses.map((c) => (
+              <div key={c.code} className={`crow${c.soon ? " soon" : ""}`}>
+                <div className="c-code">{c.code}</div>
+                <div className="c-name">{c.name}</div>
+                <div className="c-meta c-format">{c.format}</div>
+                <div className="c-meta c-dur">{c.dur}</div>
+                <div className="c-meta c-level">{c.level}</div>
+                <div className={`c-status${c.soon ? " off" : ""}`}>
+                  <span className="d"></span>{c.soon ? "Em breve" : "Disponível"}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="courses-cta reveal">
+            <a href="#contato" className="link-arrow"><span>Montar minha trilha</span> <span className="arr">→</span></a>
           </div>
         </div>
       </section>
@@ -334,29 +299,27 @@ export default function Home() {
       {/* COMUNIDADE */}
       <section className="section" id="comunidade">
         <div className="wrap">
-          <div className="wrap-narrow">
-            <div className="section-head reveal">
-              <span className="eyebrow"><i></i>Comunidade</span>
-              <h2 className="section-title">Você não fica sem apoio depois do treinamento</h2>
-            </div>
-            <div className="community-grid reveal">
-              {PERKS.map((p) => (
-                <article key={p.title} className="perk">
-                  <h3>{p.title}</h3>
-                  <p>{p.body}</p>
-                </article>
+          <div className="section-head reveal">
+            <span className="eyebrow"><i></i>Comunidade</span>
+            <h2 className="section-title">Você não fica sem apoio depois do treinamento</h2>
+          </div>
+          <div className="community-grid reveal">
+            {PERKS.map((p) => (
+              <article key={p.title} className="perk">
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="community-foot reveal">
+            <div className="platforms">
+              {PLATFORMS.map((pl) => (
+                <span key={pl.label} className={`plat${pl.soon ? " soon" : ""}`}>
+                  <span className="d"></span>{pl.label}
+                </span>
               ))}
             </div>
-            <div className="community-foot reveal">
-              <div className="platforms">
-                {PLATFORMS.map((pl) => (
-                  <span key={pl.label} className={`plat${pl.soon ? " soon" : ""}`}>
-                    <span className="d"></span>{pl.label}
-                  </span>
-                ))}
-              </div>
-              <a href="#contato" className="btn btn-solid">Quero fazer parte <span className="arr">→</span></a>
-            </div>
+            <a href="#contato" className="btn btn-solid">Quero fazer parte <span className="arr">→</span></a>
           </div>
         </div>
       </section>
@@ -367,7 +330,7 @@ export default function Home() {
           <div className="contact-grid">
             <aside className="contact-aside reveal">
               <span className="eyebrow"><i></i>Contato</span>
-              <h2>Vamos conversar?</h2>
+              <h2>Vamos começar?</h2>
               <p>Agende um diagnóstico gratuito e veja onde sua equipe está hoje e o que faz sentido como próximo passo.</p>
             </aside>
             <div className="contact-form reveal">
@@ -393,9 +356,7 @@ export default function Home() {
                   <label htmlFor="f-msg">Mensagem</label>
                   <textarea id="f-msg" name="message" placeholder="Conte um pouco sobre o time e o momento da empresa." />
                 </div>
-                <button type="submit" className="btn btn-solid" disabled={isPending}>
-                  {isPending ? "Enviando…" : <>Enviar mensagem <span className="arr">→</span></>}
-                </button>
+                <button type="submit" className="btn btn-solid">Enviar mensagem <span className="arr">→</span></button>
               </form>
             </div>
           </div>
@@ -420,7 +381,6 @@ export default function Home() {
               <h4>Comunidade</h4>
               <a href="#comunidade">Discord</a>
               <a href="#comunidade">WhatsApp</a>
-              <a href="/instrutoras">Seja uma instrutora</a>
             </div>
             <div className="footer-col">
               <h4>Contato</h4>

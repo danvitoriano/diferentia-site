@@ -15,63 +15,44 @@ export default function MateriaisPage() {
   const materials = getCaptacaoMaterials();
 
   return (
-    <div className="min-h-screen bg-[#080810] text-[#F0F0FA]">
-      <header className="border-b border-[#1E1E2E]/60 bg-[#080810]/80 backdrop-blur-md">
-        <div className="mx-auto max-w-3xl px-6 py-4 flex items-center justify-between gap-4">
-          <Link
-            href="/instrutoras"
-            className="text-xl font-bold tracking-tight text-white hover:opacity-90 transition-opacity"
-          >
-            Diferentia
-            <span className="text-[#7C6FF7]">.</span>
+    <>
+      <header className="site-header">
+        <div className="wrap nav">
+          <Link href="/instrutoras" className="brand">
+            Diferentia<span className="dot">.</span>
           </Link>
-          <Link
-            href="/instrutoras"
-            className="text-xs text-[#9090B0] hover:text-white transition-colors"
-          >
-            ← Lista de espera
+          <Link href="/instrutoras" className="link-arrow">
+            <span>Lista de espera</span> <span className="arr">←</span>
           </Link>
         </div>
       </header>
 
-      <main className="mx-auto max-w-3xl px-6 py-12 md:py-16">
-        <div className="mb-10">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#7C6FF7] mb-3 block">
-            Uso interno
-          </span>
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            Materiais de captação
-          </h1>
-          <p className="text-[#9090B0] text-sm leading-relaxed">
-            Textos para Instagram e LinkedIn. Link da lista de espera:{" "}
-            <a
-              href={WAITLIST_URL}
-              className="text-[#7C6FF7] hover:underline break-all"
-            >
-              {WAITLIST_URL}
-            </a>
-          </p>
-        </div>
+      <section className="section">
+        <div className="wrap instrutoras-wrap instrutoras-wrap-wide">
+          <div className="section-head reveal in">
+            <span className="eyebrow"><i></i>Uso interno</span>
+            <h1 className="section-title">Materiais de captação</h1>
+            <p className="lead instrutoras-lead">
+              Textos para Instagram e LinkedIn. Link da lista de espera:{" "}
+              <a href={WAITLIST_URL} className="text-link">
+                {WAITLIST_URL}
+              </a>
+            </p>
+          </div>
 
-        <div className="space-y-8">
-          {materials.map((material) => (
-            <section
-              key={material.id}
-              className="rounded-2xl border border-[#1E1E2E] bg-[#0F0F1A] p-6 md:p-8"
-            >
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <h2 className="text-lg font-semibold text-white">
-                  {material.title}
-                </h2>
-                <CopyButton text={material.body} />
-              </div>
-              <p className="text-[#9090B0] leading-relaxed whitespace-pre-wrap">
-                {material.body}
-              </p>
-            </section>
-          ))}
+          <div className="community-grid reveal in">
+            {materials.map((material) => (
+              <article key={material.id} className="perk">
+                <div className="perk-head">
+                  <h3>{material.title}</h3>
+                  <CopyButton text={material.body} />
+                </div>
+                <p className="perk-body">{material.body}</p>
+              </article>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
