@@ -13,7 +13,6 @@ const NAV: [string, string][] = [
   ["#resultados", "Resultados"],
   ["#cursos", "Cursos"],
   ["#comunidade", "Comunidade"],
-  ["/instrutoras", "Seja uma instrutora"],
 ];
 
 const METRICS: [string, string][] = [
