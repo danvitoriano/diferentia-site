@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
+import { ParallaxMedia } from "@/components/home/parallax-media";
+import { useParallaxMedia } from "@/hooks/use-parallax-media";
 
 // ───────────────────────────────────────────────
 // Dados (mesmo conteúdo, fácil de editar)
@@ -39,6 +41,20 @@ const RESULT_METRICS: [string, string][] = [
   ["100% financeiro", "casos do próprio setor"],
   ["Base própria", "fica com a empresa"],
 ];
+
+/** Fotos editoriais (Unsplash). Parâmetros fixam crop e qualidade no CDN. */
+const HOME_MEDIA = {
+  hero: {
+    src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=85",
+    alt: "Mesa de trabalho com laptop e documentos de análise",
+    credit: { name: "Scott Graham", href: "https://unsplash.com/@homajomo" },
+  },
+  results: {
+    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=85",
+    alt: "Equipe colaborando em reunião com notebooks",
+    credit: { name: "Headway", href: "https://unsplash.com/@headwayio" },
+  },
+} as const;
 
 type Course = { code: string; name: string; format: string; dur: string; level: string; trilha: string; soon?: boolean };
 const COURSES: Course[] = [
@@ -95,6 +111,7 @@ function useScrollReveal() {
 
 export default function Home() {
   useScrollReveal();
+  useParallaxMedia();
 
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -177,10 +194,26 @@ export default function Home() {
                 <a href="#metodologia" className="link-arrow"><span>Ver metodologia</span> <span className="arr">→</span></a>
               </div>
             </div>
-            <div className="hero-right reveal" style={{ transitionDelay: ".1s" }}>
-              {/* troque por foto real quando tiver */}
-              <img src="/hero-abstract.png" alt="" />
-              <span className="hero-cap">imagem provisória · arte gerada</span>
+            <div className="hero-right">
+              <ParallaxMedia speed={0.35}>
+                <img
+                  src={HOME_MEDIA.hero.src}
+                  alt={HOME_MEDIA.hero.alt}
+                  width={1920}
+                  height={1280}
+                  loading="eager"
+                  decoding="async"
+                />
+              </ParallaxMedia>
+              <span className="hero-cap">
+                <a href={HOME_MEDIA.hero.credit.href} target="_blank" rel="noopener noreferrer">
+                  {HOME_MEDIA.hero.credit.name}
+                </a>
+                {" · "}
+                <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -257,9 +290,26 @@ export default function Home() {
       <section className="section" id="resultados">
         <div className="wrap">
           <div className="results-grid">
-            <div className="results-media reveal">
-              <img src="/results-abstract.png" alt="" />
-              <span className="hero-cap">imagem provisória · arte gerada</span>
+            <div className="results-media">
+              <ParallaxMedia speed={0.35}>
+                <img
+                  src={HOME_MEDIA.results.src}
+                  alt={HOME_MEDIA.results.alt}
+                  width={1920}
+                  height={1280}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </ParallaxMedia>
+              <span className="hero-cap">
+                <a href={HOME_MEDIA.results.credit.href} target="_blank" rel="noopener noreferrer">
+                  {HOME_MEDIA.results.credit.name}
+                </a>
+                {" · "}
+                <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
             </div>
             <div className="results-body">
               <span className="eyebrow reveal"><i></i>Resultados</span>
