@@ -389,7 +389,7 @@ export default function Home() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2025 Diferentia</span>
+            <span>© 2026 Diferentia</span>
             <span>Feito para o mercado financeiro</span>
           </div>
         </div>
